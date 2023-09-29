@@ -1,0 +1,1611 @@
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.42857143;
+    background-color: #C5C3B6
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-spacing: 0;
+    border-radius: 5px;
+    border-style: solid;
+    border: none;
+    border-color: #352719;
+    background-color: #DBD8CA;
+    -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+    box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+    font-style: italic;
+}
+
+
+/* END CSS STYLING RESET PAGE
+-------------------------------------------
+*/
+
+
+
+
+
+
+
+.charsheet {
+    background: #8b8786;
+}
+
+td {
+    background: #F2F2F2;
+    padding: 0in .5pt 0in .5pt;
+    height: 9.8pt;
+}
+
+input {
+    width: 100%;
+    font-weight: 800;
+    background: #352719;
+    background-color: #D8D8D8;
+    text-align: center;
+    font-style: normal;
+    border: 3;
+    border-color: #b2b7b7;
+}
+
+
+
+
+/* TABS */
+
+
+div.tabbuttoncontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 470px;
+  margin-left: 5px;
+
+}
+
+button[type="action"].tabbutton {
+
+  font-family: 'Girassol';
+  font-size: 80%;
+  height: 12pt;
+  width: 75pt;
+
+  background-color: black;
+  color: white;
+
+  border: 1px solid gray;
+  border-radius: 80px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 1px 1px 8px 1px rgba(53, 39, 25, 0.45);
+}
+
+/*Configure the tab buttons*/
+.allsection,
+.combat,
+.skillsandpoints, .spells {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="allsection"] ~ div.allsection,
+.sheet-tabstoggle[value="combat"] ~ div.combat,
+.sheet-tabstoggle[value="skillsandpoints"] ~ div.skillsandpoints,
+.sheet-tabstoggle[value="spells"] ~ div.spells {
+	display: block;
+}
+
+
+
+
+/* LAYOUT */
+
+div.dodaslayout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+div.ATRTable, div.weapontable, div.armor, div.spelltable {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+
+}
+
+
+
+/* ATTRIBUTE TABLE */
+
+.charsheet input[type=number] {
+    width: 100% !important;
+    height: auto;
+    padding: 0;
+    background-color: #e6e6e5;
+}
+
+.charsheet button[type="roll"].attributerollbutton {
+  background: none;
+  outline-color: transparent;
+  border-style: none;
+  font-weight: 200;
+  font-size: 90%;
+  padding: 0px 0px 0px 0px;
+  font-family: 'Girassol';
+  cursor: pointer;
+  text-shadow: none;
+  color: #292929;
+}
+
+.charsheet button[type="roll"].derivedattributerollbutton{
+  background: none;
+  outline-color: transparent;
+  border-style: none;
+  color: white;
+  font-weight: 200;
+  font-size: 100%;
+  padding: 0px 0px 0px 0px;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+
+
+div.ATRTable {
+  background-color: gray;
+  width: 148pt;
+  height: 125pt;
+  /* from style reset */
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+    background-color: #DBD8CA;
+    -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+    box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+
+div.ATRTableHeader {
+  display: grid;
+  font-family: 'Girassol';
+  grid-template-columns: 23pt 41pt 3pt 64pt 19pt;
+  font-size: 95%;
+    /*padding: .1em;*/
+    text-align: center;
+    font-style: italic;
+    height: 15pt;
+}
+
+/*
+button[type="roll"].ATRTableQuestionButton {
+    background: none;
+  outline-color: transparent;
+  border-style: none;
+  font-weight: 200;
+  font-size: 100%;
+  padding: 0px 0px 0px 0px;
+  font-family: 'Girassol';
+  cursor: pointer;
+  text-shadow: none;
+  color: #292929;
+
+}
+*/
+
+div.ATRTableQuestion {
+    background-color: #dddddd;
+    border-radius: 50%;
+    height: 17px;
+    width: 15px;
+    box-shadow: 1px 1px 2px 1px rgb(25 17 8 / 60%);
+    font-family: 'Girassol';
+   /*
+    font-size: 115%;
+    */
+    text-align: center;
+    font-style: italic;
+    height: 15pt;
+    padding-right: 0.2em;
+}
+
+div.ATRTableRow {
+  display: grid;
+  grid-template-columns: 20pt 27pt 25pt 4pt 27pt 25pt 20pt;
+  font-size: 100%;
+  text-align: center;
+  height: 15pt;
+}
+
+
+
+
+div.ATRLetter {
+    font-family: 'Girassol';
+  font-style: normal;
+padding: 0em;
+color: #292929;
+font-size: 90%;
+
+
+  /*
+    text-align: center;
+    font-size: 110%;
+    padding: .3em;
+    text-align: center
+  */
+}
+
+div.ATRNumber {
+    text-align: center;
+}
+
+div.derivedATRLetter {
+
+  font-family: 'Girassol';
+  font-style: normal;
+  font-size: 85%;
+  background-color: black;
+  color: white;
+
+  text-align: center;
+  padding: 0;
+  height: 15pt;
+}
+
+
+
+/* RESOLVE_INITIATIVE FLEX Container */
+
+div.resolve_initiative_flexcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* RESOLVE TABLE */
+
+div.resolvetable {
+  font-family: 'Girassol';
+  width: 210pt;
+  height: 48pt;
+
+  margin-top: 23px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #b2b7b7;
+
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.resolvetabletoprow {
+  height: 17pt;
+}
+
+span.resolveword, span.resolvemax, span.fatigueword {
+  background-color: black;
+  color: white;
+}
+
+span.resolveemptycell {
+    background-color: #D8D8D8;
+    border: none;
+}
+
+span.resolvewp, span.resolvestart, span.resolvecurrent, span.resolvetemporary {
+    background-color: #D8D8D8;
+    color: black;
+}
+
+span.resolveword, span.fatigueword {
+    font-size: 9pt;
+}
+
+div.resolvetabletoprow span {
+  border: 1px solid gray;
+}
+
+div.resolvetabletoprow, div.resolvetablesecondrow, div.resolvetablethirdrow {
+  display: grid;
+  grid-template-columns: 70pt 28pt 28pt 28pt 28pt 28pt;
+
+}
+
+
+div.resolvetabletoprow span, div.resolvetablesecondrow span, div.resolvetablethirdrow span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div.resolvetabletoprow {
+  color: white;
+}
+
+div.pointbuytable input[type="text"] {
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    font-family: 'Verdana';
+    font-weight: 100;
+
+}
+
+
+/* Initiative Table */
+
+div.initiativetable {
+  font-family: 'Girassol';
+  width: 180pt;
+  height: 36pt;
+
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #b2b7b7;
+
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.initiativetabletoprow {
+  height: 17pt;
+}
+
+span.initiativeword, span.initiativetotal {
+  background-color: black;
+  color: white;
+}
+
+span.initiativeemptycell {
+    background-color: #D8D8D8;
+    border: none;
+}
+
+span.initiativeref, span.initiativeskill, span.initiativeroll{
+    background-color: #D8D8D8;
+    color: black;
+}
+
+span.initiativeword {
+    font-size: 9pt;
+}
+
+div.initiativetabletoprow span {
+  border: 1px solid gray;
+}
+
+div.initiativetabletoprow, div.initiativetablesecondrow, div.initiativetablethirdrow {
+  display: grid;
+  grid-template-columns: 70pt 28pt 28pt 28pt 28pt 28pt;
+
+}
+
+
+div.initiativetabletoprow span, div.initiativetablesecondrow span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div.initiativetabletoprow {
+  color: white;
+}
+
+div.initiativetable input[type="text"] {
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    font-family: 'Verdana';
+    font-weight: 100;
+
+}
+
+/* Passive Perception Table */
+body {
+  background-color: #8b8786;
+}
+
+div.passiveperceptiontable {
+  font-family: 'Girassol';
+  width: 189pt;
+  height: 62pt;
+
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #b2b7b7;
+
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.passiveperceptiontabletoprow {
+  height: 17pt;
+}
+
+span.passiveperceptiontotal {
+  background-color: black;
+  color: white;
+}
+
+
+span.passiveperceptionwit, span.passiveperceptionskill, span.passiveperceptionbase{
+    background-color: #D8D8D8;
+    color: black;
+}
+
+span.passiveperceptionsword {
+    font-size: 9pt;
+}
+
+div.passiveperceptiontabletoprow span {
+  border: 1px solid gray;
+}
+
+div.passiveperceptiontabletoprow, div.passiveperceptiontableinputrow {
+  display: grid;
+  grid-template-columns: 80pt 28pt 28pt 28pt 28pt 28pt;
+
+}
+
+
+div.passiveperceptiontabletoprow span, div.passiveperceptiontableinputrow span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div.passiveperceptiontabletoprow {
+  color: white;
+}
+
+div.passiveperceptiontable input[type="text"] {
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    font-family: 'Verdana';
+    font-weight: 100;
+}
+
+span.passiveperceptionword, span.enemydetectionword, span.passiveinsightword {
+  background-color: black;
+  color: white;
+  font-size: 9pt
+}
+
+
+
+
+
+
+
+/*WEAPON TABLE*/
+
+div.weapontable {
+  font-family: 'Girassol';
+  width: 1fr;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 7.0pt;
+  background-color: #b2b7b7;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+      -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+      box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+}
+
+div.weapontable span {
+  display: grid;
+  align-items: center;      /* new */
+  justify-items: center;    /* new */
+
+}
+
+div.wptrow2 span {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+div.wptrow1 {
+    display: grid;
+    grid-template-columns: 90pt  22pt 25pt 72pt 72pt 72pt 89pt 57pt 20pt 32pt 25pt 20pt;
+    column-gap: 0;
+  background-color: none;
+  height: 16pt;
+
+}
+
+div.wptrow2 {
+    display: grid;
+    grid-template-columns: 90pt  22pt 25pt 24pt 24pt 24pt 24pt 24pt 24pt 24pt 24pt 24pt 37pt 26pt 26pt 32pt 25pt 104pt;
+    column-gap: 0;
+  background-color: gray;
+
+}
+
+.wptrangedc, .rollplus, .wptSkrm, .wpttoprowAP, .wtMod, .wtA, .wtAdvBlock, .wtSkrmD {
+  background-color: white;
+  color: black;
+}
+
+.wtweapon, .cptoprow, .wtTotal, .wtDm, .wtOther {
+  background-color: black;
+  color: white;
+}
+
+.wtweapon {
+    font-size: 9pt;
+}
+
+.wtSkrmD, .wptSkrm, .wpttoprowcut, .wpttoprowthrust, .wtRange, .wpttoprowparryorblock, .wpttoprowdodge, .pp, .wtRange, .wtHand, .wtD, .wtSkrmDef, .wtAdvBlock {
+  color: black;
+  background-color: #D8D8D8;
+}
+
+.wtReachCategory, .wtReachLevel, .wtReachSpaces {
+    color: black;
+    background-color: #D8D8D8;
+    border: 1px solid #A4A4A4;
+}
+
+.wtAdvBlock {
+    border: 1px solid #A4A4A4;
+}
+
+.wptrangedc {
+  display: grid;
+  align-self: center;
+
+}
+
+.wpttoprowcut, .wpttoprowthrust, .wtRange, .wtHand, .wtA, .wtD, .wrSkrmDef {
+  border: 1px solid #A4A4A4;
+}
+
+.wpttoprowdodge {
+  border-left: 1px solid #A4A4A4;
+}
+
+.wpttoprowAP, .wtMod {
+  border-left: 1px solid #D8D8D8;
+  border-right: 1px solid #D8D8D8;
+}
+
+
+
+
+     /*repeating inputer*/
+
+div.wptfillrepeating,
+div.wptfillrepeating input[type="text"] {
+    display: grid;
+    grid-template-columns: 90pt 22pt 25pt 24pt 24pt 24pt 24pt 24pt 24pt 24pt 24pt 24pt 37pt 26pt 26pt 32pt 25pt 1fr;
+    font-family: 'Verdana';
+    font-weight: 100;
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+}
+
+input[name="attr_cptotal"], input[name="attr_weapon"] {
+
+background-color: #4a4545;
+color: #e0e0e0;
+border: 1px solid #363434;
+}
+
+
+
+/* RANGED WEAPONS */
+
+div.rangedweapontable {
+  font-family: 'Girassol';
+  width: 1fr;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 7.0pt;
+  background-color: #b2b7b7;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+      -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+      box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+}
+
+div.rangedweapontable span {
+  display: grid;
+  align-items: center;      /* new */
+  justify-items: center;    /* new */
+
+}
+
+div.rwptrow2 span {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+div.rwptrow1 {
+    display: grid;
+    grid-template-columns: 90pt  22pt 25pt 72pt 50pt 94pt 24pt 57pt 60pt;
+    column-gap: 0;
+  background-color: none;
+  height: 16pt;
+
+}
+
+div.rwptrow2 {
+    display: grid;
+    grid-template-columns: 90pt  22pt 25pt 24pt 24pt 24pt 50pt 30pt 40pt 24pt 24pt 32pt 25pt 104pt;
+    column-gap: 0;
+  background-color: gray;
+
+}
+
+.wptrangedc, .rollplus, .wptSkrm, .rwpttoprowAP, .rwtMod, .rwtA {
+  background-color: white;
+  color: black;
+}
+
+.rwtweapon, .rwptcptoprow, .rwtTotal, .rwtOther {
+  background-color: black;
+  color: white;
+}
+
+.rwtweapon {
+    font-size: 9pt;
+}
+
+.rwtPenetration, .rwpttoprowshoot, .rwpttoprowrange, .wpttoprowparry, .rwtSkrmD, .rwtAccuracy, .rwtroll, .rwtincrement, .rwttime, .rwtleftequipped, .rwtrightequipped {
+  color: black;
+  background-color: #D8D8D8;
+}
+
+.wptrangedc {
+  display: grid;
+  align-self: center;
+
+}
+
+.rwpttoprowshoot, .rwtAccuracy, .rwtPenetration, .rwtSkrmD, .rwtleftequipped, .rwtrightequipped, .rwtA, .rwtroll, .wrSkrmDef {
+  border: 1px solid #A4A4A4;
+}
+
+
+
+.rwpttoprowAP, .rwtMod {
+  border-left: 1px solid #D8D8D8;
+  border-right: 1px solid #D8D8D8;
+}
+
+/*style reload*/
+.rwptreload {
+  background-color: #D8D8D8;
+}
+
+
+
+
+     /*repeating inputer*/
+
+div.rwptfillrepeating,
+div.rwptfillrepeating input[type="text"] {
+    display: grid;
+    grid-template-columns: 90pt  22pt 25pt 24pt 24pt 24pt 50pt 30pt 40pt 24pt 24pt 32pt 25pt 1fr;
+    font-family: 'Verdana';
+    font-weight: 100;
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+}
+
+input[name="attr_rangedCPTotal"], input[name="attr_rangedweapon"] {
+
+background-color: #4a4545;
+color: #e0e0e0;
+border: 1px solid #363434;
+}
+
+
+
+
+/* ARMOR TABLE */
+
+div.armortable {
+  /*
+  font-style: normal;
+  */
+  font-family: 'Girassol';
+  width: 435pt;
+  padding: 0;
+  column-gap: 0;
+  padding: 3pt 0pt 0in 3pt;
+  font-size: 8.0pt;
+  background-color: #b2b7b7;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+
+    -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+    box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.armortable span {
+  display: grid;
+  align-items: center;      /* new */
+  justify-items: center;    /* new */
+
+}
+
+div.armortbtoprow {
+    display: grid;
+    grid-template-columns: 70pt 72pt 20pt 72pt;
+    column-gap: 0;
+    height: 12.8pt;
+    font-size: 8.0pt;
+}
+
+span.atTopAvEquip {
+  background-color: #EAEAEA;
+  color: black;
+  font-weight: 900;
+  border-bottom: 1px solid #BCBCBC;
+}
+      /*cpbc DR total*/
+span.atP, span.atB, span.atC, span.atE {
+  background-color: #EAEAEA;
+  color: black;
+  font-weight: 900;
+  border-bottom: 1px solid #BCBCBC;
+}
+
+span.atDRTotal {
+  background-color: black;
+  color: white;
+}
+
+span.attc, span.attp, span.attb, span.atte {
+  background-color: black;
+  color: white;
+}
+
+span.atTopWeapon, span.atTopBD {
+  background-color: none;
+}
+
+    /* second row stuff */
+div.armorsecondrow {
+    display: grid;
+    grid-template-columns: 70pt 18pt 18pt 18pt 18pt 20pt 18pt 18pt 18pt 18pt 30pt 30pt 30pt 110pt;
+    height: 14pt;
+    column-gap: 0;
+    color: #292929;
+
+}
+     /* repeating inputs */
+div.armor-fillinrepeating,
+div.armor-fillinrepeating input[type="text"] {
+    display: grid;
+    grid-template-columns: 70pt 18pt 18pt 18pt 18pt 20pt 18pt 18pt 18pt 18pt 30pt 30pt 30pt 110pt;
+    font-family: 'Verdana';
+    font-weight: 100;
+    height: 14pt;
+    font-size: 7.0pt;
+    width: 100%;
+}
+
+input[name="attr_damagereduction"], input[name="attr_attP"],
+input[name="attr_attB"], input[name="attr_attE"], input[name="attr_armor"] {
+
+background-color: #4a4545;
+color: #e0e0e0;
+border: 1px solid #363434;
+}
+
+       /*some styling */
+div.armorsecondrow span, div.armortbtoprow span {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+span.atArmor, span.atDR {
+    font-weight: 900;
+    background: black;
+    color: #ffffff;
+}
+
+span.atArmor {
+    font-size: 9pt;
+}
+
+span.atLocation, span.atAPM, span.atStealth, span.atMobility, span.atOther {
+  background-color: #DBDBDB;
+
+}
+
+span.atStealth {
+  border-right: 1px solid #BCBCBC;
+  border-left: 1px solid #BCBCBC;
+}
+
+span.atBD {
+  background-color: #D6BEA3;
+  color: black;
+  font-weight: 600;
+  border-bottom: 1px solid #BCBCBC;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+span.atAPM {
+  background-color: white;
+  color: black;
+
+    border-right: 1px solid #BCBCBC;
+    border-left: 1px solid #BCBCBC;
+}
+
+
+/* RANGED DEFENSE TABLE */
+
+div.rangedefensetable {
+  font-family: 'Girassol';
+  width: 163pt;
+  height: 62pt;
+
+  margin-top: 0px;
+  margin-left: 5px;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #b2b7b7;
+
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.rangedefensetabletoprow {
+  border: none;
+}
+div.rangedefensetablesecondrow {
+  height: 17pt;
+}
+
+span.rangedefenseunarmedword, span.rangedefenseshieldword {
+    font-size: 9pt;
+  background-color: black;
+    color: white;
+}
+
+span.rangedefensemodifier, span.rangedefensestill, span.rangedefensemoving {
+  background-color: #D8D8D8;
+  color: black;
+}
+
+div.rangedefensetablesecondrow span {
+  border: 1px solid gray;
+}
+
+div.rangedefensetabletoprow, div.rangedefensetablesecondrow, div.rangedefensetableinputrow {
+  display: grid;
+  grid-template-columns: 80pt 28pt 28pt 28pt 28pt 28pt;
+
+}
+
+
+div.rangedefensetabletoprow span, div.rangedefensetablesecondrow span, div.rangedefensetableinputrow span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div.rangedefensetable input[type="text"] {
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    font-family: 'Verdana';
+    font-weight: 100;
+}
+
+span.rangeddefenseword {
+  background-color: black;
+  color: white;
+  font-size: 9pt
+}
+
+span.rangedefenseunarmedword, span.rangeddefenseshieldword {
+  background-color: #4a4545;
+  color: #e0e0e0;
+  font-size: 9pt;
+}
+
+
+
+
+
+/* SPELLS TABLE */
+
+div.spelltable {
+  display: grid;
+  font-family: 'Girassol';
+  width: 1fr;
+  padding: 0;
+  column-gap: 0;
+  font-size: 8.0pt;
+  color: black;
+  background-color: #b2b7b7;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px color #8a8378;
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+
+}
+
+div.spelltable span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div.strow {
+  display: grid;
+  grid-template-columns: 80pt 25pt 32pt 40pt 40pt 40pt 25pt 25pt 25pt 20pt 270pt ;
+    column-gap: 0;
+  background-color: #D8D8D8;
+}
+
+.stspells, .stLVL, .stCP, .stRoll, .stOpp, .stArea, .stDuration, .stRange, .stDescription {
+
+  border: 1px solid #A4A4A4;
+}
+
+.stRollbutton, .stLVL, .stspells, .stCP, .stRoll {
+  background-color: black;
+  color: white;
+
+}
+
+.stArea, .stDuration, .stRange, .stDescription {
+  background-color: white;
+}
+
+.stLVL, .stRoll {
+  background-color: gray;
+}
+
+div.strepeating,
+div.strepeating input[type="text"] {
+    display: grid;
+  grid-template-columns: 80pt 25pt 32pt 40pt 40pt 40pt 25pt 25pt 25pt 20pt 270pt ;
+    font-family: 'Verdana';
+    font-weight: 100;
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+  padding: 0;
+  color: black;
+}
+
+input[name="attr_spelllevel"], input[name="attr_spellskill"],
+input[name="attr_strcp"] {
+
+background-color: #EAEAEA;
+font-family: 'Girassol';
+font-weight: 100;
+}
+
+div.strepeating input[name="attr_spelldescription"] {
+  text-align: left;
+  padding: 0pt 4pt;
+  font-family: 'Girassol';
+  font-weight: 100;
+}
+
+div.strepeating input[name="attr_spellorability"] {
+    background-color: #4a4545;
+    color: #e0e0e0;
+    border: 1px solid #363434;
+}
+
+
+
+
+/* SKILLS AND ABILITIES */
+
+div.skilltable {
+  font-family: 'Girassol';
+  width: 610pt;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  margin-top: 5px;
+  color: black;
+  background-color: #b2b7b7;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+    -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+    box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+
+}
+
+
+div.skilltablerow span, div.skilltablerow2 span {
+
+  display: grid;
+  align-items: center;      /* new */
+  justify-items: center;
+
+}
+
+
+div.skilltablerow {
+  display: grid;
+  grid-template-columns:  150pt 26pt 20pt 24pt 24pt 100pt 48pt 24pt 24pt 88pt 80pt;
+
+
+}
+
+div.skilltablerow2 {
+  display: grid;
+  grid-template-columns:  150pt 26pt 20pt 24pt 24pt 20pt 20pt 20pt 20pt 20pt 24pt 24pt 24pt 24pt 22pt 22pt 22pt 22pt 80pt ;
+}
+
+.str1Above, .str1RelevantAttributes, .str2Tier, .str2Cost, .str2AboveSub, .str2Roll {
+  background-color: #cfcfcf;
+}
+
+.str2Roll, .str1Skillsand, .str2Abilities, .str2Total {
+  background-color: black;
+  color: white;
+}
+
+.str1TiersbyCost, .str27, .str24, .str22, .str21, .str2star, .str2ATR1, .str2Mod1, .str2ATR2, .str2Mod2 {
+  background-color: #bababa;
+}
+
+.str1Synergy, .str2Bonus, .str2Offset {
+  background-color: #575757;
+  color: white;
+}
+
+.str1RelevantAttributes, .str2Tier, .str2Cost, .str1TiersbyCost, .str27, .str24, .str22, .str21, .str2star, .str2ATR1, .str2Mod1, .str2ATR2, .str2Mod2, .str2Bonus, .str2Offset {
+  border: 1px solid gray;
+}
+
+.str1Skillsand, .str2Abilities {
+    font-size: 9pt;
+}
+
+div.skillsfillrepeating,
+div.skillsfillrepeating input[type="text"] {
+    display: grid;
+  grid-template-columns:  150pt  26pt 20pt 24pt 24pt 20pt 20pt 20pt 20pt 20pt 24pt 24pt 24pt 24pt 22pt 22pt 22pt 22pt 80pt;
+    font-family: 'Verdana';
+    font-weight: 100;
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    color: black;
+}
+
+.str2Roll {
+  border-left: 1px solid #d1d1d1;
+}
+
+/*
+.str2Total {
+  border-right: 1px solid white;
+}
+*/
+
+input[name="attr_tierabovesub"], input[name="attr_synergybonus"], input[name="attr_synergyoffset"], input[name="attr_group"] {
+  background-color: #e6e6e6;
+}
+input[name="attr_skilltotal"] {
+  background-color: #EAEAEA;
+}
+
+input[name="attr_cost"], input[name="attr_tier"] {
+    background-color: #cacaca;
+}
+
+div.skillsfillrepeating input[name="attr_skillsandabilities"] {
+    background-color: #4a4545;
+    color: #e0e0e0;
+    border: 1px solid #363434;
+}
+
+
+/* POINT BUY TOTALS TABLE */
+
+div.pointbuytable {
+  font-family: 'Girassol';
+  width: 542pt;
+  height: 185pt;
+
+  margin-top: 12px;
+  margin-left: 0px;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #404040;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.pointbuytabletitlerow {
+  height: 17pt;
+}
+
+div.pointbuytabletitlerow, div.pointbuytabletotalrow {
+  background-color: black;
+  color: white;
+}
+
+div.pointbuytabletitlerow span {
+  border: 1px solid gray;
+}
+
+div.pointbuytabletitlerow, div.pointbuytablerow, div.pointbuytabletotalrow {
+  display: grid;
+  grid-template-columns: 111pt 26pt 30pt 26pt 30pt 320pt;
+
+}
+
+
+div.pointbuytabletitlerow span, div.pointbuytablerow span, div.pointbuytabletotalrow span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div.pointbuytablerow {
+  color: white;
+  font-family: 'Verdana';
+  font-size: 7pt;
+}
+
+.pbtpointsspent {
+  font-size: 10pt;
+}
+
+div.pointbuytable input[type="text"] {
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    font-family: 'Verdana';
+    font-weight: 100;
+}
+
+.pbtUnspent, .pbtSpent, .pbtNegative {
+    background-color: #cfcfcf;
+    color: black;
+}
+
+.pbtnotes {
+    background-color: #404040;
+}
+
+.pbtSkillTable, .pbtPowersandAbilities, .pbtAttributes {
+    border: 1px solid #363434;
+}
+
+
+
+
+/* SPELL BUILDER */
+
+div.spellbuilder {
+  font-family: 'Verdana';
+  width: 1fr;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #b2b7b7;
+  margin-top: 12px;
+  margin-left: 0px;
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.spellbuilder span {
+  display: grid;
+  align-items: center;
+  justify-items: right;
+  padding: 0px 4px 0px 0px;
+}
+
+     /*rows*/
+div.sbtitlerow {
+  display: grid;
+  grid-template-columns: 60pt repeat(4, 90pt 20pt);
+}
+
+div.sbrowcorespell, div.sbrowdamage, div.sbrowspelltype, div.sbrowarea, div.sbrowduration, div.sbrowrange, div.sbrowmodifiers, div.sbmodifiersfill {
+  display: grid;
+  grid-template-columns: 60pt repeat(4, 90pt 20pt);
+}
+
+
+div.spellbuilder input[type="text"] {
+  font-family: 'Verdana';
+  height: 12.8pt;
+  font-size: 7.0pt;
+  width: 100%;
+  color: black;
+}
+
+input[name="attr_spellbuildername1"], input[name="attr_spellbuildername2"],
+input[name="attr_spellbuildername3"],
+input[name="attr_spellbuildername4"],
+input[name="attr_spellbuilderlvl1"],
+input[name="attr_spellbuilderlvl2"],
+input[name="attr_spellbuilderlvl3"],
+input[name="attr_spellbuilderlvl4"], .sbcorespell {
+  background-color: #404040;
+  color: blue;
+}
+
+div.sbtitlerow input[type="text"] {
+  color: white;
+}
+
+
+input[name="attr_sbcorespell1"], input[name="attr_sbcorelvl1"],
+input[name="attr_sbcorespell2"],
+input[name="attr_sbcorelvl2"],
+input[name="attr_sbcorespell3"],
+input[name="attr_sbcorelvl3"],
+input[name="attr_sbcorespell4"],
+input[name="attr_sbcorelvl4"], .sbcorespell, input[name="attr_sbmodifiers1"], input[name="attr_sbmodifierslvl1"],
+input[name="attr_sbmodifiers2"],
+input[name="attr_sbmodifierslvl2"],
+input[name="attr_sbmodifiers3"],
+input[name="attr_sbmodifierslvl3"],
+input[name="attr_sbmodifiers4"],
+input[name="attr_sbmodifierslvl4"] {
+  background-color: #dbdbdb;
+  color: black;
+}
+
+div.sbmodifiersfill input[name="attr_sbmodifierleft"],
+div.sbmodifiersfill input[name="attr_sbmodifiertext1"],
+div.sbmodifiersfill input[name="attr_sbmodifier1"],
+div.sbmodifiersfill input[name="attr_sbmodifiertext2"],
+div.sbmodifiersfill input[name="attr_sbmodifier2"],
+div.sbmodifiersfill input[name="attr_sbmodifiertext3"],
+div.sbmodifiersfill input[name="attr_sbmodifier3"],
+div.sbmodifiersfill input[name="attr_sbmodifiertext4"],
+div.sbmodifiersfill input[name="attr_sbmodifier4"] {
+  background-color: #dbdbdb;
+  color: black;
+}
+
+
+
+.sbdamage, .sbspelltype, .sbmodifiers {
+  background-color: gray;
+}
+
+.sbarea, .sbduration, .sbrange {
+  color: black;
+  background-color: white;
+}
+
+.sbdamage, .sbspelltype, .sbmodifiers {
+  color: black;
+  background-color: #dbdbdb;
+}
+
+.sbnameandlevel {
+  color: white;
+  background-color: black;
+}
+
+
+
+
+
+
+
+/* INVENTORY TABLE */
+
+div.inventorytable {
+  font-family: 'Girassol';
+  width: 259pt;
+
+
+  margin-top: 12px;
+  margin-left: 0px;
+  padding: 0;
+  column-gap: 0;
+  padding: 0in 1.5pt 0in 1.5pt;
+  font-size: 8.0pt;
+  background-color: #404040;
+
+  border: 0px solid #403635;
+  outline: 3px solid #9a9489;
+  outline-offset: 1px;
+
+  -webkit-box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+  box-shadow: 2px 2px 11px 3px rgba(53, 39, 25, 0.45);
+
+}
+
+div.inventorytabletoprow {
+  height: 19pt;
+}
+
+span.inventorytabletotalsword, span.inventorytableinventoryword {
+  background-color: black;
+  color: white;
+}
+
+span.inventorytableweightword, span.inventorytablebulkword, span.inventorytablemobilityword, span.inventorytableapmodword, span.inventoryequippedword {
+    background-color: #D8D8D8;
+    color: black;
+}
+
+div.inventorytabletoprow span {
+  border: 1px solid gray;
+}
+
+div.inventorytabletoprow, div.inventorytotalsrow {
+  display: grid;
+  grid-template-columns: 100pt 32pt 32pt 32pt 32pt 32pt;
+
+}
+
+div.inventorytablerepeatinginputsrow,
+div.inventorytablerepeatinginputsrow input[type="text"], div.inventorytablerepeatinginputsrow input[type="checkbox"] {
+    display: grid;
+  grid-template-columns: 100pt 32pt 32pt 32pt 32pt 32pt;
+    font-family: 'Verdana';
+    font-weight: 100;
+    height: 12.8pt;
+    font-size: 7.0pt;
+    width: 100%;
+    color: black;
+}
+
+
+div.inventorytabletoprow span, div.inventorytotalsrow span {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.inventorytableinventoryword {
+    font-size: 9pt;
+}
+
+
+
+
+/*roll buttons*/
+
+.charsheet button[type=roll].derivedattributerollbutton::before {
+  content: '';
+}
+
+.charsheet button[type=roll].attributerollbutton::before {
+  content: '';
+}
+.charsheet button[type=roll].hidden {
+   display: none;
+
+}
+
+/* custom roll templates */
+.sheet-rolltemplate-dodas1 table {
+ width:100%;
+ background-color: white;
+ font-family:"Palatino",Helvetica,sans-serif;
+ border:1px solid rgba(112,32,130,1)
+ color: black;
+}
+.sheet-rolltemplate-dodas1 caption {
+ background: linear-gradient(180deg, #000000, #524949);
+ color: #d5e0e0;
+ text-align: center;
+ bottom:0;
+ font-weight:300;
+ font-size:1.1em;
+ padding: 5px 5px 0px 5px;
+}
+.sheet-rolltemplate-dodas1 td {
+ padding:2px;
+ line-height:1.4em;
+ color: #f3f3f3;
+     background-color: #4a4c4c;
+}
+
+.sheet-rolltemplate-dodas1 td:first-child {
+ font-weight:bold;
+ text-align:right;
+ min-width:50px;
+ padding-right:10px;
+ color: black;
+ background-color: #d5dbdc;
+}
+.sheet-rolltemplate-dodas1 tr:nth-child(even) {
+ background-color:#eee
+ color: black;
+}
+
+.sheet-rolltemplate-dodas1 .textchatcontainer .inlinerollresult {
+    background-color: #404040;
+    color: white;
+    border: 2px solid #4b7548;
+}
+
+/*custom roll template dodas damage */
+.sheet-rolltemplate-dodasdmg table {
+ width:100%;
+ background-color: #732f2f;
+ font-family:"Palatino",Helvetica,sans-serif;
+ border:1px solid rgba(112,32,130,1)
+ color: black;
+}
+.sheet-rolltemplate-dodasdmg caption {
+ background: linear-gradient(180deg, #000000, #524949);
+ color: #d5e0e0;
+ text-align: center;
+ font-weight:300;
+ font-size:1.1em;
+ padding: 5px 5px 0px 5px;
+}
+.sheet-rolltemplate-dodasdmg td {
+ padding:2px;
+ line-height:1.4em;
+ vertical-align:top
+ color: #f3f3f3;
+     background-color: #4a4c4c;
+}
+.sheet-rolltemplate-dodasdmg td:first-child {
+ font-weight:bold;
+ text-align:right;
+ min-width:50px;
+ padding-right:10px;
+ color: black;
+ background-color: #d5dbdc;
+}
+.sheet-rolltemplate-dodasdmg tr:nth-child(even) {
+ background-color: #eee;
+ color: black;
+}
+
+.sheet-rolltemplate-dodasdmg .textchatcontainer .inlinerollresult {
+    background-color: #404040;
+    color: white;
+    border: 2px solid #4b7548;
+}
+
+/*
+button[type=roll].sheet-rolltemplate-dodas1 {
+ background-color: #000000
+}
+*/
+
+.charsheet button[type=roll].sheet-d6-dice::before {
+    font-family: 'dicefontd6';
+    content: 'F ';
+}
+
+
+.sheet-rolltemplate-dodas1 a[href^='!'],.sheet-rolltemplate-dodas1 a[href^='~'] {
+    background-color: #6f120c;
+    padding: 1px 0px 0px 0px;
+    color: white;
+    height: 17px;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid white;
+}
+
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-dodas1 .inlinerollresult {
+    background-color: #303030;
+    color: white;
+}
+
+.sheet-rolltemplate-dodas1 .inlinerollresult {
+    background-color: #303030;
+    color: white;
+}
