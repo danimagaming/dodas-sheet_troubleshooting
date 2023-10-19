@@ -67,7 +67,7 @@ td {
     height: 9.8pt;
 }
 
-input {
+.charsheet input {
     width: 100%;
     font-weight: 800;
     background: #352719;
@@ -113,7 +113,7 @@ button[type="action"].tabbutton {
 /*Configure the tab buttons*/
 .allsection,
 .combat,
-.skillsandpoints, .spells {
+.skillsandpoints, .spells, .story {
 	display: none;
 }
 
@@ -121,10 +121,10 @@ button[type="action"].tabbutton {
 .sheet-tabstoggle[value="allsection"] ~ div.allsection,
 .sheet-tabstoggle[value="combat"] ~ div.combat,
 .sheet-tabstoggle[value="skillsandpoints"] ~ div.skillsandpoints,
-.sheet-tabstoggle[value="spells"] ~ div.spells {
+.sheet-tabstoggle[value="spells"] ~ div.spells,
+.sheet-tabstoggle[value="story"] ~ div.story {
 	display: block;
 }
-
 
 
 
@@ -1411,6 +1411,7 @@ div.inventorytable {
 
   margin-top: 12px;
   margin-left: 0px;
+  margin-bottom: 8px;
   padding: 0;
   column-gap: 0;
   padding: 0in 1.5pt 0in 1.5pt;
@@ -1491,41 +1492,137 @@ div.inventorytabletoprow span, div.inventorytotalsrow span {
 
 }
 
-/* custom roll templates */
-.sheet-rolltemplate-dodas1 table {
- width:100%;
- background-color: white;
- font-family:"Palatino",Helvetica,sans-serif;
- border:1px solid rgba(112,32,130,1)
- color: black;
-}
-.sheet-rolltemplate-dodas1 caption {
- background: linear-gradient(180deg, #000000, #524949);
- color: #d5e0e0;
- text-align: center;
- bottom:0;
- font-weight:300;
- font-size:1.1em;
- padding: 5px 5px 0px 5px;
-}
-.sheet-rolltemplate-dodas1 td {
- padding:2px;
- line-height:1.4em;
- color: #f3f3f3;
-     background-color: #4a4c4c;
+
+/* -- STORY -- */
+
+.storychunk {
+  border: 1px solid #554811;
+  font-family: Cambria;
+  padding: 0px 0px 8px 0px;
+  width: 100%;
 }
 
-.sheet-rolltemplate-dodas1 td:first-child {
+.storyHeader {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: black;
+
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+.personalityrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  background: #49453a;
+  color: #d6d6d4;
+  font-style: italic;
+
+}
+
+/*
+.personalityrow2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  background: #615e56;
+  color: #d6d6d4;
+}
+*/
+
+.storyDescriptorHeader {
+  border: 1px solid #5e585800;
+  width: 97%;
+}
+
+.ui-dialog .charsheet textarea {
+  min-height: 1rem;
+  height: 4rem;
+  width: 90%;
+  font-style: normal;
+  font-family: Palatino;
+  background-color: #352719;
+  padding: 6px;
+  color: #d6d6d4;
+  border: 1px dotted #000000;
+}
+
+
+
+
+
+
+
+/* ----- ROLL TEMPLATES--------- */
+
+/* custom roll templates */
+.sheet-rolltemplate-dodas1 .sheet-container {
+ justify-content: space-between;
+ width:100%;
+ background-color: black;
+ font-family:"Palatino",Helvetica,sans-serif;
+ margin-bottom: 5pt;
+ border: 1px solid #c2cecf;
+}
+
+.sheet-rolltemplate-dodas1 .sheet-fakeheader {
+ background: linear-gradient(180deg, #dfe9eb, #93a3a2);
+ color: #d5e0e0;
+ bottom:0;
+ display: grid;
+
+}
+
+.sheet-rolltemplate-dodas1 .sheet-titleweapon {
+    vertical-align: top;
+    text-align: center;
+
+ font-weight:300;
+ font-size:1.4em;
+ height: 12pt;
+ color: black;
+}
+
+.sheet-rolltemplate-dodas1 .sheet-subheader {
+    color: black;
+    text-align: center;
+    font-weight:150;
+    font-size: .8em;
+    font-style: italic;
+    vertical-align: bottom;
+    height: 11pt;
+}
+
+/* td style */
+.sheet-rolltemplate-dodas1 span {
+ padding:1px;
+ line-height:1.2em;
+ color: #f3f3f3;
+}
+
+/* td:first-child */
+.sheet-rolltemplate-dodas1 .sheet-tableevenrow {
  font-weight:bold;
- text-align:right;
  min-width:50px;
  padding-right:10px;
  color: black;
- background-color: #d5dbdc;
+ background-color: #3e3e3e;
+ display: grid;
+ grid-template-columns: 83pt 122pt;
+ justify-content: left;
 }
-.sheet-rolltemplate-dodas1 tr:nth-child(even) {
- background-color:#eee
+
+/*td:nth-child(even) */
+.sheet-rolltemplate-dodas1 .sheet-tableoddrow {
+ background-color: #272727;
  color: black;
+ display: grid;
+ grid-template-columns: 83pt 122pt;
+ justify-content: left;
 }
 
 .sheet-rolltemplate-dodas1 .textchatcontainer .inlinerollresult {
@@ -1534,30 +1631,398 @@ div.inventorytabletoprow span, div.inventorytotalsrow span {
     border: 2px solid #4b7548;
 }
 
-/*custom roll template dodas damage */
-.sheet-rolltemplate-dodasdmg table {
+.sheet-rolltemplate-dodas1 span.sheet-attackdodas1, .sheet-rolltemplate-dodas1 span.sheet-mosdodas1, .sheet-rolltemplate-dodas1 span.sheet-reachdodas1, .sheet-rolltemplate-dodas1 span.sheet-reachresultsdodas1, .sheet-rolltemplate-dodas1 span.sheet-notesdodas1, .sheet-rolltemplate-dodas1 span.sheet-notesresultsdodas1 {
+    padding: 3pt 0pt 0pt 3pt;;
+}
+
+.sheet-rolltemplate-dodas1 span.sheet-attackdodas1, .sheet-rolltemplate-dodas1 span.sheet-reachdodas1, .sheet-rolltemplate-dodas1 span.sheet-notesdodas1 {
+    font-weight: bold;
+}
+
+/* DODAS DEFENSE */
+.sheet-rolltemplate-dodasdefense .sheet-container {
+ justify-content: space-between;
  width:100%;
- background-color: #732f2f;
+ background-color: black;
+ font-family:"Palatino",Helvetica,sans-serif;
+ margin-bottom: 5pt;
+ border: 1px solid #d7d8d9;
+}
+
+.sheet-rolltemplate-dodasdefense .sheet-fakeheader {
+ background: linear-gradient(180deg, #ceb58a, #c59a57);
+ color: #d5e0e0;
+ bottom:0;
+ display: grid;
+
+}
+
+.sheet-rolltemplate-dodasdefense .sheet-titleweapon {
+    vertical-align: top;
+    text-align: center;
+
+ font-weight:300;
+ font-size:1.4em;
+ height: 12pt;
+ color: black;
+}
+
+.sheet-rolltemplate-dodasdefense .sheet-subheader {
+    color: black;
+    text-align: center;
+    font-weight:150;
+    font-size: .8em;
+    font-style: italic;
+    vertical-align: bottom;
+    height: 11pt;
+}
+
+/* td style */
+.sheet-rolltemplate-dodasdefense span {
+ padding:1px;
+ line-height:1.2em;
+ color: #f3f3f3;
+}
+
+/* td:first-child */
+.sheet-rolltemplate-dodasdefense .sheet-tableevenrow {
+ font-weight:bold;
+ min-width:50px;
+ padding-right:10px;
+ color: black;
+ background-color: #3e3e3e;
+ display: grid;
+ grid-template-columns: 83pt 122pt;
+ justify-content: left;
+}
+
+/*td:nth-child(even) */
+.sheet-rolltemplate-dodasdefense .sheet-tableoddrow {
+ background-color: #272727;
+ color: black;
+ display: grid;
+ grid-template-columns: 83pt 122pt;
+ justify-content: left;
+}
+
+.sheet-rolltemplate-dodasdefense .textchatcontainer .inlinerollresult {
+    background-color: #404040;
+    color: white;
+    border: 2px solid #4b7548;
+}
+
+.sheet-rolltemplate-dodasdefense span.sheet-attackdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-mosdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-reachdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-reachresultsdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-notesdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-notesresultsdodasdefense {
+    padding: 3pt 0pt 0pt 3pt;;
+}
+
+.sheet-rolltemplate-dodasdefense span.sheet-attackdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-reachdodasdefense, .sheet-rolltemplate-dodasdefense span.sheet-notesdodasdefense {
+    font-weight: bold;
+}
+
+
+
+/*custom roll template dodas mos damage */
+.sheet-rolltemplate-dodasmosdmg .sheet-container {
+ justify-content: space-between;
+ width:100%;
+ background-color: black;
+ font-family:"Palatino",Helvetica,sans-serif;
+ margin-bottom: 5pt;
+ border: 1px solid #400f0e;
+}
+
+.sheet-rolltemplate-dodasmosdmg .sheet-fakeheader {
+ background: linear-gradient(180deg, #5b180c, #4e1313);
+ color: #d5e0e0;
+ bottom:0;
+ display: grid;
+
+}
+
+.sheet-rolltemplate-dodasmosdmg .sheet-titleweapon {
+    vertical-align: top;
+    text-align: center;
+
+ font-weight:300;
+ font-size:1.4em;
+ height: 12pt;
+ color: #f2d2b3;
+}
+
+.sheet-rolltemplate-dodasmosdmg .sheet-subheader {
+    color: white;
+    text-align: center;
+    font-weight:150;
+    font-size: .8em;
+    font-style: italic;
+    vertical-align: bottom;
+    height: 11pt;
+}
+
+/* td style */
+.sheet-rolltemplate-dodasmosdmg span {
+ padding:1px;
+ line-height:1.2em;
+ color: #f3f3f3;
+}
+
+/* td:first-child */
+.sheet-rolltemplate-dodasmosdmg .sheet-tableevenrow {
+ font-weight:bold;
+ min-width:50px;
+ padding-right:10px;
+ color: black;
+ background-color: #3e3e3e;
+ display: grid;
+ grid-template-columns: 59pt 139pt;
+ justify-content: left;
+ padding-left: 3px;
+}
+
+/*td:nth-child(even) */
+.sheet-rolltemplate-dodasmosdmg .sheet-tableoddrow {
+ background-color: #272727;
+ color: black;
+ display: grid;
+ grid-template-columns: 71pt 66pt 66pt;
+ justify-content: left;
+ font-size: 9pt;
+ font-style: italic;
+ padding-left: 3px;
+}
+
+.sheet-rolltemplate-dodasmosdmg .sheet-tableoddrow {
+ background-color: #212121;
+ color: black;
+ display: grid;
+ grid-template-columns: 49pt 147pt;
+ justify-content: left;;
+ font-size: 9pt;
+ padding-left: 13px;
+ font-style: normal;
+}
+
+.sheet-rolltemplate-dodasmosdmg .sheet-tabledicerow {
+  background-color: #393939;
+  color: black;
+  display: grid;
+  grid-template-columns: 71pt 66pt 66pt;
+  justify-content: left;
+  font-size: 9pt;
+  font-style: italic;
+  padding-left: 3px;
+}
+
+.sheet-rolltemplate-dodasmosdmg .textchatcontainer .inlinerollresult {
+    background-color: #404040;
+    color: white;
+    border: 2px solid #4b7548;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-dodasmosdmg .inlinerollresult {
+  background-color: #404040;
+  color: white;
+  border: 2px solid #4b7548;
+}
+
+.sheet-rolltemplate-dodasmosdmg span.sheet-attackdodasdmg, .sheet-rolltemplate-dodasmosdmg span.sheet-mosdodasdmg, .sheet-rolltemplate-dodasmosdmg span.sheet-reachdodasdmg, .sheet-rolltemplate-dodasmosdmg span.sheet-reachresultsdodasdmg, .sheet-rolltemplate-dodasmosdmg span.sheet-notesdodasdmg, .sheet-rolltemplate-dodasmosdmg span.sheet-notesresultsdodasdmg {
+    padding: 3pt 0pt 0pt 3pt;;
+}
+
+.sheet-rolltemplate-dodasdmg span.sheet-attackdodas1, .sheet-rolltemplate-dodasdmg span.sheet-reachdodasdmg, .sheet-rolltemplate-dodasdmg span.sheet-notesdodasdmg {
+    font-weight: bold;
+}
+
+
+/* WHAT IS THIS FOR? */
+
+button[type=roll].sheet-d6-dice::before {
+    font-family: 'dicefontd6';
+    content: 'F ';
+}
+
+/* roll extra dmg or MoS buttons */
+.sheet-rolltemplate-dodas1 a[href^='!'],.sheet-rolltemplate-dodas1 a[href^='~'] {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dedede), to(#828585));
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    /*
+    background-color: #6f120c;
+    */
+
+    padding: 1px 0px 0px 0px;
+    color: black;
+    height: 17px;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #d4d4d4;
+}
+
+.sheet-rolltemplate-dodasmosdmg a[href^='!'],.sheet-rolltemplate-dodasmosdmg a[href^='~'] {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9e5252), to(#3f0e0d));
+    /* text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); */
+    border-radius: 4px;
+    /*
+    background-color: #6f120c;
+    */
+
+    padding: 1px 0px 0px 0px;
+    color: #f1e69b;
+    height: 17px;
+    width: 28px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #341010;
+}
+
+
+/*custom roll template dodas damage EXTRA */
+
+.sheet-rolltemplate-dodasdmgextra .sheet-container {
+ justify-content: space-between;
+ width:100%;
+ background-color: black;
+ font-family:"Palatino",Helvetica,sans-serif;
+ margin-bottom: 5pt;
+ border: 1px solid #400f0e;
+ padding-left: 3px;
+}
+
+.sheet-rolltemplate-dodasdmgextra .sheet-fakeheader {
+ background: linear-gradient(180deg, #dfe9eb, #93a3a2);
+ color: #d5e0e0;
+ bottom:0;
+ display: grid;
+
+}
+
+.sheet-rolltemplate-dodasdmgextra .sheet-titleweapon {
+    vertical-align: top;
+    text-align: center;
+
+ font-weight:300;
+ font-size:1.4em;
+ height: 12pt;
+ color: black;
+}
+
+.sheet-rolltemplate-dodasdmgextra .sheet-subheader {
+    color: black;
+    text-align: center;
+    font-weight:150;
+    font-size: .8em;
+    font-style: italic;
+    vertical-align: bottom;
+    height: 11pt;
+}
+
+/* td style */
+.sheet-rolltemplate-dodasdmgextra span {
+ padding:1px;
+ line-height:1.2em;
+ color: #f3f3f3;
+}
+
+/* td:first-child */
+.sheet-rolltemplate-dodasdmgextra .sheet-tableevenrow {
+ font-weight:bold;
+ min-width:50px;
+ padding-right:10px;
+ color: black;
+ background-color: #3e3e3e;
+ display: grid;
+ grid-template-columns: 104pt 104pt;
+ justify-content: left;
+}
+
+/*wrong table oops
+.sheet-rolltemplate-dodasdmgextra .sheet-tableoddrow {
+ background-color: #272727;
+ color: black;
+ display: grid;
+ grid-template-columns: 104pt 104pt;
+ justify-content: left;
+}
+
+.sheet-rolltemplate-dodasdmgextra .sheet-tabledicerow {
+ background-color: #3e3e3e;
+ color: black;
+ display: grid;
+ grid-template-columns: 70pt 70pt 60pt;
+ justify-content: left;
+}
+*/
+
+
+.sheet-rolltemplate-dodasdmgextra span.sheet-damageMoSdodasdmg {
+    padding: 3pt 0pt 0pt 3pt;;
+}
+
+.sheet-rolltemplate-dodasdmgextra span.sheet-damageMoSdodasdmg {
+    font-style: italic;
+}
+
+
+    /* roll extra dmg or MoS buttons */
+.sheet-rolltemplate-dodasdmgextra a[href^='!'],.sheet-rolltemplate-dodas1 a[href^='~'] {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dedede), to(#828585));
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    /*
+    background-color: #6f120c;
+    */
+
+    padding: 1px 0px 0px 0px;
+    color: black;
+    height: 17px;
+    width: 18px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #d4d4d4;
+}
+
+
+/* DARKMODE Rolll TEmplate */
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-dodas1 .inlinerollresult, .sheet-rolltemplate-darkmode.sheet-rolltemplate-dodasmosdmg .inlinerollresult, .sheet-rolltemplate-darkmode.sheet-rolltemplate-dodasdmgextra .inlinerollresult {
+    background-color: #303030;
+    color: white;
+}
+
+.sheet-rolltemplate-dodas1 .inlinerollresult, .sheet-rolltemplate-dodasmosdmg .inlinerollresult, .sheet-rolltemplate-dodasdmgextra .inlinerollresult {
+    background-color: #303030;
+    color: white;
+}
+
+
+
+/* original black gradiant header css, with repeateable rows. simple template */
+.sheet-rolltemplate-dodas table {
+ width:100%;
+ background-color: white;
  font-family:"Palatino",Helvetica,sans-serif;
  border:1px solid rgba(112,32,130,1)
  color: black;
 }
-.sheet-rolltemplate-dodasdmg caption {
+.sheet-rolltemplate-dodas caption {
  background: linear-gradient(180deg, #000000, #524949);
  color: #d5e0e0;
  text-align: center;
+ bottom:0;
  font-weight:300;
  font-size:1.1em;
  padding: 5px 5px 0px 5px;
 }
-.sheet-rolltemplate-dodasdmg td {
+
+.sheet-rolltemplate-dodas td {
  padding:2px;
  line-height:1.4em;
- vertical-align:top
  color: #f3f3f3;
      background-color: #4a4c4c;
 }
-.sheet-rolltemplate-dodasdmg td:first-child {
+
+.sheet-rolltemplate-dodas td:first-child {
  font-weight:bold;
  text-align:right;
  min-width:50px;
@@ -1565,22 +2030,16 @@ div.inventorytabletoprow span, div.inventorytotalsrow span {
  color: black;
  background-color: #d5dbdc;
 }
-.sheet-rolltemplate-dodasdmg tr:nth-child(even) {
- background-color: #eee;
+.sheet-rolltemplate-dodas tr:nth-child(even) {
+ background-color:#eee
  color: black;
 }
 
-.sheet-rolltemplate-dodasdmg .textchatcontainer .inlinerollresult {
+.sheet-rolltemplate-dodas .textchatcontainer .inlinerollresult {
     background-color: #404040;
     color: white;
     border: 2px solid #4b7548;
 }
-
-/*
-button[type=roll].sheet-rolltemplate-dodas1 {
- background-color: #000000
-}
-*/
 
 .charsheet button[type=roll].sheet-d6-dice::before {
     font-family: 'dicefontd6';
@@ -1588,7 +2047,7 @@ button[type=roll].sheet-rolltemplate-dodas1 {
 }
 
 
-.sheet-rolltemplate-dodas1 a[href^='!'],.sheet-rolltemplate-dodas1 a[href^='~'] {
+.sheet-rolltemplate-dodas a[href^='!'],.sheet-rolltemplate-dodas a[href^='~'] {
     background-color: #6f120c;
     padding: 1px 0px 0px 0px;
     color: white;
@@ -1600,12 +2059,12 @@ button[type=roll].sheet-rolltemplate-dodas1 {
 }
 
 
-.sheet-rolltemplate-darkmode.sheet-rolltemplate-dodas1 .inlinerollresult {
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-dodas .inlinerollresult {
     background-color: #303030;
     color: white;
 }
 
-.sheet-rolltemplate-dodas1 .inlinerollresult {
+.sheet-rolltemplate-dodas .inlinerollresult {
     background-color: #303030;
     color: white;
 }
