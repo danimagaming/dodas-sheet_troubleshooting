@@ -4,10 +4,10 @@
 
 <div class="tabbuttoncontainer">
   <div class="tabbutton0">
-    <button class="tabbutton" type="action" name="act_all">ALL</button>
+    <button class="tabbutton" type="action" name="act_allsection">ALL</button>
     </div>
   <div class="tabbutton1">
-    <button class="tabbutton" type="action" name="act_combat">WEAPONS & ARMOR</button>
+    <button class="tabbutton" type="action" name="act_combat">Weapons & Armor</button>
     </div>
   <div class="tabbutton2">
     <button class="tabbutton" type="action" name="act_skillsandpoints" >SKILLS & POINTS</button>
@@ -15,12 +15,15 @@
   <div class="tabbutton3">
     <button class="tabbutton" type="action" name="act_spells" >SPELLS</button>
     </div>
+  <div class="tabbutton4">
+    <button class="tabbutton" type="action" name="act_story" >STORY</button>
+    </div>
 </div>
 
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='all'  />
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='allsection'  />
 
 
-<div class="all">
+<div class="allsection">
 
 
 <div class="dodaslayout">
@@ -36,20 +39,20 @@
 
       <div class="ATRTableQuestion">
       <button class="attributerollbutton" type="roll" value="[Click For Attribute Information](https://www.dropbox.com/s/llcy4cu0awgfskf/3.%20Attributes.pdf?dl=0)" name="attributeInfo">
-          <span>?</span></button>
+          <span title="click for info">?</span></button>
       </div>
 
     </div>
  <!-- STR top row -->
     <div class="ATRTableRow">
       <div class="ATRIcon">
-        <img class="STRImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/ST%20icon.png?raw=true" width="23" height="23"></img>
+        <img title="Strength" class="STRImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/ST%20icon.png?raw=true" width="23" height="23"></img>
       </div>
 
       <div class="ATRLetter">
-        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Strength}} {{roll=[[2d6 + @{Strength}]]}}' name="roll_strengthbutton">
-          <span>STR</span></button>
-          <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/dotsLeft.png?raw=true" style="position:absolute; left:90px; top: 117px; height: 120px; width: 6px;">
+        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Strength}} {{roll=[[2d6 + @{Strength}]]}}' name="roll_Strength">
+          <span title="Roll Strength">STR</span></button>
+          <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/dotsLeft.png?raw=true" style="position:absolute; left:90px; top: 122px; height: 120px; width: 6px;">
       </div>
 
       <div class="ATRNumber">
@@ -60,14 +63,14 @@
 
       <div class="derivedATRLetter">
             <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Power}} {{roll=[[2d6 + @{Power}]]}}' name="roll_powerbutton">
-              <span>PW</span></button>
+              <span title="Power">PW</span></button>
           </div>
 <div class="derivedATRNumber">
             <input type="number" name="attr_power" style="font-weight: bold;" placeholder="0">
           </div>
 
     <div class="ATRIcon">
-        <img class="PWImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/power%20icon%20white%20border.png?raw=true" width="23" height="23"></img>
+        <img title="Power" class="PWImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/power%20icon%20white%20border.png?raw=true" width="23" height="23"></img>
       </div>
 
     </div>
@@ -77,14 +80,14 @@
 
       <div class="ATRIcon">
 
-        <img class="AGIImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/AGI%20Icon.png?raw=true" width="23" height="23"></img>
+        <img title="Agility" class="AGIImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/AGI%20Icon.png?raw=true" width="23" height="23"></img>
 
       </div>
 
       <div class="ATRLetter">
         <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Agility}} {{roll=[[2d6 + @{agility}]]}}' name="roll_agilitybutton">
 
-          <span>AGI</span></button>
+          <span title="Roll Agility">AGI</span></button>
       </div>
       <div class="ATRNumber">
         <input type="number" name="attr_agility" value="0">
@@ -94,7 +97,7 @@
 
        <div class="derivedATRLetter">
            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Movement}} {{Info=You can move a number of spaces per round equal to your move derived attribute. Each space is about 5 feet.}}' name="roll_movebutton">
-            <span>Move</span></button>
+            <span title="Movement speed in 5ft spaces">Move</span></button>
           </div>
           <div>
             <input type="number" name="attr_movement" style=" font-weight: bold;" placeholder="5">
@@ -110,12 +113,12 @@
     <div class="ATRTableRow">
 
       <div class="ATRIcon">
-        <img class="TGHImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/TH%20Icon.png?raw=true" width="23" height="23"></img>
+        <img title="Toughness" class="TGHImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/TH%20Icon.png?raw=true" width="23" height="23"></img>
       </div>
 
       <div class="ATRLetter">
         <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Toughness}} {{roll=[[2d6 + @{toughness}]]}}' name="roll_toughnessbutton">
-          <span>TGH</span></button>
+          <span title="Roll Toughness">TGH</span></button>
       </div>
 
       <div class="ATRNumber">
@@ -126,14 +129,14 @@
 
       <div class="derivedATRLetter">
             <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Body}} {{roll=[[2d6 + @{Body}]]}}' name="roll_bodybutton">
-              <span>BD</span></button>
+              <span title="Roll Body">BD</span></button>
             </div>
           <div class="derivedATRNumber">
             <input type="number" name="attr_body" style=" font-weight: bold;" placeholder="0">
           </div>
 
   <div class="ATRIcon">
-        <img class="BDImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/BD%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
+        <img title="Body" class="BDImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/BD%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
       </div>
 
     </div>
@@ -141,12 +144,12 @@
         <div class="ATRTableRow">
 
           <div class="ATRIcon">
-        <img class="TGHImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/SZ%20Icon.png?raw=true" width="23" height="23"></img>
+        <img title="Size" class="SZImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/SZ%20Icon.png?raw=true" width="23" height="23"></img>
       </div>
 
           <div class="ATRLetter">
               <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Size}} {{Info=Size adds to Power and Move, but subtracts from ranged defense}}' name="roll_sizebutton">
-            <span>SZ</span></button>
+            <span title="Size">SZ</span></button>
           </div>
           <div class="ATRNumber">
             <input type="number" name="attr_size" style=" font-weight: bold;" placeholder="0" min="-6">
@@ -156,14 +159,14 @@
 
            <div class="derivedATRLetter">
         <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Knockdown}} {{roll=[[2d6 + @{knockdown}]]}}' name="roll_knockdownbutton">
-          <span> KND</span></button>
+          <span title="Roll Knockdown"> KND</span></button>
         </div>
       <div class="derivedATRNumber">
         <input type="number" name="attr_knockdown" style=" font-weight: bold;" placeholder="0">
       </div>
 
       <div class="ATRIcon">
-        <img class="KNDImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/KN%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
+        <img title="Knockdown" class="KNDImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/KN%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
       </div>
 
         </div>
@@ -172,12 +175,12 @@
         <div class="ATRTableRow">
 
            <div class="ATRIcon">
-        <img class="WPImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/WP%20Icon.png?raw=true" width="23" height="23"></img>
+        <img title="Willpower" class="WPImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/WP%20Icon.png?raw=true" width="23" height="23"></img>
       </div>
 
           <div class="ATRLetter">
         <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Willpower}} {{roll=[[2d6 + @{willpower}]]}}' name="roll_willpowerbutton">
-          <span>WP</span></button>
+          <span title="Roll Willpower">WP</span></button>
       </div>
 
       <div class="ATRNumber">
@@ -188,14 +191,14 @@
 
           <div class="derivedATRLetter">
             <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Knockout}} {{roll=[[2d6 + @{knockout}]]}}' name="roll_knockoutbutton">
-              <span>KO</span></button>
+              <span title="Roll Knockout">KO</span></button>
           </div>
           <div class="derivedATRNumber">
             <input class="" type="number" name="attr_knockout" style=" font-weight: bold;" placeholder="0">
           </div>
 
       <div class="ATRIcon">
-        <img class="KOImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/KO%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
+        <img title="Knockout" class="KOImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/KO%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
       </div>
 
         </div>
@@ -205,12 +208,12 @@
   <div class="ATRTableRow">
 
      <div class="ATRIcon">
-        <img class="WITImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/WT%20Icon.png?raw=true" width="23" height="23"></img>
+        <img title="Wit" class="WITImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/WT%20Icon.png?raw=true" width="23" height="23"></img>
       </div>
 
       <div class="ATRLetter">
         <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Wit}} {{roll=[[2d6 + @{wit}]]}}' name="roll_witbutton">
-          <span>WIT</span></button>
+          <span title="Roll Wit">WIT</span></button>
       </div>
       <div class="ATRNumber">
         <input type="number" name="attr_wit" style=" font-weight: bold;" value="0" min="-5" max="5">
@@ -220,14 +223,14 @@
 
         <div class="derivedATRLetter">
         <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Reflex}} {{roll=[[2d6 + @{reflex} &{tracker}]]}}' name="roll_reflexbutton">
-          <span> REF</span></button>
+          <span title="Roll Reflex"> REF</span></button>
       </div>
       <div class="derivedATRNumber">
         <input type="number" name="attr_reflex" value="0">
       </div>
 
       <div class="ATRIcon">
-        <img class="REFImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/AP%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
+        <img title="Reflex" class="REFImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/AP%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
       </div>
 
         </div>
@@ -236,12 +239,12 @@
     <div class="ATRTableRow">
 
       <div class="ATRIcon">
-        <img class="INTImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/INT%20Icon.png?raw=true" width="23" height="23"></img>
+        <img title="Intelligence" class="INTImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/INT%20Icon.png?raw=true" width="23" height="23"></img>
       </div>
 
           <div class="ATRLetter">
             <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Intelligence}} {{roll=[[2d6 + @{intelligence}]]}}' name="roll_agilitybutton">
-              <span>IN</span></button>
+              <span title="Roll Intelligence">IN</span></button>
           </div>
           <div class="ATRNumber">
             <input type="number" name="attr_intelligence" style=" font-weight: bold;" placeholder="0">
@@ -251,14 +254,14 @@
 
           <div class="derivedATRLetter">
               <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} ActionPoints}} {{info=4+REF, or Reflex. Action points are your base Combat Points or CP, used for attack and defense rolls. Final CP is calculated by adding your skill modifier of whatever weapon is equipped, to your AP, and then adding any AP modifiers from the weapon equipped. Fill in in the CP column of the Weapon Table.}}' name="roll_actionpointsbutton">
-        <span>AP</span></button>
+        <span title="Action Points (Base CP)">AP</span></button>
       </div>
       <div class="derivedATRNumber">
         <input type="number" name="attr_actionpoints" style=" font-weight: bold;" placeholder="4">
       </div>
 
       <div class="ATRIcon">
-        <img class="APImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/CP%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
+        <img title="Action Points (BaseCP)" class="APImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/CP%20Icon%20white%20border.png?raw=true" width="23" height="23"></img>
       </div>
 
         </div>
@@ -279,11 +282,11 @@
  <div class="resolvetable">
      <div class="resolvetabletoprow">
          <span class="resolveemptycell"><img class="WPImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/WP%20Icon.png?raw=true" width="23" height="23"></img></span>
-         <span class="resolvewp">ATR</span>
-         <span class="resolvestart">Free</span>
-         <span class="resolvemax">Max</span>
-         <span class="resolvecurrent">Current</span>
-         <span class="resolvetemporary">Temp</span>
+         <span title="Relevant Attribute" class="resolvewp">ATR</span>
+         <span title="Free starting Resolve" class="resolvestart">Free</span>
+         <span title="Maximum starting Resolve" class="resolvemax">Max</span>
+         <span title="spendable resolve left" class="resolvecurrent">Current</span>
+         <span title="temporary Resolve" class="resolvetemporary">Temp</span>
      </div>
 
      <div class="resolvetablesecondrow">
@@ -311,21 +314,21 @@
  <div class="initiativetable">
      <div class="initiativetabletoprow">
          <span class="initiativeemptycell"><img class="REFImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/AP%20Icon%20white%20border.png?raw=true" width="23" height="23"></img></span>
-         <span class="initiativeref">REF</span>
-         <span class="initiativeskill">Skill</span>
+         <span title="Reflex starting attribute" class="initiativeref">REF</span>
+         <span title="Skill modifier to initiative" class="initiativeskill">Skill</span>
          <span class="initiativetotal">Total</span>
          <span class="initiativeroll">Roll</span>
 </div>
 
      <div class="initiativetablesecondrow">
-         <span class="initiativeword">initiative</span>
+         <span title="Determines combat order" class="initiativeword">initiative</span>
          <input type="number" name="attr_initiativereflexnumber" placeholder="0">
          <input type="number" name="attr_initiativeskillnumber" value="1">
          <input type="number" name="attr_initiativetotalnumber" value="1">
          <span>
              <button class="sheet-d6-dice" type="roll" value=
                       '&{template:dodas1} {{name=@{character_name} Initiative}} {{Initiative=[[1d6 + 1d6 + @{initiativetotalnumber} &{tracker}]]}} '
-                      name="roll_weaponrepeatingbutton"></button>
+                      name="roll_Initiative"></button>
                       </span>
 
      </div>
@@ -393,8 +396,8 @@
             <span><input type="text" name="attr_rangedcstill" placeholder="9"> </span>
             <span><input type="text" name="attr_rangedcmoving" placeholder="12"> </span>
             -->
-            <span class="wpttoprowAP">AP</span>
-            <span class="cptoprow">CP</span>
+            <span title="Action Points" class="wpttoprowAP">AP</span>
+            <span title="Combat Points" class="cptoprow">CP</span>
             <span class="wpttoprowcut">Swing / Shoot</span>
             <span class="wpttoprowthrust">Thrust / Throw</span>
             <span class="wpttoprowparryorblock">Parry / Block</span>
@@ -413,31 +416,31 @@
             <span class="dodgerollbutton">
                 <button class="sheet-d6-dice" type="roll" value=
                       '&{template:dodas1} {{name=@{character_name} @{weapon} }}{{Dodge=[[1d4 + 1d6 + @{dodgemodifier}]][[1d4 + 1d6 + @{dodgemodifier}]][[1d4 + 1d6 + @{dodgemodifier}]]}} '
-                      name="roll_weaponrepeatingbutton"></button>
+                      name="roll_Dodge"></button>
             </span>
           </div>
 
           <div class="wptrow2">
             <span class="wtweapon">Melee Weapons</span>
 
-            <span class="wtMod">Mod</span>
-            <span class="wtTotal">Total</span>
-            <span class="wtA">Dmg</span>
-            <span class="wtA">Att+</span>
+            <span title="Action Points Modifier" class="wtMod">Mod</span>
+            <span title="Combat Points (Attack and Defense)" class="wtTotal">Total</span>
+            <span title="Damage" class="wtA">Dmg</span>
+            <span title="number added to attack roll button" class="wtA">Att+</span>
             <span class="wtD">Roll</span>
-            <span class="wtA">Dmg</span>
-            <span class="wtA">Att+</span>
+            <span title="Damage" class="wtA">Dmg</span>
+            <span title="number added to attack roll button" class="wtA">Att+</span>
             <span class="wtD">Roll</span>
-            <span class="wtAdvBlock">Adv.?</span>
-            <span class="wtSkrmD">Def+</span>
+            <span title="Advantage or not?"class="wtAdvBlock">Adv.?</span>
+            <span title="Number added to defense roll button"class="wtSkrmD">Def+</span>
             <span class="wtD">Roll</span>
 
             <span class="wtReachCategory">Category</span>
-            <span class="wtReachLevel">Lvl</span>
-            <span class="wtReachSpaces">Spaces</span>
+            <span title="relative reach level" class="wtReachLevel">Lvl</span>
+            <span title="spaces away the weapon can attack" class="wtReachSpaces">Spaces</span>
 
-            <span class="wtRange">Left</span> <!-- moved reach elsewhere -->
-            <span class="wtHand">Right</span>
+            <span title="left hand equipped" class="wtRange">Left</span> <!-- moved reach elsewhere -->
+            <span title="Right hand equipped" class="wtHand">Right</span>
 
             <span class="wtOther">Other</span>
           </div>
@@ -452,40 +455,49 @@
               <input type="text" name="attr_cutattack" value="">
               <span class="swingweaponbutton">
 
-<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{weapon} }} {{attack=[[2d6 + @{cutattack}]] [[2d6 + @{cutattack}]][[2d6 + @{cutattack}]]}} {{Base Damage= @{cutdamage} swing or shoot}} {{Extra Dmg Dice= [1](~repeating_weapons_1d6extradamageswing) [2](~repeating_weapons_2d6extradamageswing) [3](~repeating_weapons_3d6extradamageswing) [4](~repeating_weapons_4d6extradamageswing) [5](~repeating_weapons_5d6extradamageswing) }} {{Notes=@{other}}}
+<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{weapon} }} {{subtags=@{character_name} }} {{diceADroll=Swing Attack}} {{attackdatadodas1=[[2d6 + @{cutattack}]] or [[2d6 + @{cutattack}]] or [[2d6 + @{cutattack}]], at +@{cutattack}}} {{reachdatadodas1=@{range} (@{reachlevel}), Spaces: @{reachspaces} }} {{mosorparryblock=Roll Dmg, MoS}} {{mosbuttonsdata= [<5](~repeating_weapons_underFiveMoS) [5](~repeating_weapons_fiveMoS) [10](~repeating_weapons_tenMoS) [15](~repeating_weapons_fifteenMoS) [20](~repeating_weapons_twentyMoS) [25](~repeating_weapons_twentyfiveMoS) [30](~repeating_weapons_thirtyMoS) }} {{notesdatadodas1=@{other}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{cutattack}]] '
  name="roll_weaponrepeatingbuttonswing"></button>
-            <button type="roll" name="roll_1d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_2d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 2d6}} {{Damage=[[2d6]] + @{cutdamage}}} "></button>
-            <button type="roll" name="roll_3d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 3d6}} {{Damage=[[3d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_4d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 4d6}} {{Damage=[[4d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_5d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 5d6}} {{Damage=[[5d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_6d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 6d6}} {{Damage=[[6d6]] + @{cutdamage}}}"></button>
+            <button type="roll" name="roll_underFiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg= @{cutdamage}}} {{MoSAmount=<5 MoS =}} {{MoSExplainer=Base Weapon Damage only}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+            <button type="roll" name="roll_fiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{cutdamage}}} {{MoSAmount=5 MoS =}} {{MoSExplainer=+1d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}} "></button>
+            <button type="roll" name="roll_tenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{cutdamage}}} {{MoSAmount=10 MoS =}} {{MoSExplainer=+1d6 Damage, Reroll 1 damage die}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+            <button type="roll" name="roll_fifteenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=15 MoS =}} {{MoSExplainer=+2d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+            <button type="roll" name="roll_twentyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=20 MoS =}} {{MoSExplainer=+2d6 Damage, Reroll 2 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+            <button type="roll" name="roll_twentyfiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=25 MoS =}} {{MoSExplainer=+3d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+            <button type="roll" name="roll_thirtyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=30 MoS =}} {{MoSExplainer=+3d6 Damage, Reroll 3 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+
+            <button type="roll" name="roll_headshotExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Headshot: +[[1d6]]}}"></button>
+            <button type="roll" name="roll_CritExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Critical: +[[1d6]]}}"></button>
+            <button type="roll" name="roll_RerollDmgDie" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Reroll 1d6: [[1d6]]}}"></button>
                       </span>
+
+
               <input type="text" name="attr_thrustdamage" value="">
               <input type="text" name="attr_thrustattack" value="">
+
+
               <span class="thrustweaponbutton">
-<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{weapon} }} {{attack=[[2d6 + @{thrustattack}]] [[2d6 + @{thrustattack}]][[2d6 + @{thrustattack}]]}} {{Base Damage= @{thrustdamage} thrust or throw}} {{Extra Dmg Dice= [1](~repeating_weapons_1d6extradamagethrust) [2](~repeating_weapons_2d6extradamagethrust) [3](~repeating_weapons_3d6extradamagethrust) [4](~repeating_weapons_4d6extradamagethrust) [5](~repeating_weapons_5d6extradamagethrust) }} {{Notes=@{other}}}
+
+<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{weapon} }} {{subtags=@{character_name} }} {{diceADroll=Thrust Attack}} {{attackdatadodas1=[[2d6 + @{thrustattack}]] or [[2d6 + @{thrustattack}]] or [[2d6 + @{thrustattack}]], at +@{thrustattack}}} {{reachdatadodas1=@{range} (@{reachlevel}), Spaces: @{reachspaces} }} {{mosorparryblock=Roll Dmg, MoS}} {{mosbuttonsdata= [<5](~repeating_weapons_underFiveMoS) [5](~repeating_weapons_fiveMoS) [10](~repeating_weapons_tenMoS) [15](~repeating_weapons_fifteenMoS) [20](~repeating_weapons_twentyMoS) [25](~repeating_weapons_twentyfiveMoS) [30](~repeating_weapons_thirtyMoS) }} {{notesdatadodas1=@{other}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{thrustattack}]] '
-                      name="roll_weaponrepeatingbuttonthrust"></button>
-            <button type="roll" name="roll_1d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_2d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[2d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_3d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[3d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_4d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[4d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_5d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[5d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_6d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[6d6]] + @{thrustdamage}}}"></button>
-                          <!--
-            <button type="roll" name="roll_2d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 2d6}} {{roll=[[2d6]]}}"></button>
-            <button type="roll" name="roll_3d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 3d6}} {{roll=[[3d6]]}}"></button>
-            <button type="roll" name="roll_4d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 4d6}} {{roll=[[4d6]]}}"></button>
-            <button type="roll" name="roll_5d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 5d6}} {{roll=[[5d6]]}}"></button>
-            <button type="roll" name="roll_6d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 6d6}} {{roll=[[6d6]]}}"></button>
-            -->
-                      </span>
+name="roll_weaponrepeatingbuttonthrust"></button>
+<button type="roll" name="roll_underFiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg= @{thrustdamage}}} {{MoSAmount=<5 MoS =}} {{MoSExplainer=Base Weapon Damage only}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_fiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{thrustdamage}}} {{MoSAmount=5 MoS =}} {{MoSExplainer=+1d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}} "></button>
+<button type="roll" name="roll_tenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{thrustdamage}}} {{MoSAmount=10 MoS =}} {{MoSExplainer=+1d6 Damage, Reroll 1 damage die}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_fifteenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=15 MoS =}} {{MoSExplainer=+2d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_twentyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=20 MoS =}} {{MoSExplainer=+2d6 Damage, Reroll 2 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_twentyfiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=25 MoS =}} {{MoSExplainer=+3d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_thirtyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=30 MoS =}} {{MoSExplainer=+3d6 Damage, Reroll 3 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+
+<button type="roll" name="roll_headshotExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Headshot: +[[1d6]]}}"></button>
+<button type="roll" name="roll_CritExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Critical: +[[1d6]]}}"></button>
+<button type="roll" name="roll_RerollDmgDie" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Reroll 1d6: [[1d6]]}}"></button>
+        </span>
+
               <input type="text" name="attr_parryblock" value="">
               <input type="text" name="attr_blockdefendplus" value="">
               <span class="rolldefendbutton">
-<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{weapon} }}{{Defense=[[2d6 + @{blockdefendplus}]][[2d6 + @{blockdefendplus}]][[2d6 + @{blockdefendplus}]]}} {{Parry or Block=@{parryblock}}}  {{Notes=@{other}}}
+<button class="sheet-d6-dice" type="roll" value='&{template:dodasdefense} {{name=@{weapon} }} {{subtags=@{character_name} }} {{diceADroll=Defense Roll}} {{attackdatadodas1=[[2d6 + @{blockdefendplus}]] or [[2d6 + @{blockdefendplus}]] or [[2d6 + @{blockdefendplus}]], at +@{blockdefendplus}}} {{reachdatadodas1=@{range} (@{reachlevel}), Spaces: @{reachspaces} }} {{mosorparryblock=Parry or Block:}} {{mosbuttonsdata=@{parryblock}}}  {{Notes=@{other}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{parryblock}]] '
                       name="roll_weaponrepeatingbuttondefend"></button>
                      </span>
@@ -523,7 +535,7 @@
             <span><input type="text" name="attr_rangedcmoving" placeholder="12"> </span>
             -->
             <span class="rwpttoprowAP">AP</span>
-            <span class="rwptcptoprow">CP</span>
+            <span title="Combat Points" class="rwptcptoprow">CP</span>
             <span class="rwpttoprowshoot">Shoot / Throw</span>
             <span class="rwpttoprowrange">Range</span>
 
@@ -536,17 +548,17 @@
           <div class="rwptrow2">
             <span class="rwtweapon">Ranged Weapons</span>
 
-            <span class="rwtMod">Mod</span>
-            <span class="rwtTotal">Total</span>
-            <span class="rwtA">Dmg</span>
-            <span class="rwtA">Att+</span>
+            <span title="modifier" class="rwtMod">Mod</span>
+            <span title="Combat Points" class="rwtTotal">Total</span>
+            <span title="Damage" class="rwtA">Dmg</span>
+            <span title="number added to Attack roll button" class="rwtA">Att+</span>
             <span class="rwtroll">Roll</span>
             <span class="rwtincrement">Increment</span>
 
-            <span class="rwtAccuracy">Accuracy</span>
-            <span class="rwtPenetration">Penetration</span>
-            <span class="rwtSkrmD">Shots</span>
-            <span class="rwttime">Time</span>
+            <span title="ignore this much range penalty" class="rwtAccuracy">Accuracy</span>
+            <span title="ignores armor all or nothing" class="rwtPenetration">Penetration</span>
+            <span title="shots before reloading" class="rwtSkrmD">Shots</span>
+            <span title="time to reload" class="rwttime">Time</span>
             <span class="rwtleftequipped">Left</span>
             <span class="rwtrightequipped">Right</span>
             <span class="rwtOther">Other</span>
@@ -560,11 +572,11 @@
               <input type="text" name="attr_rangeddmg" value="">
               <input type="text" name="attr_rangedattackplus" value="">
 
-             <span class="swingweaponbutton">
+             <span class="rangedweaponbutton">
 
 <button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{rangedweapon} }} {{attack=[[2d6 + @{rangedattackplus}]] [[2d6 + @{rangedattackplus}]][[2d6 + @{rangedattackplus}]]}} {{Base Damage= @{rangeddmg}}} {{Extra Dmg Dice= [1](~repeating_weapons_1d6extradamageswing) [2](~repeating_weapons_2d6extradamageswing) [3](~repeating_weapons_3d6extradamageswing) [4](~repeating_weapons_4d6extradamageswing) [5](~repeating_weapons_5d6extradamageswing) }} {{Notes=@{rangedother}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{rangedattackplus}]] '
- name="roll_weaponrepeatingbuttonswing"></button>
+ name="roll_Ranged-Attack"></button>
             <button type="roll" name="roll_1d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{cutdamage}}}"></button>
             <button type="roll" name="roll_2d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 2d6}} {{Damage=[[2d6]] + @{cutdamage}}} "></button>
             <button type="roll" name="roll_3d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 3d6}} {{Damage=[[3d6]] + @{cutdamage}}}"></button>
@@ -596,26 +608,26 @@
       <div class="armortable">
         <div class="armortbtoprow">
           <span class="atTopWeapon"></span>
-          <span class="atTopAvEquip">AV Equip</span>
+          <span title="Armor Value of equipment" class="atTopAvEquip">AV Equip</span>
           <span class="atTopBD"></span>
-          <span class="atDRTotal">DR Total</span>
+          <span title="Damage Reduction Total" class="atDRTotal">DR Total</span>
 
         </div>
         <div class="armorsecondrow">
           <span class="atArmor">Armor</span>
-          <span class="atC">c</span>
-          <span class="atP">p</span>
-          <span class="atB">b</span>
-          <span class="atE">e</span>
-          <span class="atBD">BD</span>
-          <span class="attc">c</span>
-          <span class="attp">p</span>
-          <span class="attb">b</span>
-          <span class="atte">e</span>
+          <span title="Cutting damage" class="atC">c</span>
+          <span title="Piercing damage" class="atP">p</span>
+          <span title="Blunt damage" class="atB">b</span>
+          <span title="Energy or Magic damage" class="atE">e</span>
+          <span title="Body attribute" class="atBD">BD</span>
+          <span title="Cutting damage reduction" class="attc">c</span>
+          <span title="Piercing damage reduciton" class="attp">p</span>
+          <span title="Blunt damage reduction" class="attb">b</span>
+          <span title="Energy or Magic damage reduction" class="atte">e</span>
 
-          <span class="atAPM">AP Mod</span>
-          <span class="atStealth">Stealth</span>
-          <span class="atStealth">Mobility</span>
+          <span title="Action Point Modifier" class="atAPM">AP Mod</span>
+          <span title="Modifier to Stealth" class="atStealth">Stealth</span>
+          <span title="Modifier to Mobility" class="atStealth">Mobility</span>
           <span class="atLocation">Location / Other</span>
         </div>
 
@@ -657,9 +669,9 @@
 
      <div class="rangedefensetablesecondrow">
          <span class="rangeddefenseword">Ranged Defense</span>
-         <span class="rangedefensemodifier">Mod</span>
-         <span class="rangedefensestill">Still</span>
-              <span class="rangedefensemoving">Moving</span>
+         <span title="Modifier" class="rangedefensemodifier">Mod</span>
+         <span title="Defense if standing still" class="rangedefensestill">Still</span>
+              <span title="Defense if moving or in Melee" class="rangedefensemoving">Moving</span>
 
         </div>
 
@@ -685,15 +697,15 @@
 <div class="spelltable">
   <div class="strow">
     <span class="stspells">Spells & Abilities</span>
-    <span class="stDmg">Dmg</span>
+    <span title="Damage or Amount of Spell Effect" class="stDmg">Dmg</span>
 
     <span class="stOpp">Type</span>
     <span class="stArea">Area</span>
     <span class="stDuration">Duration</span>
     <span class="stRange">Range</span>
-    <span class="stLVL">LVL</span>
-    <span class="stRoll">Roll+</span>
-    <span class="stCP">CP</span>
+    <span title="Spell Level" class="stLVL">LVL</span>
+    <span title="number added to spell roll" class="stRoll">Roll+</span>
+    <span title="Combat Point cost to cast" class="stCP">CP</span>
     <span class="stRollbutton">Roll</span>
     <span class="stDescription">Description</span>
   </div>
@@ -738,7 +750,7 @@
     <span class="str1empty"></span>
     <span class="str1empty"></span>
     <span class="str1empty"></span>
-    <span class="str1TiersbyCost">Tiers by Cost</span>
+    <span title="Which Tier is the Skill?" class="str1TiersbyCost">Tiers by Cost</span>
     <span class="str1Synergy">Synergy</span>
     <span class="str1Above">Above</span>
     <span class="str1Sub">Sub</span>
@@ -752,19 +764,19 @@
     <span class="str2Roll">Roll</span>
     <span class="str2Tier">Tier</span>
     <span class="str2Cost">Cost</span>
-    <span class="str27">5</span>
-    <span class="str24">4</span>
-    <span class="str22">3</span>
-    <span class="str21">2</span>
-    <span class="str2star">1</span>
+    <span title="Tier 5" class="str27">5</span>
+    <span title="Tier 4" class="str24">4</span>
+    <span title="Tier 3 (Optional)" class="str22">3</span>
+    <span title="Tier 2" class="str21">2</span>
+    <span title="Tier 1" class="str2star">1</span>
     <span class="str2Bonus">Bonus</span>
     <span class="str2Offset">Offset</span>
     <span class="str2AboveSub">Sub</span>
     <span class="str2Sub">Total</span>
-    <span class="str2ATR1">ATR</span>
-    <span class="str2Mod1">Mod</span>
-    <span class="str2ATR2">ATR</span>
-    <span class="str2Mod2">Mod</span>
+    <span title="Attribute used for skill" class="str2ATR1">ATR</span>
+    <span title="Attribute modifier" class="str2Mod1">Mod</span>
+    <span title="Attribute two used for skill" class="str2ATR2">ATR</span>
+    <span title="Attribute modifier" class="str2Mod2">Mod</span>
     <span class="OtherModifiersBottom">Modifiers</span>
 
   </div>
@@ -776,7 +788,7 @@
       <input type="text" name="attr_skilltotal" value="">
       <span class="skillrollbutton">
         <button class="sheet-d6-dice" type="roll" value=
-        '&{template:dodas1} {{name=@{character_name} @{skillsandabilities} }} {{roll=[[2d6 + @{skilltotal}]]}}'
+        '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
         name="roll_skilltotalcolumn"></button> </span>
         <input type="text" name="attr_tiercost" value="">
       <input type="text" name="attr_cost" value="">
@@ -1065,7 +1077,7 @@
          <span class="inventorytableweightword">Weight</span>
          <span class="inventorytablebulkword">Bulk</span>
          <span class="inventorytablemobilityword">Mobility</span>
-         <span class="inventorytableapmodword">AP Mod</span>
+         <span title="Action Points Modifier" class="inventorytableapmodword">AP Mod</span>
          <span class="inventoryequippedword">Equipped</span>
     </div>
     <fieldset class="repeating_inventorytableitemrepeats">
@@ -1089,6 +1101,64 @@
 </div>
 
 
+<!-- story first? -->
+<div class="storychunk">
+    <span class="storyHeader">Personality</span>
+    <div class="personalityrow">
+  <span class="storyDescriptorHeader">Appearance</span>
+  <span class="storyDescriptorHeader">Demeanor</span>
+  <span class="storyDescriptorHeader">Personality</span>
+  <span class="storyDescriptorHeader">Quirks & Flaws</span>
+    </div>
+    <div class="personalityrow">
+      <textarea type="text" name="attr_appearance" value=""></textarea>
+    <textarea type="text" name="attr_demeanor" value=""></textarea>
+    <textarea type="text" name="attr_personality" value=""></textarea>
+    <textarea type="text" name="attr_quirksandflaws" value=""></textarea>
+    </div>
+  </div>
+
+  <div class="storychunk">
+  <span class="storyHeader">Motivations and Drive</span>
+     <div class="personalityrow">
+  <span class="storyDescriptorHeader">Motivation</span>
+  <span class="storyDescriptorHeader">Connections & Tie-ins</span>
+  <span class="storyDescriptorHeader">Reason to Adventure</span>
+  <span class="storyDescriptorHeader">Ideals & Values</span>
+    <textarea type="text" name="attr_motivation" value=""></textarea>
+    <textarea type="text" name="attr_connections" value=""></textarea>
+    <textarea type="text" name="attr_reasontoadventure" value=""></textarea>
+    <textarea type="text" name="attr_ideals" value=""></textarea>
+    </div>
+  </div>
+
+  <div class="storychunk">
+<span class="storyHeader">Training & Skills</span>
+     <div class="personalityrow">
+  <span class="storyDescriptorHeader">Background Profession</span>
+  <span title="School? Mentor? Self-Taught?" class="storyDescriptorHeader">Learned From?</span>
+  <span class="storyDescriptorHeader">Social Status</span>
+  <span class="storyDescriptorHeader">Deeds or Achievements</span>
+   <textarea type="text" name="attr_backgroundprofession" value=""></textarea>
+   <textarea type="text" name="attr_trainingsource" value=""></textarea>
+   <textarea type="text" name="attr_socialstatus" value=""></textarea>
+   <textarea type="text" name="attr_deeds" value=""></textarea>
+    </div>
+  </div>
+
+  <div class="storychunk">
+<span class="storyHeader">Horror (Optional)</span>
+    <div class="personalityrow">
+  <span class="storyDescriptorHeader">Phobias</span>
+  <span class="storyDescriptorHeader">Injuries and Scars</span>
+  <span class="storyDescriptorHeader">Strange Encounters</span>
+  <span class="storyDescriptorHeader">Treasured Possession</span>
+  <textarea type="text" name="attr_Phobias" value=""></textarea>
+  <textarea type="text" name="attr_InjuriesandScars" value=""></textarea>
+  <textarea type="text" name="attr_StrangeEncounters" value=""></textarea>
+  <textarea type="text" name="attr_TreasuredPossession" value=""></textarea>
+  </div>
+  </div>
 
 
 
@@ -1105,353 +1175,368 @@
 
 <!--TABS SHENANIGANS -->
 
-<!-- COMBAT TAB -->
+
+
+
+
+
+<!-- COMBAT TAB, was line ~1113 -->
 <div class="combat">
 
 <!-- WEAPON TABLE COMBAT TAB -->
-   <div class="weapontable">
-          <div class="wptrow1">
-            <span class="swordimage">
-            <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/exportSwordPNG.png?raw=true" style="position:relative; left:0px; top: -3px; height: 21px; width: 105px;">
-            </span>
+<div class="weapontable">
+  <div class="wptrow1">
+    <span class="swordimage">
+    <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/exportSwordPNG.png?raw=true" style="position:relative; left:0px; top: -3px; height: 21px; width: 105px;">
+    </span>
 
-            <!--
-            <span class="wptrangedc">Range DC</span>
-            <span><input type="text" name="attr_rangedcstill" placeholder="9"> </span>
-            <span><input type="text" name="attr_rangedcmoving" placeholder="12"> </span>
-            -->
-            <span class="wpttoprowAP">AP</span>
-            <span class="cptoprow">CP</span>
-            <span class="wpttoprowcut">Swing / Shoot</span>
-            <span class="wpttoprowthrust">Thrust / Throw</span>
-            <span class="wpttoprowparryorblock">Parry / Block</span>
+    <!--
+    <span class="wptrangedc">Range DC</span>
+    <span><input type="text" name="attr_rangedcstill" placeholder="9"> </span>
+    <span><input type="text" name="attr_rangedcmoving" placeholder="12"> </span>
+    -->
+    <span title="Action Points" class="wpttoprowAP">AP</span>
+    <span title="Combat Points" class="cptoprow">CP</span>
+    <span class="wpttoprowcut">Swing / Shoot</span>
+    <span class="wpttoprowthrust">Thrust / Throw</span>
+    <span class="wpttoprowparryorblock">Parry / Block</span>
 
-            <!-- insert reach stuff -->
-            <span class="Reach">Reach</span>
-
-
-            <span class="equipped_hand">Equipped Hand</span>
-            <!-- <span class="placeholder_reach2"></span> -->
+    <!-- insert reach stuff -->
+    <span class="Reach">Reach</span>
 
 
-            <span class="wpttoprowdodge">Dodge</span>
-            <span class="d4d6dodgereminder">d4d6</span>
-            <span><input type="text" name="attr_dodgemodifier" placeholder="0"> </span>
-            <span class="dodgerollbutton">
-                <button class="sheet-d6-dice" type="roll" value=
-                      '&{template:dodas1} {{name=@{character_name} @{weapon} }}{{Dodge=[[1d4 + 1d6 + @{dodgemodifier}]][[1d4 + 1d6 + @{dodgemodifier}]][[1d4 + 1d6 + @{dodgemodifier}]]}} '
-                      name="roll_weaponrepeatingbutton"></button>
-            </span>
-          </div>
+    <span class="equipped_hand">Equipped Hand</span>
+    <!-- <span class="placeholder_reach2"></span> -->
 
-          <div class="wptrow2">
-            <span class="wtweapon">Melee Weapons</span>
 
-            <span class="wtMod">Mod</span>
-            <span class="wtTotal">Total</span>
-            <span class="wtA">Dmg</span>
-            <span class="wtA">Att+</span>
-            <span class="wtD">Roll</span>
-            <span class="wtA">Dmg</span>
-            <span class="wtA">Att+</span>
-            <span class="wtD">Roll</span>
-            <span class="wtAdvBlock">Adv.?</span>
-            <span class="wtSkrmD">Def+</span>
-            <span class="wtD">Roll</span>
+    <span class="wpttoprowdodge">Dodge</span>
+    <span class="d4d6dodgereminder">d4d6</span>
+    <span><input type="text" name="attr_dodgemodifier" placeholder="0"> </span>
+    <span class="dodgerollbutton">
+        <button class="sheet-d6-dice" type="roll" value=
+              '&{template:dodas1} {{name=@{character_name} @{weapon} }}{{Dodge=[[1d4 + 1d6 + @{dodgemodifier}]][[1d4 + 1d6 + @{dodgemodifier}]][[1d4 + 1d6 + @{dodgemodifier}]]}} '
+              name="roll_Dodge"></button>
+    </span>
+  </div>
 
-            <span class="wtReachCategory">Category</span>
-            <span class="wtReachLevel">Lvl</span>
-            <span class="wtReachSpaces">Spaces</span>
+  <div class="wptrow2">
+    <span class="wtweapon">Melee Weapons</span>
 
-            <span class="wtRange">Left</span> <!-- moved reach elsewhere -->
-            <span class="wtHand">Right</span>
+    <span title="Action Points Modifier" class="wtMod">Mod</span>
+    <span title="Combat Points (Attack and Defense)" class="wtTotal">Total</span>
+    <span title="Damage" class="wtA">Dmg</span>
+    <span title="number added to attack roll button" class="wtA">Att+</span>
+    <span class="wtD">Roll</span>
+    <span title="Damage" class="wtA">Dmg</span>
+    <span title="number added to attack roll button" class="wtA">Att+</span>
+    <span class="wtD">Roll</span>
+    <span title="Advantage or not?"class="wtAdvBlock">Adv.?</span>
+    <span title="Number added to defense roll button"class="wtSkrmD">Def+</span>
+    <span class="wtD">Roll</span>
 
-            <span class="wtOther">Other</span>
-          </div>
+    <span class="wtReachCategory">Category</span>
+    <span title="relative reach level" class="wtReachLevel">Lvl</span>
+    <span title="spaces away the weapon can attack" class="wtReachSpaces">Spaces</span>
 
-          <fieldset class="repeating_weapons">
-            <div class="wptfillrepeating">
-              <input type="text" name="attr_weapon" value="">
+    <span title="left hand equipped" class="wtRange">Left</span> <!-- moved reach elsewhere -->
+    <span title="Right hand equipped" class="wtHand">Right</span>
 
-              <input type="text" name="attr_weaponactionpointmodifier" value="">
-              <input type="text" name="attr_cptotal" value="">
-              <input type="text" name="attr_cutdamage" value="">
-              <input type="text" name="attr_cutattack" value="">
-              <span class="swingweaponbutton">
+    <span class="wtOther">Other</span>
+  </div>
 
-<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{weapon} }} {{attack=[[2d6 + @{cutattack}]] [[2d6 + @{cutattack}]][[2d6 + @{cutattack}]]}} {{Base Damage= @{cutdamage} swing or shoot}} {{Extra Dmg Dice= [1](~repeating_weapons_1d6extradamageswing) [2](~repeating_weapons_2d6extradamageswing) [3](~repeating_weapons_3d6extradamageswing) [4](~repeating_weapons_4d6extradamageswing) [5](~repeating_weapons_5d6extradamageswing) }} {{Notes=@{other}}}
+  <fieldset class="repeating_weapons">
+    <div class="wptfillrepeating">
+      <input type="text" name="attr_weapon" value="">
+
+      <input type="text" name="attr_weaponactionpointmodifier" value="">
+      <input type="text" name="attr_cptotal" value="">
+      <input type="text" name="attr_cutdamage" value="">
+      <input type="text" name="attr_cutattack" value="">
+      <span class="swingweaponbutton">
+
+<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{weapon} }} {{subtags=@{character_name} }} {{diceADroll=Swing Attack}} {{attackdatadodas1=[[2d6 + @{cutattack}]] or [[2d6 + @{cutattack}]] or [[2d6 + @{cutattack}]], at +@{cutattack}}} {{reachdatadodas1=@{range} (@{reachlevel}), Spaces: @{reachspaces} }} {{mosorparryblock=Roll Dmg, MoS}} {{mosbuttonsdata= [<5](~repeating_weapons_underFiveMoS) [5](~repeating_weapons_fiveMoS) [10](~repeating_weapons_tenMoS) [15](~repeating_weapons_fifteenMoS) [20](~repeating_weapons_twentyMoS) [25](~repeating_weapons_twentyfiveMoS) [30](~repeating_weapons_thirtyMoS) }} {{notesdatadodas1=@{other}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{cutattack}]] '
- name="roll_weaponrepeatingbuttonswing"></button>
-            <button type="roll" name="roll_1d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_2d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 2d6}} {{Damage=[[2d6]] + @{cutdamage}}} "></button>
-            <button type="roll" name="roll_3d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 3d6}} {{Damage=[[3d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_4d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 4d6}} {{Damage=[[4d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_5d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 5d6}} {{Damage=[[5d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_6d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 6d6}} {{Damage=[[6d6]] + @{cutdamage}}}"></button>
-                      </span>
-              <input type="text" name="attr_thrustdamage" value="">
-              <input type="text" name="attr_thrustattack" value="">
-              <span class="thrustweaponbutton">
-<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{weapon} }} {{attack=[[2d6 + @{thrustattack}]] [[2d6 + @{thrustattack}]][[2d6 + @{thrustattack}]]}} {{Base Damage= @{thrustdamage} thrust or throw}} {{Extra Dmg Dice= [1](~repeating_weapons_1d6extradamagethrust) [2](~repeating_weapons_2d6extradamagethrust) [3](~repeating_weapons_3d6extradamagethrust) [4](~repeating_weapons_4d6extradamagethrust) [5](~repeating_weapons_5d6extradamagethrust) }} {{Notes=@{other}}}
+name="roll_weaponrepeatingbuttonswing"></button>
+    <button type="roll" name="roll_underFiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg= @{cutdamage}}} {{MoSAmount=<5 MoS =}} {{MoSExplainer=Base Weapon Damage only}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+    <button type="roll" name="roll_fiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{cutdamage}}} {{MoSAmount=5 MoS =}} {{MoSExplainer=+1d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}} "></button>
+    <button type="roll" name="roll_tenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{cutdamage}}} {{MoSAmount=10 MoS =}} {{MoSExplainer=+1d6 Damage, Reroll 1 damage die}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+    <button type="roll" name="roll_fifteenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=15 MoS =}} {{MoSExplainer=+2d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+    <button type="roll" name="roll_twentyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=20 MoS =}} {{MoSExplainer=+2d6 Damage, Reroll 2 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+    <button type="roll" name="roll_twentyfiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=25 MoS =}} {{MoSExplainer=+3d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+    <button type="roll" name="roll_thirtyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{cutdamage}}} {{MoSAmount=30 MoS =}} {{MoSExplainer=+3d6 Damage, Reroll 3 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+
+    <button type="roll" name="roll_headshotExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Headshot: +[[1d6]]}}"></button>
+    <button type="roll" name="roll_CritExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Critical: +[[1d6]]}}"></button>
+    <button type="roll" name="roll_RerollDmgDie" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Reroll 1d6: [[1d6]]}}"></button>
+              </span>
+
+
+      <input type="text" name="attr_thrustdamage" value="">
+      <input type="text" name="attr_thrustattack" value="">
+
+
+      <span class="thrustweaponbutton">
+
+<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{weapon} }} {{subtags=@{character_name} }} {{diceADroll=Thrust Attack}} {{attackdatadodas1=[[2d6 + @{thrustattack}]] or [[2d6 + @{thrustattack}]] or [[2d6 + @{thrustattack}]], at +@{thrustattack}}} {{reachdatadodas1=@{range} (@{reachlevel}), Spaces: @{reachspaces} }} {{mosorparryblock=Roll Dmg, MoS}} {{mosbuttonsdata= [<5](~repeating_weapons_underFiveMoS) [5](~repeating_weapons_fiveMoS) [10](~repeating_weapons_tenMoS) [15](~repeating_weapons_fifteenMoS) [20](~repeating_weapons_twentyMoS) [25](~repeating_weapons_twentyfiveMoS) [30](~repeating_weapons_thirtyMoS) }} {{notesdatadodas1=@{other}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{thrustattack}]] '
-                      name="roll_weaponrepeatingbuttonthrust"></button>
-            <button type="roll" name="roll_1d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_2d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[2d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_3d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[3d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_4d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[4d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_5d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[5d6]] + @{thrustdamage}}}"></button>
-            <button type="roll" name="roll_6d6extradamagethrust" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[6d6]] + @{thrustdamage}}}"></button>
-                          <!--
-            <button type="roll" name="roll_2d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 2d6}} {{roll=[[2d6]]}}"></button>
-            <button type="roll" name="roll_3d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 3d6}} {{roll=[[3d6]]}}"></button>
-            <button type="roll" name="roll_4d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 4d6}} {{roll=[[4d6]]}}"></button>
-            <button type="roll" name="roll_5d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 5d6}} {{roll=[[5d6]]}}"></button>
-            <button type="roll" name="roll_6d6extradamage" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra damage 6d6}} {{roll=[[6d6]]}}"></button>
-            -->
-                      </span>
-              <input type="text" name="attr_parryblock" value="">
-              <input type="text" name="attr_blockdefendplus" value="">
-              <span class="rolldefendbutton">
-<button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{weapon} }}{{Defense=[[2d6 + @{blockdefendplus}]][[2d6 + @{blockdefendplus}]][[2d6 + @{blockdefendplus}]]}} {{Parry or Block=@{parryblock}}}  {{Notes=@{other}}}
+name="roll_weaponrepeatingbuttonthrust"></button>
+<button type="roll" name="roll_underFiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg= @{thrustdamage}}} {{MoSAmount=<5 MoS =}} {{MoSExplainer=Base Weapon Damage only}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_fiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{thrustdamage}}} {{MoSAmount=5 MoS =}} {{MoSExplainer=+1d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}} "></button>
+<button type="roll" name="roll_tenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + @{thrustdamage}}} {{MoSAmount=10 MoS =}} {{MoSExplainer=+1d6 Damage, Reroll 1 damage die}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_fifteenMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=15 MoS =}} {{MoSExplainer=+2d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_twentyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=20 MoS =}} {{MoSExplainer=+2d6 Damage, Reroll 2 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_twentyfiveMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=25 MoS =}} {{MoSExplainer=+3d6 Damage}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+<button type="roll" name="roll_thirtyMoS" class="hidden" value="&{template:dodasmosdmg} {{name=@{weapon}}} {{subtags=@{character_name} }} {{damageMoStotalsdodasdmg=[[1d6]] + [[1d6]] + [[1d6]] + @{thrustdamage}}} {{MoSAmount=30 MoS =}} {{MoSExplainer=+3d6 Damage, Reroll 3 damage dice}} {{headshotdmgbutton=[+1d6](~repeating_weapons_headshotExtraDmg)}} {{criticialhitdmgbutton=[+1d6](~repeating_weapons_CritExtraDmg)}} {{rerolldiedmgbutton=[1d6](~repeating_weapons_RerollDmgDie)}}"></button>
+
+<button type="roll" name="roll_headshotExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Headshot: +[[1d6]]}}"></button>
+<button type="roll" name="roll_CritExtraDmg" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Critical: +[[1d6]]}}"></button>
+<button type="roll" name="roll_RerollDmgDie" class="hidden" value="&{template:dodasdmgextra} {{name=@{weapon} (Extra Damage)}} {{subtags=@{character_name} }} {{extradmgdodasdmg= Reroll 1d6: [[1d6]]}}"></button>
+</span>
+
+      <input type="text" name="attr_parryblock" value="">
+      <input type="text" name="attr_blockdefendplus" value="">
+      <span class="rolldefendbutton">
+<button class="sheet-d6-dice" type="roll" value='&{template:dodasdefense} {{name=@{weapon} }} {{subtags=@{character_name} }} {{diceADroll=Defense Roll}} {{attackdatadodas1=[[2d6 + @{blockdefendplus}]] or [[2d6 + @{blockdefendplus}]] or [[2d6 + @{blockdefendplus}]], at +@{blockdefendplus}}} {{reachdatadodas1=@{range} (@{reachlevel}), Spaces: @{reachspaces} }} {{mosorparryblock=Parry or Block:}} {{mosbuttonsdata=@{parryblock}}}  {{Notes=@{other}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{parryblock}]] '
-                      name="roll_weaponrepeatingbuttondefend"></button>
-                     </span>
+              name="roll_weaponrepeatingbuttondefend"></button>
+             </span>
 
-            <input type="text" name="attr_range" value=""> <!-- should be attr_reachcategory -->
-            <input type="text" name="attr_reachlevel" value="">
-            <input type="text" name="attr_reachspaces" value="">
+    <input type="text" name="attr_range" value=""> <!-- should be attr_reachcategory -->
+    <input type="text" name="attr_reachlevel" value="">
+    <input type="text" name="attr_reachspaces" value="">
 
-            <input type="text" name="attr_lefthand" value=""> <!-- changing to equipped hand left right with checkbox original name="attr_range" name="attr_hand"  -->
-              <input type="text" name="attr_hand" value="">
+    <input type="text" name="attr_lefthand" value=""> <!-- changing to equipped hand left right with checkbox original name="attr_range" name="attr_hand"  -->
+      <input type="text" name="attr_hand" value="">
 
-              <!-- CHECKBOXES WON'T WORK, TROUBLESHOOT LATER
-              <input type="checkbox" name="attr_lefthandbox" value="">
-              <input type="checkbox" name="attr_righthandbox" value=""> -->
+      <!-- CHECKBOXES WON'T WORK, TROUBLESHOOT LATER
+      <input type="checkbox" name="attr_lefthandbox" value="">
+      <input type="checkbox" name="attr_righthandbox" value=""> -->
 
-            <input type="text" name="attr_other" value="">
+    <input type="text" name="attr_other" value="">
 
 
-            </div>
-          </fieldset>
-        </div>
+    </div>
+  </fieldset>
+</div>
 
 
 <!-- RANGED WEAPONS -->
 
 <div class="rangedweapontable">
-          <div class="rwptrow1">
-            <span class="arrowimage">
-            <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/arrowPNGcolored.png?raw=true" style="justify-self: center; left:0px; top: -15px; height: 13px; width: 75%;">
-            </span>
+  <div class="rwptrow1">
+    <span class="arrowimage">
+    <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/arrowPNGcolored.png?raw=true" style="justify-self: center; left:0px; top: -15px; height: 13px; width: 75%;">
+    </span>
 
-            <!--
-            <span class="wptrangedc">Range DC</span>
-            <span><input type="text" name="attr_rangedcstill" placeholder="9"> </span>
-            <span><input type="text" name="attr_rangedcmoving" placeholder="12"> </span>
-            -->
-            <span class="rwpttoprowAP">AP</span>
-            <span class="rwptcptoprow">CP</span>
-            <span class="rwpttoprowshoot">Shoot / Throw</span>
-            <span class="rwpttoprowrange">Range</span>
+    <!--
+    <span class="wptrangedc">Range DC</span>
+    <span><input type="text" name="attr_rangedcstill" placeholder="9"> </span>
+    <span><input type="text" name="attr_rangedcmoving" placeholder="12"> </span>
+    -->
+    <span class="rwpttoprowAP">AP</span>
+    <span title="Combat Points" class="rwptcptoprow">CP</span>
+    <span class="rwpttoprowshoot">Shoot / Throw</span>
+    <span class="rwpttoprowrange">Range</span>
 
-            <span class="rwptblank"></span>
+    <span class="rwptblank"></span>
 
-            <span class="rwptreload">Reload</span>
-            <span class="rwptequipped">Equipped Hand</span>
-            </div>
+    <span class="rwptreload">Reload</span>
+    <span class="rwptequipped">Equipped Hand</span>
+    </div>
 
-          <div class="rwptrow2">
-            <span class="rwtweapon">Ranged Weapons</span>
+  <div class="rwptrow2">
+    <span class="rwtweapon">Ranged Weapons</span>
 
-            <span class="rwtMod">Mod</span>
-            <span class="rwtTotal">Total</span>
-            <span class="rwtA">Dmg</span>
-            <span class="rwtA">Att+</span>
-            <span class="rwtroll">Roll</span>
-            <span class="rwtincrement">Increment</span>
+    <span title="modifier" class="rwtMod">Mod</span>
+    <span title="Combat Points" class="rwtTotal">Total</span>
+    <span title="Damage" class="rwtA">Dmg</span>
+    <span title="number added to Attack roll button" class="rwtA">Att+</span>
+    <span class="rwtroll">Roll</span>
+    <span class="rwtincrement">Increment</span>
 
-            <span class="rwtAccuracy">Accuracy</span>
-            <span class="rwtPenetration">Penetration</span>
-            <span class="rwtSkrmD">Shots</span>
-            <span class="rwttime">Time</span>
-            <span class="rwtleftequipped">Left</span>
-            <span class="rwtrightequipped">Right</span>
-            <span class="rwtOther">Other</span>
-          </div>
+    <span title="ignore this much range penalty" class="rwtAccuracy">Accuracy</span>
+    <span title="ignores armor all or nothing" class="rwtPenetration">Penetration</span>
+    <span title="shots before reloading" class="rwtSkrmD">Shots</span>
+    <span title="time to reload" class="rwttime">Time</span>
+    <span class="rwtleftequipped">Left</span>
+    <span class="rwtrightequipped">Right</span>
+    <span class="rwtOther">Other</span>
+  </div>
 
-          <fieldset class="repeating_weapons">
-            <div class="rwptfillrepeating">
-              <input type="text" name="attr_rangedweapon" value="">
-              <input type="text" name="attr_rangedapmod" value="">
-              <input type="text" name="attr_rangedCPTotal" value="">
-              <input type="text" name="attr_rangeddmg" value="">
-              <input type="text" name="attr_rangedattackplus" value="">
+  <fieldset class="repeating_weapons">
+    <div class="rwptfillrepeating">
+      <input type="text" name="attr_rangedweapon" value="">
+      <input type="text" name="attr_rangedapmod" value="">
+      <input type="text" name="attr_rangedCPTotal" value="">
+      <input type="text" name="attr_rangeddmg" value="">
+      <input type="text" name="attr_rangedattackplus" value="">
 
-             <span class="swingweaponbutton">
+     <span class="rangedweaponbutton">
 
 <button class="sheet-d6-dice" type="roll" value='&{template:dodas1} {{name=@{character_name} @{rangedweapon} }} {{attack=[[2d6 + @{rangedattackplus}]] [[2d6 + @{rangedattackplus}]][[2d6 + @{rangedattackplus}]]}} {{Base Damage= @{rangeddmg}}} {{Extra Dmg Dice= [1](~repeating_weapons_1d6extradamageswing) [2](~repeating_weapons_2d6extradamageswing) [3](~repeating_weapons_3d6extradamageswing) [4](~repeating_weapons_4d6extradamageswing) [5](~repeating_weapons_5d6extradamageswing) }} {{Notes=@{rangedother}}}
 !token-mod --set bar1_value|[[ @{selected|bar1} - @{rangedattackplus}]] '
- name="roll_weaponrepeatingbuttonswing"></button>
-            <button type="roll" name="roll_1d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_2d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 2d6}} {{Damage=[[2d6]] + @{cutdamage}}} "></button>
-            <button type="roll" name="roll_3d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 3d6}} {{Damage=[[3d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_4d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 4d6}} {{Damage=[[4d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_5d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 5d6}} {{Damage=[[5d6]] + @{cutdamage}}}"></button>
-            <button type="roll" name="roll_6d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 6d6}} {{Damage=[[6d6]] + @{cutdamage}}}"></button>
-                      </span>
+name="roll_Ranged-Attack"></button>
+    <button type="roll" name="roll_1d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 1d6}} {{Damage=[[1d6]] + @{cutdamage}}}"></button>
+    <button type="roll" name="roll_2d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 2d6}} {{Damage=[[2d6]] + @{cutdamage}}} "></button>
+    <button type="roll" name="roll_3d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 3d6}} {{Damage=[[3d6]] + @{cutdamage}}}"></button>
+    <button type="roll" name="roll_4d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 4d6}} {{Damage=[[4d6]] + @{cutdamage}}}"></button>
+    <button type="roll" name="roll_5d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 5d6}} {{Damage=[[5d6]] + @{cutdamage}}}"></button>
+    <button type="roll" name="roll_6d6extradamageswing" class="hidden" value="&{template:dodas1} {{name=@{character_name} Extra 6d6}} {{Damage=[[6d6]] + @{cutdamage}}}"></button>
+              </span>
 
-              <input type="text" name="attr_rangedincrement" value="">
-              <input type="text" name="attr_rangedaccuracy" value="">
-              <input type="text" name="attr_rangedpenetration" value="">
-              <input type="text" name="attr_rangedshots" value="">
-              <input type="text" name="attr_reloadtime" value="">
+      <input type="text" name="attr_rangedincrement" value="">
+      <input type="text" name="attr_rangedaccuracy" value="">
+      <input type="text" name="attr_rangedpenetration" value="">
+      <input type="text" name="attr_rangedshots" value="">
+      <input type="text" name="attr_reloadtime" value="">
 
-              <input type="text" name="attr_rangedequippedleft" value="">
-              <input type="text" name="attr_rangedequippedright" value="">
-              <input type="text" name="attr_rangedother" value="">
+      <input type="text" name="attr_rangedequippedleft" value="">
+      <input type="text" name="attr_rangedequippedright" value="">
+      <input type="text" name="attr_rangedother" value="">
 
 
 
-            </div>
-          </fieldset>
-        </div>
+    </div>
+  </fieldset>
+</div>
 
 
 
 <!-- ARMOR TABLE -->
 
-      <div class="armortable">
-        <div class="armortbtoprow">
-          <span class="atTopWeapon"></span>
-          <span class="atTopAvEquip">AV Equip</span>
-          <span class="atTopBD"></span>
-          <span class="atDRTotal">DR Total</span>
+<div class="armortable">
+<div class="armortbtoprow">
+  <span class="atTopWeapon"></span>
+  <span title="Armor Value of equipment" class="atTopAvEquip">AV Equip</span>
+  <span class="atTopBD"></span>
+  <span title="Damage Reduction Total" class="atDRTotal">DR Total</span>
 
-        </div>
-        <div class="armorsecondrow">
-          <span class="atArmor">Armor</span>
-          <span class="atC">c</span>
-          <span class="atP">p</span>
-          <span class="atB">b</span>
-          <span class="atE">e</span>
-          <span class="atBD">BD</span>
-          <span class="attc">c</span>
-          <span class="attp">p</span>
-          <span class="attb">b</span>
-          <span class="atte">e</span>
+</div>
+<div class="armorsecondrow">
+  <span class="atArmor">Armor</span>
+  <span title="Cutting damage" class="atC">c</span>
+  <span title="Piercing damage" class="atP">p</span>
+  <span title="Blunt damage" class="atB">b</span>
+  <span title="Energy or Magic damage" class="atE">e</span>
+  <span title="Body attribute" class="atBD">BD</span>
+  <span title="Cutting damage reduction" class="attc">c</span>
+  <span title="Piercing damage reduciton" class="attp">p</span>
+  <span title="Blunt damage reduction" class="attb">b</span>
+  <span title="Energy or Magic damage reduction" class="atte">e</span>
 
-          <span class="atAPM">AP Mod</span>
-          <span class="atStealth">Stealth</span>
-          <span class="atStealth">Mobility</span>
-          <span class="atLocation">Location / Other</span>
-        </div>
-
-
-
-        <fieldset class="repeating_armor">
-          <div class="armor-fillinrepeating">
-            <input type="text" name="attr_armor" value="">
-            <input type="text" name="attr_armorvalue" value="">
-            <input type="text" name="attr_atP" value="">
-            <input type="text" name="attr_atB" value="">
-            <input type="text" name="attr_atE" value="">
-            <input type="text" name="attr_armortablebody">
-            <input type="text" name="attr_damagereduction" value="">
-            <input type="text" name="attr_attP" value="">
-            <input type="text" name="attr_attB" value="">
-            <input type="text" name="attr_attE" value="">
-            <input type="text" name="attr_actionpointmodifier" value="">
-            <input type="text" name="attr_stealtharmormodifier" value="">
-            <input type="text" name="attr_mobilityarmormodifier" value="">
-            <input type="text" name="attr_location" value="">
+  <span title="Action Point Modifier" class="atAPM">AP Mod</span>
+  <span title="Modifier to Stealth" class="atStealth">Stealth</span>
+  <span title="Modifier to Mobility" class="atStealth">Mobility</span>
+  <span class="atLocation">Location / Other</span>
+</div>
 
 
-          </div>
-        </fieldset>
-      </div>
+
+<fieldset class="repeating_armor">
+  <div class="armor-fillinrepeating">
+    <input type="text" name="attr_armor" value="">
+    <input type="text" name="attr_armorvalue" value="">
+    <input type="text" name="attr_atP" value="">
+    <input type="text" name="attr_atB" value="">
+    <input type="text" name="attr_atE" value="">
+    <input type="text" name="attr_armortablebody">
+    <input type="text" name="attr_damagereduction" value="">
+    <input type="text" name="attr_attP" value="">
+    <input type="text" name="attr_attB" value="">
+    <input type="text" name="attr_attE" value="">
+    <input type="text" name="attr_actionpointmodifier" value="">
+    <input type="text" name="attr_stealtharmormodifier" value="">
+    <input type="text" name="attr_mobilityarmormodifier" value="">
+    <input type="text" name="attr_location" value="">
+
+
+  </div>
+</fieldset>
+</div>
 
 
 <!-- Ranged Defense table -->
 <div class="rangedefensetable">
 
-  <div class="rangedefensetabletoprow">
-         <span class="rangedefensesimage"><img class="SIZEImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/SZ%20Icon.png?raw=true" width="23" height="23"></span>
-    <span class="rangedefenseblank"></span>
-         <span class="rangedefense9-SZ">(9-SZ)</span>
-         <span class="rangedefense9-SZ">(12-SZ)</span>
+<div class="rangedefensetabletoprow">
+ <span class="rangedefensesimage"><img class="SIZEImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/SZ%20Icon.png?raw=true" width="23" height="23"></span>
+<span class="rangedefenseblank"></span>
+ <span class="rangedefense9-SZ">(9-SZ)</span>
+ <span class="rangedefense9-SZ">(12-SZ)</span>
 
 </div>
 
-     <div class="rangedefensetablesecondrow">
-         <span class="rangeddefenseword">Ranged Defense</span>
-         <span class="rangedefensemodifier">Mod</span>
-         <span class="rangedefensestill">Still</span>
-              <span class="rangedefensemoving">Moving</span>
+<div class="rangedefensetablesecondrow">
+ <span class="rangeddefenseword">Ranged Defense</span>
+ <span title="Modifier" class="rangedefensemodifier">Mod</span>
+ <span title="Defense if standing still" class="rangedefensestill">Still</span>
+      <span title="Defense if moving or in Melee" class="rangedefensemoving">Moving</span>
 
-        </div>
+</div>
 
-      <div class="rangedefensetableinputrow">
-            <span class="rangedefenseunarmedword">Size Modifier</span>
-        <input type="number" name="attr_rangeddefensemodifier" placeholder="0">
-        <input type="number" name="attr_rangeddefenseninenumber" placeholder="9">
-            <input type="number" name="attr_rangeddefensetwelvenumber" placeholder="12">
+<div class="rangedefensetableinputrow">
+    <span class="rangedefenseunarmedword">Size Modifier</span>
+<input type="number" name="attr_rangeddefensemodifier" placeholder="0">
+<input type="number" name="attr_rangeddefenseninenumber" placeholder="9">
+    <input type="number" name="attr_rangeddefensetwelvenumber" placeholder="12">
 
-           </div>
+   </div>
 
-           <div class="rangedefensetableinputrow">
-                 <span class="rangeddefenseshieldword">Shield</span>
-             <input type="number" name="attr_rangeddefenseshieldmodifier" placeholder="0">
-             <input type="number" name="attr_rangeddefenseshieldninenumber" placeholder="9">
-                 <input type="number" name="attr_rangeddefenseshieldtwelvenumber" placeholder="12">
+   <div class="rangedefensetableinputrow">
+         <span class="rangeddefenseshieldword">Shield</span>
+     <input type="number" name="attr_rangeddefenseshieldmodifier" placeholder="0">
+     <input type="number" name="attr_rangeddefenseshieldninenumber" placeholder="9">
+         <input type="number" name="attr_rangeddefenseshieldtwelvenumber" placeholder="12">
 
-              </div>
- </div>
+      </div>
+</div>
 
 
-<!-- Spells COMBAT tab -->
+<!-- Spells -->
 <div class="spelltable">
-  <div class="strow">
-    <span class="stspells">Spells & Abilities</span>
-    <span class="stDmg">Dmg</span>
+<div class="strow">
+<span class="stspells">Spells & Abilities</span>
+<span title="Damage or Amount of Spell Effect" class="stDmg">Dmg</span>
 
-    <span class="stOpp">Type</span>
-    <span class="stArea">Area</span>
-    <span class="stDuration">Duration</span>
-    <span class="stRange">Range</span>
-    <span class="stLVL">LVL</span>
-    <span class="stRoll">Roll+</span>
-    <span class="stCP">CP</span>
-    <span class="stRollbutton">Roll</span>
-    <span class="stDescription">Description</span>
-  </div>
-  <fieldset class="repeating_spells">
-    <div class="strepeating">
-      <input type="text" name="attr_spellorability" value="">
-      <input type="text" name="attr_spelldamage" value="">
-
-      <input type="text" name="attr_spellopposed" value="">
-      <input type="text" name="attr_spellarea" value="">
-      <input type="text" name="attr_spellduration" value="">
-      <input type="text" name="attr_spellrange" value="">
-
-      <input type="text" name="attr_spelllevel" value="">
-      <input type="text" name="attr_spellskill" value="">
-      <input type="text" name="attr_strcp" value="">
-      <span class="spellrollbutton">
-        <button class="sheet-d6-dice" type="roll" value=
-                '&{template:dodas1} {{name=@{character_name} @{spellorability} }} {{attack=[[2d6 + @{spellskill}]][[2d6 + @{spellskill}]][[2d6 + @{spellskill}]]}} {{Damage=@{spelldamage} + [[1d6]][[1d6]][[1d6]]}} {{Type=@{spellopposed}}} {{Area=@{spellarea}}} {{Duration=@{spellduration}}} {{Range=@{spellrange}}} {{LVL=@{spelllevel}}} {{Description=@{spelldescription}}} '
-                name="roll_spellreapeatingbutton"></button></span>
-      <input type="text" name="attr_spelldescription" value="">
-
-
-      <!--
-      <span><button type="roll"
-          value='&{template:dodas1} {{name=@{charcter_name} @{spellorability} }} {{attack=[[2d6 + @{strroll}]]}} {{Damage=@{spelldamage} + [[1d6]][[1d6]][[1d6]]}} {{Opposed=@{stropp}}} {{Spell Range=@{strrange}}} {{Spell Area=@{strarea}}} {{Spell Duration=@{strduration}}} {{Spell LVL=@{strlvl}}} {{Spell Description=@{strdescription}}} '
-          name="roll_spellreapeatingbutton"></button></span>
-          -->
-    </div>
-  </fieldset>
+<span class="stOpp">Type</span>
+<span class="stArea">Area</span>
+<span class="stDuration">Duration</span>
+<span class="stRange">Range</span>
+<span title="Spell Level" class="stLVL">LVL</span>
+<span title="number added to spell roll" class="stRoll">Roll+</span>
+<span title="Combat Point cost to cast" class="stCP">CP</span>
+<span class="stRollbutton">Roll</span>
+<span class="stDescription">Description</span>
 </div>
+<fieldset class="repeating_spells">
+<div class="strepeating">
+<input type="text" name="attr_spellorability" value="">
+<input type="text" name="attr_spelldamage" value="">
+
+<input type="text" name="attr_spellopposed" value="">
+<input type="text" name="attr_spellarea" value="">
+<input type="text" name="attr_spellduration" value="">
+<input type="text" name="attr_spellrange" value="">
+
+<input type="text" name="attr_spelllevel" value="">
+<input type="text" name="attr_spellskill" value="">
+<input type="text" name="attr_strcp" value="">
+<span class="spellrollbutton">
+<button class="sheet-d6-dice" type="roll" value=
+        '&{template:dodas1} {{name=@{character_name} @{spellorability} }} {{attack=[[2d6 + @{spellskill}]][[2d6 + @{spellskill}]][[2d6 + @{spellskill}]]}} {{Damage=@{spelldamage} + [[1d6]][[1d6]][[1d6]]}} {{Type=@{spellopposed}}} {{Area=@{spellarea}}} {{Duration=@{spellduration}}} {{Range=@{spellrange}}} {{LVL=@{spelllevel}}} {{Description=@{spelldescription}}} '
+        name="roll_spellreapeatingbutton"></button></span>
+<input type="text" name="attr_spelldescription" value="">
+
+
+<!--
+<span><button type="roll"
+  value='&{template:dodas1} {{name=@{charcter_name} @{spellorability} }} {{attack=[[2d6 + @{strroll}]]}} {{Damage=@{spelldamage} + [[1d6]][[1d6]][[1d6]]}} {{Opposed=@{stropp}}} {{Spell Range=@{strrange}}} {{Spell Area=@{strarea}}} {{Spell Duration=@{strduration}}} {{Spell LVL=@{strlvl}}} {{Spell Description=@{strdescription}}} '
+  name="roll_spellreapeatingbutton"></button></span>
+  -->
+</div>
+</fieldset>
+</div>
+
       </div>
 </div>
 <!-- END OF COMBAT TAB -->
@@ -1511,7 +1596,7 @@
       <input type="text" name="attr_skilltotal" value="">
       <span class="skillrollbutton">
         <button class="sheet-d6-dice" type="roll" value=
-        '&{template:dodas1} {{name=@{character_name} @{skillsandabilities} }} {{roll=[[2d6 + @{skilltotal}]]}}'
+        '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
         name="roll_skilltotalcolumn"></button> </span>
         <input type="text" name="attr_tiercost" value="">
       <input type="text" name="attr_cost" value="">
@@ -1531,6 +1616,7 @@
       <input type="text" name="attr_othermodifiersfill" value="">
       </div>
   </fieldset>
+
 
 </div>
 
@@ -1835,16 +1921,84 @@
       </fieldset>
   </div> <!-- close table? -->
 
-</div> <!-- close spells tab? -->
+</div> <!-- close dodaslayout tab, below close spells tab? -->
+</div>
+
+<!-- STORY FILL IN SECTION TAB -->
+
+<div class="story">
+<div class="dodaslayout">
+
+  <div class="storychunk">
+    <span class="storyHeader">Personality</span>
+    <div class="personalityrow">
+  <span class="storyDescriptorHeader">Appearance</span>
+  <span class="storyDescriptorHeader">Demeanor</span>
+  <span class="storyDescriptorHeader">Personality</span>
+  <span class="storyDescriptorHeader">Quirks & Flaws</span>
+    </div>
+    <div class="personalityrow">
+      <textarea type="text" name="attr_appearance" value=""></textarea>
+    <textarea type="text" name="attr_demeanor" value=""></textarea>
+    <textarea type="text" name="attr_personality" value=""></textarea>
+    <textarea type="text" name="attr_quirksandflaws" value=""></textarea>
+    </div>
+  </div>
+
+  <div class="storychunk">
+  <span class="storyHeader">Motivations and Drive</span>
+     <div class="personalityrow">
+  <span class="storyDescriptorHeader">Motivation</span>
+  <span class="storyDescriptorHeader">Connections & Tie-ins</span>
+  <span class="storyDescriptorHeader">Reason to Adventure</span>
+  <span class="storyDescriptorHeader">Ideals & Values</span>
+    <textarea type="text" name="attr_motivation" value=""></textarea>
+    <textarea type="text" name="attr_connections" value=""></textarea>
+    <textarea type="text" name="attr_reasontoadventure" value=""></textarea>
+    <textarea type="text" name="attr_ideals" value=""></textarea>
+    </div>
+  </div>
+
+  <div class="storychunk">
+<span class="storyHeader">Training & Skills</span>
+     <div class="personalityrow">
+  <span class="storyDescriptorHeader">Background Profession</span>
+  <span class="storyDescriptorHeader">Learned From?</span>
+  <span class="storyDescriptorHeader">Social Status</span>
+  <span class="storyDescriptorHeader">Deeds or Achievements</span>
+   <textarea type="text" name="attr_backgroundprofession" value=""></textarea>
+   <textarea type="text" name="attr_trainingsource" value=""></textarea>
+   <textarea type="text" name="attr_socialstatus" value=""></textarea>
+   <textarea type="text" name="attr_deeds" value=""></textarea>
+    </div>
+  </div>
+
+  <div class="storychunk">
+<span class="storyHeader">Horror (Optional)</span>
+    <div class="personalityrow">
+  <span class="storyDescriptorHeader">Phobias</span>
+  <span class="storyDescriptorHeader">Injuries and Scars</span>
+  <span class="storyDescriptorHeader">Strange Encounters</span>
+  <span class="storyDescriptorHeader">Treasured Possession</span>
+  <textarea type="text" name="attr_Phobias" value=""></textarea>
+  <textarea type="text" name="attr_InjuriesandScars" value=""></textarea>
+  <textarea type="text" name="attr_StrangeEncounters" value=""></textarea>
+  <textarea type="text" name="attr_TreasuredPossession" value=""></textarea>
+  </div>
+  </div>
+
+</div> <!-- close dodaslayour -->
+</div> <!-- end STORY section -->
+
+<!--
+</div>   everything????? -->
 
 
 
-
-</div> <!-- everything????? -->
 
 
 <!--custom roll template -->
-			<rolltemplate class="sheet-rolltemplate-dodas1">
+			<rolltemplate class="sheet-rolltemplate-dodas">
 			<table>
 			    <caption>{{name}}</caption>
 			    {{#allprops() }}
@@ -1852,6 +2006,95 @@
 			    {{/allprops() }}
 			</table>
 </rolltemplate>
+
+
+<rolltemplate class="sheet-rolltemplate-dodas1">
+  <div class="container">
+  <div class="fakeheader">
+      <span class="titleweapon">{{name}}</span>
+      <span class="subheader">{{subtags}}</span>
+      </div>
+  <div class="tableevenrow">
+      <span class="attackdodas1">{{diceADroll}}</span>
+      <span class="attackresultsdodas1">{{attackdatadodas1}}</span>
+  </div>
+  <div class="tableoddrow">
+      <span class="reachdodas1">Weapon Reach</span>
+      <span class="reachresultsdodas1">{{reachdatadodas1}}</span>
+  </div>
+  <div class="tableevenrow">
+      <span class="mosdodas1">{{mosorparryblock}}</span>
+      <span class="mosbuttonsdodas1">{{mosbuttonsdata}}</span>
+  </div>
+  <div class="tableoddrow">
+      <span class="notesdodas1">Notes</span>
+      <span class="notesresultsdodas1">{{notesdatadodas1}}</span>
+  </div>
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-dodasdefense">
+  <div class="container">
+  <div class="fakeheader">
+      <span class="titleweapon">{{name}}</span>
+      <span class="subheader">{{subtags}}</span>
+      </div>
+  <div class="tableevenrow">
+      <span class="attackdodas1">{{diceADroll}}</span>
+      <span class="attackresultsdodas1">{{attackdatadodas1}}</span>
+  </div>
+  <div class="tableoddrow">
+      <span class="reachdodas1">Weapon Reach</span>
+      <span class="reachresultsdodas1">{{reachdatadodas1}}</span>
+  </div>
+  <div class="tableevenrow">
+      <span class="mosdodas1">{{mosorparryblock}}</span>
+      <span class="mosbuttonsdodas1">{{mosbuttonsdata}}</span>
+  </div>
+  <div class="tableoddrow">
+      <span class="notesdodas1">Notes</span>
+      <span class="notesresultsdodas1">{{notesdatadodas1}}</span>
+  </div>
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-dodasmosdmg">
+<div class="container">
+<div class="fakeheader">
+    <span class="titleweapon">{{name}}</span>
+    <span class="subheader">{{subtags}}</span>
+    </div>
+<div class="tableevenrow">
+    <span class="damagedodasdmg">Damage =</span>
+    <span class="damageresultsdodasdmg">{{damageMoStotalsdodasdmg}}</span>
+</div>
+<div class="tableoddrow">
+    <span class="mosamountspan">{{MoSAmount}}</span>
+    <span class="MoSexplainerspan">{{MoSExplainer}}</span>
+    </div>
+<div class="tabledicerow">
+    <span class="headshotdodasdmg">Headshot?{{headshotdmgbutton}}</span>
+    <span class="criticaldodasdmg">Critical?{{criticialhitdmgbutton}}</span>
+    <span class="rerolldiedodasdmg">Reroll?{{rerolldiedmgbutton}}</span>
+</div>
+
+</div>
+
+
+</div>
+</rolltemplate>
+
+<!-- extra damage headshot, crit, or reroll -->
+<rolltemplate class="sheet-rolltemplate-dodasdmgextra">
+<div class="container">
+<div class="tableevenrow">
+    <span class="damageresultsMoSdodasdmg">{{extradmgdodasdmg}}</span>
+    <span class="damageMoSdodasdmg">Extra Damage</span>
+</div>
+
+</div>
+</rolltemplate>
+
 
 
 
@@ -2054,7 +2297,7 @@
     });
 
     //TAB BUTTONS
-        const buttonlist = ["all","combat","skillsandpoints","spells"];
+        const buttonlist = ["allsection","combat","skillsandpoints","spells","story"];
         buttonlist.forEach(button => {
             on(`clicked:${button}`, function() {
                 setAttrs({
