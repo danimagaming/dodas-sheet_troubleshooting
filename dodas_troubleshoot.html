@@ -7,7 +7,7 @@
     <button class="tabbutton" type="action" name="act_allsection">ALL</button>
     </div>
   <div class="tabbutton1">
-    <button class="tabbutton" type="action" name="act_combat">Weapons & Armor</button>
+    <button class="tabbutton" type="action" name="act_wepnstab">Weapons & Armor</button>
     </div>
   <div class="tabbutton2">
     <button class="tabbutton" type="action" name="act_skillsandpoints" >SKILLS & POINTS</button>
@@ -34,7 +34,7 @@
     <div class="ATRTableHeader">
       <span class="emptycellTopLeft"></span>
       <span class="ATRTablePhysical">Attributes</span>
-      <div class="blank row"></div>
+      <div class="attributeDivider"></div>
       <span class="ATRTableDerived">Derived</span>
 
       <div class="ATRTableQuestion">
@@ -50,7 +50,7 @@
       </div>
 
       <div class="ATRLetter">
-        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Strength}} {{roll=[[2d6 + @{Strength}]]}}' name="roll_Strength">
+        <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Strength}} {{roll=[[2d6 + @{Strength}]]}}' name="roll_Strength">
           <span title="Roll Strength">STR</span></button>
           <img src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/dotsLeft.png?raw=true" style="position:absolute; left:90px; top: 122px; height: 120px; width: 6px;">
       </div>
@@ -59,10 +59,11 @@
         <input type="number" name="attr_strength" placeholder="0">
       </div>
 
-    <div class="blank row"></div>
+    <div class="attributesDivider"></div>
+
 
       <div class="derivedATRLetter">
-            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Power}} {{roll=[[2d6 + @{Power}]]}}' name="roll_powerbutton">
+            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Power}} {{roll=[[2d6 + @{Power}]]}}' name="roll_powerbutton">
               <span title="Power">PW</span></button>
           </div>
 <div class="derivedATRNumber">
@@ -85,7 +86,7 @@
       </div>
 
       <div class="ATRLetter">
-        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Agility}} {{roll=[[2d6 + @{agility}]]}}' name="roll_agilitybutton">
+        <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Agility}} {{roll=[[2d6 + @{agility}]]}}' name="roll_agilitybutton">
 
           <span title="Roll Agility">AGI</span></button>
       </div>
@@ -93,7 +94,7 @@
         <input type="number" name="attr_agility" value="0">
       </div>
 
-   <div class="blank row"></div>
+   <div class="attributeDivider"></div>
 
        <div class="derivedATRLetter">
            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Movement}} {{Info=You can move a number of spaces per round equal to your move derived attribute. Each space is about 5 feet.}}' name="roll_movebutton">
@@ -117,7 +118,7 @@
       </div>
 
       <div class="ATRLetter">
-        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Toughness}} {{roll=[[2d6 + @{toughness}]]}}' name="roll_toughnessbutton">
+        <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Toughness}} {{roll=[[2d6 + @{toughness}]]}}' name="roll_toughnessbutton">
           <span title="Roll Toughness">TGH</span></button>
       </div>
 
@@ -125,10 +126,10 @@
         <input type="number" name="attr_toughness" style=" font-weight: bold;" placeholder="0">
       </div>
 
- <div class="blank row"></div>
+ <div class="attributeDivider"></div>
 
       <div class="derivedATRLetter">
-            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Body}} {{roll=[[2d6 + @{Body}]]}}' name="roll_bodybutton">
+            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Body}} {{roll=[[2d6 + @{Body}]]}}' name="roll_bodybutton">
               <span title="Roll Body">BD</span></button>
             </div>
           <div class="derivedATRNumber">
@@ -148,17 +149,17 @@
       </div>
 
           <div class="ATRLetter">
-              <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Size}} {{Info=Size adds to Power and Move, but subtracts from ranged defense}}' name="roll_sizebutton">
+              <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Size}} {{Info=Size adds to Power and Move, but subtracts from ranged defense}}' name="roll_sizebutton">
             <span title="Size">SZ</span></button>
           </div>
           <div class="ATRNumber">
             <input type="number" name="attr_size" style=" font-weight: bold;" placeholder="0" min="-6">
           </div>
 
- <div class="blank row"></div>
+ <div class="attributeDivider"></div>
 
            <div class="derivedATRLetter">
-        <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Knockdown}} {{roll=[[2d6 + @{knockdown}]]}}' name="roll_knockdownbutton">
+        <button class="derivedattributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Knockdown}} {{roll=[[2d6 + @{knockdown}]]}}' name="roll_knockdownbutton">
           <span title="Roll Knockdown"> KND</span></button>
         </div>
       <div class="derivedATRNumber">
@@ -179,7 +180,7 @@
       </div>
 
           <div class="ATRLetter">
-        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Willpower}} {{roll=[[2d6 + @{willpower}]]}}' name="roll_willpowerbutton">
+        <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Willpower}} {{roll=[[2d6 + @{willpower}]]}}' name="roll_willpowerbutton">
           <span title="Roll Willpower">WP</span></button>
       </div>
 
@@ -187,10 +188,10 @@
         <input type="number" name="attr_willpower" placeholder="0">
       </div>
 
- <div class="blank row"></div>
+ <div class="attributeDivider"></div>
 
           <div class="derivedATRLetter">
-            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Knockout}} {{roll=[[2d6 + @{knockout}]]}}' name="roll_knockoutbutton">
+            <button class="derivedattributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Knockout}} {{roll=[[2d6 + @{knockout}]]}}' name="roll_knockoutbutton">
               <span title="Roll Knockout">KO</span></button>
           </div>
           <div class="derivedATRNumber">
@@ -212,17 +213,17 @@
       </div>
 
       <div class="ATRLetter">
-        <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Wit}} {{roll=[[2d6 + @{wit}]]}}' name="roll_witbutton">
+        <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Wit}} {{roll=[[2d6 + @{wit}]]}}' name="roll_witbutton">
           <span title="Roll Wit">WIT</span></button>
       </div>
       <div class="ATRNumber">
         <input type="number" name="attr_wit" style=" font-weight: bold;" value="0" min="-5" max="5">
       </div>
 
- <div class="blank row"></div>
+ <div class="attributeDivider"></div>
 
         <div class="derivedATRLetter">
-        <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Reflex}} {{roll=[[2d6 + @{reflex} &{tracker}]]}}' name="roll_reflexbutton">
+        <button class="derivedattributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Reflex}} {{roll=[[2d6 + @{reflex} &{tracker}]]}}' name="roll_reflexbutton">
           <span title="Roll Reflex"> REF</span></button>
       </div>
       <div class="derivedATRNumber">
@@ -243,17 +244,17 @@
       </div>
 
           <div class="ATRLetter">
-            <button class="attributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} Intelligence}} {{roll=[[2d6 + @{intelligence}]]}}' name="roll_agilitybutton">
+            <button class="attributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} Intelligence}} {{roll=[[2d6 + @{intelligence}]]}}' name="roll_agilitybutton">
               <span title="Roll Intelligence">IN</span></button>
           </div>
           <div class="ATRNumber">
             <input type="number" name="attr_intelligence" style=" font-weight: bold;" placeholder="0">
           </div>
 
- <div class="blank row"></div>
+ <div class="attributeDivider"></div>
 
           <div class="derivedATRLetter">
-              <button class="derivedattributerollbutton" type="roll" value='&{template:dodas1} {{name=@{character_name} ActionPoints}} {{info=4+REF, or Reflex. Action points are your base Combat Points or CP, used for attack and defense rolls. Final CP is calculated by adding your skill modifier of whatever weapon is equipped, to your AP, and then adding any AP modifiers from the weapon equipped. Fill in in the CP column of the Weapon Table.}}' name="roll_actionpointsbutton">
+              <button class="derivedattributerollbutton" type="roll" value='&{template:dodas} {{name=@{character_name} ActionPoints}} {{info=4+REF, or Reflex. Action points are your base Combat Points or CP, used for attack and defense rolls. Final CP is calculated by adding your skill modifier of whatever weapon is equipped, to your AP, and then adding any AP modifiers from the weapon equipped. Fill in in the CP column of the Weapon Table.}}' name="roll_actionpointsbutton">
         <span title="Action Points (Base CP)">AP</span></button>
       </div>
       <div class="derivedATRNumber">
@@ -327,7 +328,7 @@
          <input type="number" name="attr_initiativetotalnumber" value="1">
          <span>
              <button class="sheet-d6-dice" type="roll" value=
-                      '&{template:dodas1} {{name=@{character_name} Initiative}} {{Initiative=[[1d6 + 1d6 + @{initiativetotalnumber} &{tracker}]]}} '
+                      '&{template:dodas} {{name=@{character_name} Initiative}} {{Initiative + @{initiativetotalnumber} = =[[1d6 + 1d6 + @{initiativetotalnumber} &{tracker}]]}} '
                       name="roll_Initiative"></button>
                       </span>
 
@@ -335,6 +336,8 @@
     </div>
 
 </div> <!-- close flex container -->
+
+<div class="passives_luck_flexcontainer">
 
 <!-- Passive Perception Table -->
 <div class="passiveperceptiontable">
@@ -380,8 +383,43 @@
 
  </div>
 
+<!-- LUCK SANITY TABLE -->
+<div class="lucksanitytable">
+     <div class="lucksanitytabletoprow">
+         <span class="lucksanitycell"><img class="REFImg" src="https://github.com/danimagaming/ForgeofSteelRoll20beta/blob/main/terror.png?raw=true" width="23" height="23"></span>
+         <span class="lucksanityMax">Max</span>
+         <span class="lucksanityLoss">Loss</span>
+         <span class="lucksanityCurrent">Current</span>
+         <span class="lucksanitycell">Roll</span>
+     </div>
 
+     <div class="lucksanitytablesecondrow">
+         <span class="luckword">Luck</span>
+         <input type="number" name="attr_luckmax" placeholder="0">
+         <input type="number" name="attr_luckloss" placeholder="1">
+         <input type="number" name="attr_luckcurrent" placeholder="1">
+         <span>
+             <button class="sheet-d6-dice" type="roll" value=
+                      '&{template:dodas} {{name=@{character_name}}} {{Luck Roll +@{luckcurrent} = =[[1d6 + 1d6 + @{luckcurrent}]]}} '
+                      name="roll_Luck"></button>
+                      </span>
+     </div>
 
+     <div class="lucksanitytablethirdrow">
+         <span class="sanityword">Sanity</span>
+         <input type="number" name="attr_sanitymax" placeholder="0">
+         <input type="number" name="attr_sanityloss" placeholder="2">
+         <input type="number" name="attr_sanitycurrent" placeholder="2">
+         <span>
+             <button class="sheet-d6-dice" type="roll" value=
+                      '&{template:dodas} {{name=@{character_name}}} {{Sanity Roll + @{sanitycurrent}= =[[1d6 + 1d6 + @{sanitycurrent}]]}} '
+                      name="roll_Sanity"></button>
+                      </span>
+     </div>
+
+ </div>
+
+</div> <!-- close flex column -->
 
 <!-- WEAPONs EQUIPPED TABLE -->
 
@@ -745,7 +783,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 <div class="skilltable">
   <div class="skilltablerow">
 
-    <span class="str1Skillsand">Skills &</span>
+    <span class="str1Skillsand">Combat</span>
     <span class="str1empty"></span>
     <span class="str1empty"></span>
     <span class="str1empty"></span>
@@ -759,11 +797,11 @@ name="roll_weaponrepeatingbuttonthrust"></button>
   </div>
   <div class="skilltablerow2">
 
-    <span class="str2Abilities">Abilities</span>
+    <span class="str2Abilities">Skills</span>
     <span class="str2Total">Total</span>
     <span class="str2Roll">Roll</span>
     <span class="str2Tier">Tier</span>
-    <span class="str2Cost">Cost</span>
+    <span class="str2Cost">Points</span>
     <span title="Tier 5" class="str27">5</span>
     <span title="Tier 4" class="str24">4</span>
     <span title="Tier 3 (Optional)" class="str22">3</span>
@@ -781,35 +819,1019 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   </div>
 
-  <fieldset class="repeating_skills">
-    <div class="skillsfillrepeating">
+<!-- initial skill categories -->
+  <!-- combat skills -->
+    <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
 
-      <input type="text" name="attr_skillsandabilities" value="">
-      <input type="text" name="attr_skilltotal" value="">
+      <span class="skillnamefieldprimary" name="attr_allcombat">All Combat</span>
+      <input type="text" class="skilltotalfield" name="attr_allcombatskilltotal" value="">
       <span class="skillrollbutton">
         <button class="sheet-d6-dice" type="roll" value=
-        '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+        '&{template:dodas} {{name=@{character_name} All Combat }} {{roll +@{allcombatskilltotal} = =[[2d6 + @{allcombatskilltotal}]]}}'
         name="roll_skilltotalcolumn"></button> </span>
-        <input type="text" name="attr_tiercost" value="">
-      <input type="text" name="attr_cost" value="">
-      <input type="text" name="attr_tierseven" value="">
-      <input type="text" name="attr_tierfour" value="">
-      <input type="text" name="attr_tiertwo" value="">
-      <input type="text" name="attr_tierone" value="">
-      <input type="text" name="attr_tierstar" value="">
-      <input type="text" name="attr_tierabovesub" value="">
-      <input type="text" name="attr_synergybonus" value="">
-      <input type="text" name="attr_synergyoffset" value="">
-      <input type="text" name="attr_group" value="">
-      <input type="text" name="attr_attribute" value="">
-      <input type="text" name="attr_attributemodifier" value="">
-      <input type="text" name="attr_attributetwo" value="">
-      <input type="text" name="attr_attributemodifiertwo" value="">
-      <input type="text" name="attr_othermodifiersfill" value="">
+      <input type="text" class="tiercostcolumn" name="attr_allcombattiercost" value="5">
+      <input type="text" class="costcolumn" name="attr_allcombatpoints" value="">
+      <input type="number" class="tiersevenfield" name="attr_allcombattierfive" value="">
+      <input type="number" class="tierfourfield" name="attr_allcombattierfour" value="">
+      <input type="number" class="tiertwofield" name="attr_allcombattierthree" value="">
+      <input type="number" class="tieronefield" name="attr_allcombattiertwo" value="">
+      <input type="number" class="tierstarfield" name="attr_allcombattierone" value="">
+      <input type="number" class="tierabovesubfield" name="attr_allcombattierabovesub" value="">
+      <input type="number" class="synergybonusfield" name="attr_allcombatsynergybonus" value="">
+      <input type="number" class="synergyoffsetfield" name="attr_allcombatsynergyoffset" value="">
+      <input type="number" class="subtotalfield" name="attr_allcombatgroup" value="">
+      <input type="text" class="firstskillATRfield" name="attr_allcombatattribute" value="AP">
+      <input type="text" class="firstATRmodField" name="attr_allcombatattributemodifier" value=""> <!-- sheetworker -->
+      <input type="text" class="secondATRField" name="attr_allcombatattributetwo" value="">
+      <input type="text" class="secondATRmod" name="attr_allcombatattributemodifiertwo" value="">
+      <input type="text" class="otherskillfield" name="attr_allcombatothermodifiersfill" value="">
       </div>
-  </fieldset>
 
-</div>
+      
+<!-- hidden attributes for repeating row calculations -->  
+      <input type="hidden" name="attr_total_allcombatspec" value="0">
+      <input type="hidden" name="attr_total_meleespec" value="0">
+      <input type="hidden" name="attr_total_rangedspec" value="0">
+
+      <!-- all combat SPECIALIZATIONS -->
+      <fieldset class="repeating_allcombatspec">
+         <div class="skillsfillrepeatingsecondary">
+
+           <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+           <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+           <span class="skillrollbutton">
+             <button class="sheet-d6-dice" type="roll" value=
+             '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+             name="roll_skilltotalcolumn"></button> </span>
+           <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+           <input type="text" class="costcolumn" name="attr_points" value="">
+           <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+           <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+           <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+           <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+           <input type="number" class="tieronefield" name="attr_tierone" value="">
+           <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+           <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+           <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+           <input type="number" class="subtotalfield" name="attr_group" value="">
+           <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+           <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+           <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+           <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+           <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+           </div>
+       </fieldset>
+
+       <!-- melee combat -->
+       <div class="skillsfillrepeatingsecondary"> <!-- class is a misnomer leftover from before -->
+
+          <span class="skillnamefield" name="attr_meleecombat">Melee Combat</span>
+          <input type="text" class="skilltotalfield" name="attr_meleecombatskilltotal" value="">
+          <span class="skillrollbutton">
+            <button class="sheet-d6-dice" type="roll" value=
+            '&{template:dodas} {{name=@{character_name} Melee Combat }} {{roll +@{meleecombatskilltotal} = =[[2d6 + @{meleecombatskilltotal}]]}}'
+            name="roll_skilltotalcolumn"></button> </span>
+          <input type="text" class="tiercostcolumn" name="attr_meleecombattiercost" value="4">
+          <input type="text" class="costcolumn" name="attr_meleecombatpoints" value="">
+          <input type="number" class="tierfivefield" name="attr_meleecombattierfive" value="">
+          <input type="number" class="tierfourfield" name="attr_meleecombattierfour" value="">
+          <input type="number" class="tierthreefield" name="attr_meleecombattierthree" value="">
+          <input type="number" class="tiertwofield" name="attr_meleecombattiertwo" value="">
+          <input type="number" class="tieronefield" name="attr_meleecombattierone" value="">
+          <input type="number" class="tierabovesubfield" name="attr_meleecombattierabovesub" value="">
+          <input type="number" class="synergybonusfield" name="attr_meleecombatsynergybonus" value="">
+          <input type="number" class="synergyoffsetfield" name="attr_meleecombatsynergyoffset" value="">
+          <input type="number" class="subtotalfield" name="attr_meleecombatgroup" value="">
+          <input type="text" class="firstskillATRfield" name="attr_meleecombatattribute" value="AP">
+          <input type="text" class="firstATRmodField" name="attr_meleecombatattributemodifier" value=""> <!-- pull sheetworker value -->
+          <input type="text" class="secondATRField" name="attr_meleecombatattributetwo" value="">
+          <input type="text" class="secondATRmod" name="attr_meleecombatattributemodifiertwo" value="">
+          <input type="text" class="otherskillfield" name="attr_meleecombatothermodifiersfill" value="">
+           </div>
+
+       <!-- Melee Combat SPECIALIZATIONS -->
+      <fieldset class="repeating_meleespec">
+         <div class="skillsfillrepeatingtertiary">
+
+           <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+           <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+           <span class="skillrollbutton">
+             <button class="sheet-d6-dice" type="roll" value=
+             '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+             name="roll_skilltotalcolumn"></button> </span>
+           <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+           <input type="text" class="costcolumn" name="attr_points" value="">
+           <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+           <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+           <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+           <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+           <input type="number" class="tieronefield" name="attr_tierone" value="">
+           <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+           <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+           <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+           <input type="number" class="subtotalfield" name="attr_group" value="">
+           <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+           <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+           <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+           <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+           <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+           </div>
+       </fieldset>
+
+        <!-- ranged combat -->
+       <div class="skillsfillrepeatingsecondary"> <!-- class is a misnomer leftover from before -->
+
+          <span class="skillnamefield" name="attr_rangedcombat">Ranged Combat</span>
+          <input type="text" class="skilltotalfield" name="attr_rangedcombatskilltotal" value="">
+          <span class="skillrollbutton">
+            <button class="sheet-d6-dice" type="roll" value=
+            '&{template:dodas} {{name=@{character_name} @{rangedcombat} }} {{roll +@{rangedcombatskilltotal} = =[[2d6 + @{rangedcombatskilltotal}]]}}'
+            name="roll_skilltotalcolumn"></button> </span>
+          <input type="text" class="tiercostcolumn" name="attr_rangedcombattiercost" value="4">
+          <input type="text" class="costcolumn" name="attr_rangedcombatpoints" value="">
+          <input type="number" class="tierfivefield" name="attr_rangedcombattierfive" value="">
+          <input type="number" class="tierfourfield" name="attr_rangedcombattierfour" value="">
+          <input type="number" class="tierthreefield" name="attr_rangedcombattierthree" value="">
+          <input type="number" class="tiertwofield" name="attr_rangedcombattiertwo" value="">
+          <input type="number" class="tieronefield" name="attr_rangedcombattierone" value="">
+          <input type="number" class="tierabovesubfield" name="attr_rangedcombattierabovesub" value="">
+          <input type="number" class="synergybonusfield" name="attr_rangedcombatsynergybonus" value="">
+          <input type="number" class="synergyoffsetfield" name="attr_rangedcombatsynergyoffset" value="">
+          <input type="number" class="subtotalfield" name="attr_rangedcombatgroup" value="">
+          <input type="text" class="firstskillATRfield" name="attr_rangedcombatattribute" value="AP">
+          <input type="text" class="firstATRmodField" name="attr_rangedcombatattributemodifier" value="">
+          <input type="text" class="secondATRField" name="attr_rangedcombatattributetwo" value="">
+          <input type="text" class="secondATRmod" name="attr_rangedcombatattributemodifiertwo" value="">
+          <input type="text" class="otherskillfield" name="attr_rangedcombatothermodifiersfill" value="">
+           </div>
+
+       <!-- Ranged Combat SPECIALIZATIONS -->
+      <fieldset class="repeating_rangedspec">
+         <div class="skillsfillrepeatingtertiary">
+
+           <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+           <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+           <span class="skillrollbutton">
+             <button class="sheet-d6-dice" type="roll" value=
+             '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+             name="roll_skilltotalcolumn"></button> </span>
+           <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+           <input type="text" class="costcolumn" name="attr_points" value="">
+           <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+           <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+           <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+           <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+           <input type="number" class="tieronefield" name="attr_tierone" value="">
+           <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+           <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+           <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+           <input type="number" class="subtotalfield" name="attr_group" value="">
+           <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+           <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+           <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+           <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+           <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+           </div>
+       </fieldset>
+
+
+
+
+
+
+
+      <!-- ADVENTURING SKILLS REPEAT -->
+         <div class="skilltable">
+         <div class="skilltablerow">
+
+           <span class="str1Skillsand">Adventuring</span>
+           <span class="str1empty"></span>
+           <span class="str1empty"></span>
+           <span class="str1empty"></span>
+           <span class="str1empty"></span>
+           <span title="Which Tier is the Skill?" class="str1TiersbyCost">Tiers by Cost</span>
+           <span class="str1Synergy">Synergy</span>
+           <span class="str1Above">Above</span>
+           <span class="str1Sub">Sub</span>
+           <span class="str1RelevantAttributes">Relevant Attributes</span>
+           <span class="str1OtherModifiersTop">Other</span>
+         </div>
+         <div class="skilltablerow2">
+
+           <span class="str2Abilities">Skills</span>
+           <span class="str2Total">Total</span>
+           <span class="str2Roll">Roll</span>
+           <span class="str2Tier">Tier</span>
+           <span class="str2Cost">Points</span>
+           <span title="Tier 5" class="str27">5</span>
+           <span title="Tier 4" class="str24">4</span>
+           <span title="Tier 3 (Optional)" class="str22">3</span>
+           <span title="Tier 2" class="str21">2</span>
+           <span title="Tier 1" class="str2star">1</span>
+           <span class="str2Bonus">Bonus</span>
+           <span class="str2Offset">Offset</span>
+           <span class="str2AboveSub">Sub</span>
+           <span class="str2Sub">Total</span>
+           <span title="Attribute used for skill" class="str2ATR1">ATR</span>
+           <span title="Attribute modifier" class="str2Mod1">Mod</span>
+           <span title="Attribute two used for skill" class="str2ATR2">ATR</span>
+           <span title="Attribute modifier" class="str2Mod2">Mod</span>
+           <span class="OtherModifiersBottom">Modifiers</span>
+
+         </div>
+
+       <!-- KNOWLEDGE, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_knowledge">Knowledge</span>
+             <input type="text" class="skilltotalfield" name="attr_knowledgeskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Knowledge}} {{roll +@{knowledgeskilltotal} = =[[2d6 + @{knowledgeskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_knowledgetiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_knowledgepoints" value="">
+             <input type="number" class="tierfivefield" name="attr_knowledgetierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_knowledgetierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_knowledgetierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_knowledgetiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_knowledgetierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_knowledgetierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_knowledgesynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_knowledgesynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_knowledgegroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_knowledgeattribute" value="INT">
+             <input type="text" class="firstATRmodField" name="attr_knowledgeattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_knowledgeattributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_knowledgeattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_knowledgeothermodifiersfill" value="">
+             </div>
+
+           <!-- Knowledge Repeating -->
+           <fieldset class="repeating_knowledgespec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+       <!-- mobility, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_mobility">Mobility</span>
+             <input type="text" class="skilltotalfield" name="attr_mobilityskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Mobility }} {{roll +@{mobilityskilltotal} = =[[2d6 + @{mobilityskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_mobilitytiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_mobilitypoints" value="">
+             <input type="number" class="tierfivefield" name="attr_mobilitytierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_mobilitytierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_mobilitytierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_mobilitytiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_mobilitytierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_mobilitytierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_mobilitysynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_mobilitysynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_mobilitygroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_mobilityattribute" value="KND">
+             <input type="text" class="firstATRmodField" name="attr_mobilityattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_mobilityattributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_mobilityattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_mobilityothermodifiersfill" value="">
+             </div>
+
+           <!-- mobility Repeating -->
+           <fieldset class="repeating_mobilityspec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+           <!-- mechanicaldevices, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_mechanicaldevices">Mechanical Devices</span>
+             <input type="text" class="skilltotalfield" name="attr_mechanicaldevicesskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Mechanical Devics }} {{roll +@{mechanicaldevicesskilltotal} = =[[2d6 + @{mechanicaldevicesskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_mechanicaldevicestiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_mechanicaldevicespoints" value="">
+             <input type="number" class="tierfivefield" name="attr_mechanicaldevicestierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_mechanicaldevicestierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_mechanicaldevicestierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_mechanicaldevicestiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_mechanicaldevicestierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_mechanicaldevicestierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_mechanicaldevicessynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_mechanicaldevicessynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_mechanicaldevicesgroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_mechanicaldevicesattribute" value="REF">
+             <input type="text" class="firstATRmodField" name="attr_mechanicaldevicesattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_mechanicaldevicesattributetwo" value="INT">
+             <input type="text" class="secondATRmod" name="attr_mechanicaldevicesattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_mechanicaldevicesothermodifiersfill" value="">
+             </div>
+
+           <!-- mechanicaldevices Repeating -->
+           <fieldset class="repeating_mechanicaldevicesspec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+
+       <!-- medicine, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_medicine">Medicine</span>
+             <input type="text" class="skilltotalfield" name="attr_medicineskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Medicine }} {{roll +@{medicineskilltotal} = =[[2d6 + @{medicineskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_medicinetiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_medicinepoints" value="">
+             <input type="number" class="tierfivefield" name="attr_medicinetierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_medicinetierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_medicinetierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_medicinetiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_medicinetierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_medicinetierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_medicinesynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_medicinesynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_medicinegroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_medicineattribute" value="INT">
+             <input type="text" class="firstATRmodField" name="attr_medicineattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_medicineattributetwo" value="REF">
+             <input type="text" class="secondATRmod" name="attr_medicineattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_medicineothermodifiersfill" value="">
+             </div>
+
+           <!-- medicine Repeating -->
+           <fieldset class="repeating_medicinespec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+           <!-- perception, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_perception">Perception</span>
+             <input type="text" class="skilltotalfield" name="attr_perceptionskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Perception }} {{roll +@{perceptionskilltotal} = =[[2d6 + @{perceptionskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_perceptiontiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_perceptionpoints" value="">
+             <input type="number" class="tierfivefield" name="attr_perceptiontierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_perceptiontierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_perceptiontierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_perceptiontiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_perceptiontierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_perceptiontierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_perceptionsynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_perceptionsynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_perceptiongroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_perceptionattribute" value="WIT">
+             <input type="text" class="firstATRmodField" name="attr_perceptionattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_perceptionattributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_perceptionattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_perceptionothermodifiersfill" value="">
+             </div>
+
+           <!-- perception Repeating -->
+           <fieldset class="repeating_perceptionspec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+           <!-- profession, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_profession">Profession (Non-Adventuring)</span>
+             <input type="text" class="skilltotalfield" name="attr_professionskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Profession }} {{roll +@{professionskilltotal} = =[[2d6 + @{professionskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_professiontiercost" value="1">
+             <input type="text" class="costcolumn" name="attr_professionpoints" value="">
+             <input type="number" class="tierfivefield" name="attr_professiontierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_professiontierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_professiontierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_professiontiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_professiontierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_professiontierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_professionsynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_professionsynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_professiongroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_professionattribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_professionattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_professionattributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_professionattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_professionothermodifiersfill" value="">
+             </div>
+
+           <!-- profession Repeating -->
+           <fieldset class="repeating_perceptionspec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+
+
+        <!-- SOCIAL SKILLS -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_social">Social</span>
+             <input type="text" class="skilltotalfield" name="attr_socialskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Social }} {{roll +@{socialskilltotal} = =[[2d6 + @{socialskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_socialtiercost" value="5">
+             <input type="text" class="costcolumn" name="attr_socialpoints" value="">
+             <input type="number" class="tierfivefield" name="attr_socialtierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_socialtierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_socialtierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_socialtiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_socialtierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_socialtierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_socialsynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_socialsynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_socialgroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_socialattribute" value="WIT">
+             <input type="text" class="firstATRmodField" name="attr_socialattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_socialattributetwo" value="WP">
+             <input type="text" class="secondATRmod" name="attr_socialattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_socialothermodifiersfill" value="">
+             </div>
+
+       <!-- Social WIT -->
+       <div class="skillsfillrepeatingsecondary"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_socialwits">Social: Wits</span>
+             <input type="text" class="skilltotalfield" name="attr_socialwitskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Social Wits }} {{roll +@{socialwitskilltotal} = =[[2d6 + @{socialwitskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_socialwittiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_socialwitpoints" value="">
+             <input type="number" class="tierfivefield" name="attr_socialwittierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_socialwittierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_socialwittierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_socialwittiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_socialwittierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_socialwittierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_socialwitsynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_socialwitsynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_socialwitgroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_socialwitattribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_socialwitattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_socialwitattributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_socialwitattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_socialwitothermodifiersfill" value="">
+             </div>
+
+           <!-- social wits Repeating -->
+           <fieldset class="repeating_socialwitspec">
+           <div class="skillsfillrepeatingtertiary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+           </fieldset>
+
+           <!-- Social Personality -->
+           <div class="skillsfillrepeatingsecondary"> <!-- class is a misnomer leftover from before -->
+
+                 <span class="skillnamefieldprimary" name="attr_socialpersonality">Social: Personality</span>
+                 <input type="text" class="skilltotalfield" name="attr_socialpersonalityskilltotal" value="">
+                 <span class="skillrollbutton">
+                   <button class="sheet-d6-dice" type="roll" value=
+                   '&{template:dodas} {{name=@{character_name} Social Personality }} {{roll +@{socialpersonalityskilltotal} = =[[2d6 + @{socialpersonalityskilltotal}]]}}'
+                   name="roll_skilltotalcolumn"></button> </span>
+                 <input type="text" class="tiercostcolumn" name="attr_socialpersonalitytiercost" value="4">
+                 <input type="text" class="costcolumn" name="attr_socialpersonalitypoints" value="">
+                 <input type="number" class="tierfivefield" name="attr_socialpersonalitytierfive" value="">
+                 <input type="number" class="tierfourfield" name="attr_socialpersonalitytierfour" value="">
+                 <input type="number" class="tierthreefield" name="attr_socialpersonalitytierthree" value="">
+                 <input type="number" class="tiertwofield" name="attr_socialpersonalitytiertwo" value="">
+                 <input type="number" class="tieronefield" name="attr_socialpersonalitytierone" value="">
+                 <input type="number" class="tierabovesubfield" name="attr_socialpersonalitytierabovesub" value="">
+                 <input type="number" class="synergybonusfield" name="attr_socialpersonalitysynergybonus" value="">
+                 <input type="number" class="synergyoffsetfield" name="attr_socialpersonalitysynergyoffset" value="">
+                 <input type="number" class="subtotalfield" name="attr_socialpersonalitygroup" value="">
+                 <input type="text" class="firstskillATRfield" name="attr_socialpersonalityattribute" value="WP">
+                 <input type="text" class="firstATRmodField" name="attr_socialpersonalityattributemodifier" value="">
+                 <input type="text" class="secondATRField" name="attr_socialpersonalityattributetwo" value="">
+                 <input type="text" class="secondATRmod" name="attr_socialpersonalityattributemodifiertwo" value="">
+                 <input type="text" class="otherskillfield" name="attr_socialpersonalityothermodifiersfill" value="">
+                 </div>
+
+               <!-- social Personality Repeating -->
+               <fieldset class="repeating_socialpersonalityspec">
+               <div class="skillsfillrepeatingtertiary">
+
+                 <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+                 <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+                 <span class="skillrollbutton">
+                   <button class="sheet-d6-dice" type="roll" value=
+                   '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+                   name="roll_skilltotalcolumn"></button> </span>
+                 <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+                 <input type="text" class="costcolumn" name="attr_points" value="">
+                 <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+                 <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+                 <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+                 <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+                 <input type="number" class="tieronefield" name="attr_tierone" value="">
+                 <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+                 <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+                 <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+                 <input type="number" class="subtotalfield" name="attr_group" value="">
+                 <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+                 <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+                 <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+                 <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+                 <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+                 </div>
+               </fieldset>
+
+
+           <!-- strengthskills, start of skills -->
+           <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_strengthskills">Strength Skills</span>
+             <input type="text" class="skilltotalfield" name="attr_strengthskillsskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Strength Skills }} {{roll +@{strengthskillsskilltotal} = =[[2d6 + @{strengthskillsskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_strengthskillstiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_strengthskillspoints" value="">
+             <input type="number" class="tierfivefield" name="attr_strengthskillstierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_strengthskillstierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_strengthskillstierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_strengthskillstiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_strengthskillstierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_strengthskillstierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_strengthskillssynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_strengthskillssynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_strengthskillsgroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_strengthskillsattribute" value="PW">
+             <input type="text" class="firstATRmodField" name="attr_strengthskillsattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_strengthskillsattributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_strengthskillsattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_strengthskillsothermodifiersfill" value="">
+             </div>
+
+           <!-- strengthskills Repeating -->
+           <fieldset class="repeating_strengthskillsspec">
+           <div class="skillsfillrepeatingsecondary">
+
+             <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+             <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+             <input type="text" class="costcolumn" name="attr_points" value="">
+             <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_tierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_group" value="">
+             <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+             <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+             <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+             </div>
+         </fieldset>
+
+       <!-- SURVIVAL -->
+       <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_survival">Survival</span>
+             <input type="text" class="skilltotalfield" name="attr_survivalskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} Survival }} {{roll +@{survivalskilltotal} = =[[2d6 + @{survivalskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_survivaltiercost" value="5">
+             <input type="text" class="costcolumn" name="attr_survivalpoints" value="">
+             <input type="number" class="tierfivefield" name="attr_survivaltierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_survivaltierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_survivaltierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_survivaltiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_survivaltierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_survivaltierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_survivalsynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_survivalsynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_survivalgroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_survivalattribute" value="WIT">
+             <input type="text" class="firstATRmodField" name="attr_survivalattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_survivalattributetwo" value="INT">
+             <input type="text" class="secondATRmod" name="attr_survivalattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_survivalothermodifiersfill" value="">
+             </div>
+
+       <!-- Survival Outdoors -->
+       <div class="skillsfillrepeatingsecondary"> <!-- class is a misnomer leftover from before -->
+
+             <span class="skillnamefieldprimary" name="attr_survivaloutdoors">Survival: Outdoors</span>
+             <input type="text" class="skilltotalfield" name="attr_survivaloutdoorsskilltotal" value="">
+             <span class="skillrollbutton">
+               <button class="sheet-d6-dice" type="roll" value=
+               '&{template:dodas} {{name=@{character_name} @{survivaloutdoors} }} {{roll +@{survivaloutdoorsskilltotal} = =[[2d6 + @{survivaloutdoorsskilltotal}]]}}'
+               name="roll_skilltotalcolumn"></button> </span>
+             <input type="text" class="tiercostcolumn" name="attr_survivaloutdoorstiercost" value="4">
+             <input type="text" class="costcolumn" name="attr_survivaloutdoorspoints" value="">
+             <input type="number" class="tierfivefield" name="attr_survivaloutdoorstierfive" value="">
+             <input type="number" class="tierfourfield" name="attr_survivaloutdoorstierfour" value="">
+             <input type="number" class="tierthreefield" name="attr_survivaloutdoorstierthree" value="">
+             <input type="number" class="tiertwofield" name="attr_survivaloutdoorstiertwo" value="">
+             <input type="number" class="tieronefield" name="attr_survivaloutdoorstierone" value="">
+             <input type="number" class="tierabovesubfield" name="attr_survivaloutdoorstierabovesub" value="">
+             <input type="number" class="synergybonusfield" name="attr_survivaloutdoorssynergybonus" value="">
+             <input type="number" class="synergyoffsetfield" name="attr_survivaloutdoorssynergyoffset" value="">
+             <input type="number" class="subtotalfield" name="attr_survivaloutdoorsgroup" value="">
+             <input type="text" class="firstskillATRfield" name="attr_survivaloutdoorsattribute" value="WIT">
+             <input type="text" class="firstATRmodField" name="attr_survivaloutdoorsattributemodifier" value="">
+             <input type="text" class="secondATRField" name="attr_survivaloutdoorsattributetwo" value="INT">
+             <input type="text" class="secondATRmod" name="attr_survivaloutdoorsattributemodifiertwo" value="">
+             <input type="text" class="otherskillfield" name="attr_survivaloutdoorsothermodifiersfill" value="">
+             </div>
+
+             <!-- Survival Outdoors Repeating -->
+             <fieldset class="repeating_survivaloutdoorsspec">
+             <div class="skillsfillrepeatingtertiary">
+
+               <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+               <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+               <span class="skillrollbutton">
+                 <button class="sheet-d6-dice" type="roll" value=
+                 '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+                 name="roll_skilltotalcolumn"></button> </span>
+               <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+               <input type="text" class="costcolumn" name="attr_points" value="">
+               <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+               <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+               <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+               <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+               <input type="number" class="tieronefield" name="attr_tierone" value="">
+               <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+               <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+               <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+               <input type="number" class="subtotalfield" name="attr_group" value="">
+               <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+               <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+               <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+               <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+               <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+               </div>
+             </fieldset>
+
+             <!-- Survival Urban -->
+             <div class="skillsfillrepeatingsecondary"> <!-- class is a misnomer leftover from before -->
+
+                   <span class="skillnamefieldprimary" name="attr_survivalurban">Survival: Urban</span>
+                   <input type="text" class="skilltotalfield" name="attr_survivalurbanskilltotal" value="">
+                   <span class="skillrollbutton">
+                     <button class="sheet-d6-dice" type="roll" value=
+                     '&{template:dodas} {{name=@{character_name} @{survivalurban} }} {{roll +@{survivalurbanskilltotal} = =[[2d6 + @{survivalurbanskilltotal}]]}}'
+                     name="roll_skilltotalcolumn"></button> </span>
+                   <input type="text" class="tiercostcolumn" name="attr_survivalurbantiercost" value="4">
+                   <input type="text" class="costcolumn" name="attr_survivalurbanpoints" value="">
+                   <input type="number" class="tierfivefield" name="attr_survivalurbantierfive" value="">
+                   <input type="number" class="tierfourfield" name="attr_survivalurbantierfour" value="">
+                   <input type="number" class="tierthreefield" name="attr_survivalurbantierthree" value="">
+                   <input type="number" class="tiertwofield" name="attr_survivalurbantiertwo" value="">
+                   <input type="number" class="tieronefield" name="attr_survivalurbantierone" value="">
+                   <input type="number" class="tierabovesubfield" name="attr_survivalurbantierabovesub" value="">
+                   <input type="number" class="synergybonusfield" name="attr_survivalurbansynergybonus" value="">
+                   <input type="number" class="synergyoffsetfield" name="attr_survivalurbansynergyoffset" value="">
+                   <input type="number" class="subtotalfield" name="attr_survivalurbangroup" value="">
+                   <input type="text" class="firstskillATRfield" name="attr_survivalurbanattribute" value="WIT">
+                   <input type="text" class="firstATRmodField" name="attr_survivalurbanattributemodifier" value="">
+                   <input type="text" class="secondATRField" name="attr_survivalurbanattributetwo" value="INT">
+                   <input type="text" class="secondATRmod" name="attr_survivalurbanattributemodifiertwo" value="">
+                   <input type="text" class="otherskillfield" name="attr_survivalurbanothermodifiersfill" value="">
+                   </div>
+
+                   <!-- Survival Urban Repeating -->
+                   <fieldset class="repeating_survivalurbanspec">
+                   <div class="skillsfillrepeatingtertiary">
+
+                     <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+                     <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+                     <span class="skillrollbutton">
+                       <button class="sheet-d6-dice" type="roll" value=
+                       '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+                       name="roll_skilltotalcolumn"></button> </span>
+                     <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+                     <input type="text" class="costcolumn" name="attr_points" value="">
+                     <input type="number" class="tierfivefield" name="attr_tierfive" value="">
+                     <input type="number" class="tierfourfield" name="attr_tierfour" value="">
+                     <input type="number" class="tierthreefield" name="attr_tierthree" value="">
+                     <input type="number" class="tiertwofield" name="attr_tiertwo" value="">
+                     <input type="number" class="tieronefield" name="attr_tierone" value="">
+                     <input type="number" class="tierabovesubfield" name="attr_tierabovesub" value="">
+                     <input type="number" class="synergybonusfield" name="attr_synergybonus" value="">
+                     <input type="number" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+                     <input type="number" class="subtotalfield" name="attr_group" value="">
+                     <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+                     <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+                     <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+                     <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+                     <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+                     </div>
+                   </fieldset>
+
+
+
+
+  <!-- OLD repeating specializations, indented -->
+      <!-- custom skills -->
+      <div class="skilltable">
+      <div class="skilltablerow">
+
+        <span class="str1Skillsand">Custom</span>
+        <span class="str1empty"></span>
+        <span class="str1empty"></span>
+        <span class="str1empty"></span>
+        <span class="str1empty"></span>
+        <span title="Which Tier is the Skill?" class="str1TiersbyCost">Tiers by Cost</span>
+        <span class="str1Synergy">Synergy</span>
+        <span class="str1Above">Above</span>
+        <span class="str1Sub">Sub</span>
+        <span class="str1RelevantAttributes">Relevant Attributes</span>
+        <span class="str1OtherModifiersTop">Other</span>
+      </div>
+      <div class="skilltablerow2">
+
+        <span class="str2Abilities">Skills</span>
+        <span class="str2Total">Total</span>
+        <span class="str2Roll">Roll</span>
+        <span class="str2Tier">Tier</span>
+        <span class="str2Cost">Points</span>
+        <span title="Tier 5" class="str27">5</span>
+        <span title="Tier 4" class="str24">4</span>
+        <span title="Tier 3 (Optional)" class="str22">3</span>
+        <span title="Tier 2" class="str21">2</span>
+        <span title="Tier 1" class="str2star">1</span>
+        <span class="str2Bonus">Bonus</span>
+        <span class="str2Offset">Offset</span>
+        <span class="str2AboveSub">Sub</span>
+        <span class="str2Sub">Total</span>
+        <span title="Attribute used for skill" class="str2ATR1">ATR</span>
+        <span title="Attribute modifier" class="str2Mod1">Mod</span>
+        <span title="Attribute two used for skill" class="str2ATR2">ATR</span>
+        <span title="Attribute modifier" class="str2Mod2">Mod</span>
+        <span class="OtherModifiersBottom">Modifiers</span>
+
+      </div>
+
+      <div class="skillsfillrepeating"> <!-- class is a misnomer leftover from before -->
+
+        <span class="skillnamefieldprimary" name="attr_customskills">Custom Skills</span>
+        <input type="text" class="skilltotalfield" name="attr_customskillsskilltotal" value="">
+        <span class="skillrollbutton">
+          <button class="sheet-d6-dice" type="roll" value=
+          '&{template:dodas} {{name=@{character_name} @{customskills} }} {{roll +@{customskillsskilltotal} = =[[2d6 + @{customskillsskilltotal}]]}}'
+          name="roll_skilltotalcolumn"></button> </span>
+        <input type="text" class="tiercostcolumn" name="attr_customskillstiercost" value="">
+        <input type="text" class="costcolumn" name="attr_customskillscost" value="">
+        <input type="text" class="tiersevenfield" name="attr_customskillstierseven" value="">
+        <input type="text" class="tierfourfield" name="attr_customskillstierfour" value="">
+        <input type="text" class="tiertwofield" name="attr_customskillstiertwo" value="">
+        <input type="text" class="tieronefield" name="attr_customskillstierone" value="">
+        <input type="text" class="tierstarfield" name="attr_customskillstierstar" value="">
+        <input type="text" class="tierabovesubfield" name="attr_customskillstierabovesub" value="">
+        <input type="text" class="synergybonusfield" name="attr_customskillssynergybonus" value="">
+        <input type="text" class="synergyoffsetfield" name="attr_customskillssynergyoffset" value="">
+        <input type="text" class="subtotalfield" name="attr_customskillsgroup" value="">
+        <input type="text" class="firstskillATRfield" name="attr_customskillsattribute" value="">
+        <input type="text" class="firstATRmodField" name="attr_customskillsattributemodifier" value="">
+        <input type="text" class="secondATRField" name="attr_customskillsattributetwo" value="">
+        <input type="text" class="secondATRmod" name="attr_customskillsattributemodifiertwo" value="">
+        <input type="text" class="otherskillfield" name="attr_customskillsothermodifiersfill" value="">
+        </div>
+
+    <fieldset class="repeating_skills">
+      <div class="skillsfillrepeating">
+
+        <input type="text" class="skillnamefield" name="attr_skillsandabilities" value="">
+        <input type="text" class="skilltotalfield" name="attr_skilltotal" value="">
+        <span class="skillrollbutton">
+          <button class="sheet-d6-dice" type="roll" value=
+          '&{template:dodas} {{name=@{character_name} @{skillsandabilities} }} {{roll +@{skilltotal} = =[[2d6 + @{skilltotal}]]}}'
+          name="roll_skilltotalcolumn"></button> </span>
+        <input type="text" class="tiercostcolumn" name="attr_tiercost" value="">
+        <input type="text" class="costcolumn" name="attr_cost" value="">
+        <input type="text" class="tiersevenfield" name="attr_tierseven" value="">
+        <input type="text" class="tierfourfield" name="attr_tierfour" value="">
+        <input type="text" class="tiertwofield" name="attr_tiertwo" value="">
+        <input type="text" class="tieronefield" name="attr_tierone" value="">
+        <input type="text" class="tierstarfield" name="attr_tierstar" value="">
+        <input type="text" class="tierabovesubfield" name="attr_tierabovesub" value="">
+        <input type="text" class="synergybonusfield" name="attr_synergybonus" value="">
+        <input type="text" class="synergyoffsetfield" name="attr_synergyoffset" value="">
+        <input type="text" class="subtotalfield" name="attr_group" value="">
+
+
+
+        <input type="text" class="firstskillATRfield" name="attr_attribute" value="">
+          <!-- try a datalist instead
+        <input type="text" list="abilityScores" name="attr_abilityScore">
+        <datalist id="abilityScores">
+            <option value="@{power}">PW</option>
+            <option value="@{movement}">Move</option>
+            <option value="@{willpower}">WP</option>
+            <option value="@{wit}">WIT</option>
+            <option value="@{intelligence}">INT</option>
+            <option value="@{knockdown}">KN</option>
+            <option value="@{reflex}">REF</option>
+            <option value="@{actionpoints}">AP</option>
+        </datalist>
+            -->
+        <input type="text" class="firstATRmodField" name="attr_attributemodifier" value="">
+        <input type="text" class="secondATRField" name="attr_attributetwo" value="">
+        <input type="text" class="secondATRmod" name="attr_attributemodifiertwo" value="">
+        <input type="text" class="otherskillfield" name="attr_othermodifiersfill" value="">
+        </div>
+        </fieldset>
+
+  </div>
+
+
+
 
 
 
@@ -826,15 +1848,15 @@ name="roll_weaponrepeatingbuttonthrust"></button>
   </div>
   <div class="pointbuytablerow">
     <span class="pbtAttributes">Attributes</span>
-    <input type="text" name="attr_pbAttributesNumber" value=""> <!-- TOTALS -->
-    <input type="text" name="attr_pbAttributesSpent" value="">
-    <input type="text" name="attr_pbAttributesUnspent" value="">
-    <input type="text" name="attr_pbAttributesNegative" value="">
-    <input type="text" name="attr_pbAttributesNotes" value="">
+    <input type="text" name="attr_pbattributestotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbattributesspent" value="">
+    <input type="text" name="attr_pbattributesunspent" value="">
+    <input type="text" name="attr_pbattributesnegative" value="">
+    <input type="text" name="attr_pbattributesnotes" value="">
   </div>
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Combat Skills</span> <!-- COMBAT SKILLS -->
-    <input type="text" name="attr_pbSkillTableNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbcombatskillstotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbCombatSkillsUnspent" value="">
     <input type="text" name="attr_pbCombatSkillsSpent" value="">
     <input type="text" name="attr_pbCombatSkillsNegative" value="">
@@ -842,8 +1864,8 @@ name="roll_weaponrepeatingbuttonthrust"></button>
   </div>
 
   <div class="pointbuytablerow">
-    <span class="pbtSkillTable">Non-Combat Skills</span>
-    <input type="text" name="attr_pbNonCombatSkillsTotals" value=""> <!-- TOTALS -->
+    <span class="pbtSkillTable">Adventuring Skills</span>
+    <input type="text" name="attr_pbadventuringskillstotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbNonCombatSkillsUnspent" value="">
     <input type="text" name="attr_pbNonCombatSkillsSpent" value="">
     <input type="text" name="attr_pbNonCombatSkillsNegative" value="">
@@ -852,7 +1874,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Equipment</span>
-    <input type="text" name="attr_pbEquipmentTotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbequipmenttotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbEquipmentUnspent" value="">
     <input type="text" name="attr_pbEquipmentSpent" value="">
     <input type="text" name="attr_pbEquipmentNegative" value="">
@@ -861,7 +1883,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtPowersandAbilities">Magic Skills</span> <!-- Magic Skills -->
-    <input type="text" name="attr_pbPowersandAbilitiesNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbpowersandabilitiestotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbMagicSkillsTotal" value="">
     <input type="text" name="attr_pbMagicSkillsUnspent" value="">
     <input type="text" name="attr_pbMagicSkillsSpent" value="">
@@ -870,7 +1892,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Spells Learned</span>
-    <input type="text" name="attr_pbSpellsLearnedTotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbspellslearnedtotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbSpellsLearnedUnspent" value="">
     <input type="text" name="attr_pbSpellsLearnedSpent" value="">
     <input type="text" name="attr_pbSpellsLearnedNegative" value="">
@@ -879,7 +1901,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Adv./Disadvantages</span>
-    <input type="text" name="attr_pbAdvDisadvantagesTotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbadvdisadvantagestotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbAdvDisadvantagesUnspent" value="">
     <input type="text" name="attr_pbAdvDisadvantagesSpent" value="">
     <input type="text" name="attr_pbAdvDisadvantagesNegative" value="">
@@ -888,7 +1910,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtOther">Other</span>
-    <input type="text" name="attr_pbOtherNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbothertotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbOtherUnspent" value="">
     <input type="text" name="attr_pbOtherSpent" value="">
     <input type="text" name="attr_pbOtherNegative" value="">
@@ -897,7 +1919,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytabletotalrow">
     <span class="pbtTotal">TOTAL Character Points</span>
-    <input type="text" name="attr_pbTotalNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbtotaloverall" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbTotalUnspent" value="">
     <input type="text" name="attr_pbTotalSpent" value="">
     <input type="text" name="attr_pbTotalNegative" value="">
@@ -906,16 +1928,16 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Combatant Base Value</span>
-    <input type="text" name="attr_pbCombatBaseValue" value="30"> <!-- TOTALS -->
-    <input type="text" name="attr_pbCombatBaseValueUnspent" value="">
-    <input type="text" name="attr_pbCombatBaseValueSpent" value="">
-    <input type="text" name="attr_pbCombatBaseValueNegative" value="">
-    <input type="text" name="attr_pbCombatBaseValueNotes" value="">
+    <input type="text" name="attr_pbcombatbasevalue" value="30"> <!-- TOTALS -->
+    <input type="text" name="attr_pbcombatbasevalueUnspent" value="">
+    <input type="text" name="attr_pbcombatbasevalueSpent" value="">
+    <input type="text" name="attr_pbcombatbasevalueNegative" value="">
+    <input type="text" name="attr_pbcombatbasevalueNotes" value="">
   </div>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">-1/2 Non-Combat Skills</span>
-    <input type="text" name="attr_pbHalfNonCombatSkillsNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbhalfnoncombatskillstotal" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbHalfNonCombatSkillsUnspent" value="">
     <input type="text" name="attr_pbHalfNonCombatSkillsSpent" value="">
     <input type="text" name="attr_pbHalfNonCombatSkillsNegative" value="">
@@ -924,7 +1946,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Misc. Modifiers</span>
-    <input type="text" name="attr_pbMiscModNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbmiscmodtotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbMiscModUnspent" value="">
     <input type="text" name="attr_pbMiscModSpent" value="">
     <input type="text" name="attr_pbMiscModNegative" value="">
@@ -933,7 +1955,7 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
   <div class="pointbuytabletotalrow">
     <span class="pbtTotal">Combat Encounter Value</span>
-    <input type="text" name="attr_pbCombatEncounterValueNumber" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbcombatencountervaluetotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbCombatEncounterValueUnspent" value="">
     <input type="text" name="attr_pbCombatEncounterValueSpent" value="">
     <input type="text" name="attr_pbCombatEncounterValueNegative" value="">
@@ -1154,9 +2176,9 @@ name="roll_weaponrepeatingbuttonthrust"></button>
   <span class="storyDescriptorHeader">Strange Encounters</span>
   <span class="storyDescriptorHeader">Treasured Possession</span>
   <textarea type="text" name="attr_Phobias" value=""></textarea>
-  <textarea type="text" name="attr_InjuriesandScars" value=""></textarea>
-  <textarea type="text" name="attr_StrangeEncounters" value=""></textarea>
-  <textarea type="text" name="attr_TreasuredPossession" value=""></textarea>
+  <textarea type="text" name="attr_injuriesandscars" value=""></textarea>
+  <textarea type="text" name="attr_strangeencounters" value=""></textarea>
+  <textarea type="text" name="attr_treasuredpossession" value=""></textarea>
   </div>
   </div>
 
@@ -1181,9 +2203,10 @@ name="roll_weaponrepeatingbuttonthrust"></button>
 
 
 <!-- COMBAT TAB, was line ~1113 -->
-<div class="combat">
+<div class="wepnstab">
 
 <!-- WEAPON TABLE COMBAT TAB -->
+
 <div class="weapontable">
   <div class="wptrow1">
     <span class="swordimage">
@@ -1539,6 +2562,8 @@ name="roll_Ranged-Attack"></button>
 
       </div>
 </div>
+
+
 <!-- END OF COMBAT TAB -->
 
 
@@ -1635,10 +2660,10 @@ name="roll_Ranged-Attack"></button>
   <div class="pointbuytablerow">
     <span class="pbtAttributes">Attributes</span>
     <input type="text" name="attr_pbAttributesNumber" value=""> <!-- TOTALS -->
-    <input type="text" name="attr_pbAttributesSpent" value="">
-    <input type="text" name="attr_pbAttributesUnspent" value="">
-    <input type="text" name="attr_pbAttributesNegative" value="">
-    <input type="text" name="attr_pbAttributesNotes" value="">
+    <input type="text" name="attr_pbattributesspent" value="">
+    <input type="text" name="attr_pbattributesunspent" value="">
+    <input type="text" name="attr_pbattributesnegative" value="">
+    <input type="text" name="attr_pbattributesnotes" value="">
   </div>
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Combat Skills</span> <!-- COMBAT SKILLS -->
@@ -1660,7 +2685,7 @@ name="roll_Ranged-Attack"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Equipment</span>
-    <input type="text" name="attr_pbEquipmentTotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbequipmenttotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbEquipmentUnspent" value="">
     <input type="text" name="attr_pbEquipmentSpent" value="">
     <input type="text" name="attr_pbEquipmentNegative" value="">
@@ -1678,7 +2703,7 @@ name="roll_Ranged-Attack"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Spells Learned</span>
-    <input type="text" name="attr_pbSpellsLearnedTotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbspellslearnedtotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbSpellsLearnedUnspent" value="">
     <input type="text" name="attr_pbSpellsLearnedSpent" value="">
     <input type="text" name="attr_pbSpellsLearnedNegative" value="">
@@ -1687,7 +2712,7 @@ name="roll_Ranged-Attack"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Adv./Disadvantages</span>
-    <input type="text" name="attr_pbAdvDisadvantagesTotals" value=""> <!-- TOTALS -->
+    <input type="text" name="attr_pbadvdisadvantagestotals" value=""> <!-- TOTALS -->
     <input type="text" name="attr_pbAdvDisadvantagesUnspent" value="">
     <input type="text" name="attr_pbAdvDisadvantagesSpent" value="">
     <input type="text" name="attr_pbAdvDisadvantagesNegative" value="">
@@ -1714,11 +2739,11 @@ name="roll_Ranged-Attack"></button>
 
   <div class="pointbuytablerow">
     <span class="pbtSkillTable">Combatant Base Value</span>
-    <input type="text" name="attr_pbCombatBaseValue" value="30"> <!-- TOTALS -->
-    <input type="text" name="attr_pbCombatBaseValueUnspent" value="">
-    <input type="text" name="attr_pbCombatBaseValueSpent" value="">
-    <input type="text" name="attr_pbCombatBaseValueNegative" value="">
-    <input type="text" name="attr_pbCombatBaseValueNotes" value="">
+    <input type="text" name="attr_pbcombatbasevalue" value="30"> <!-- TOTALS -->
+    <input type="text" name="attr_pbcombatbasevalueUnspent" value="">
+    <input type="text" name="attr_pbcombatbasevalueSpent" value="">
+    <input type="text" name="attr_pbcombatbasevalueNegative" value="">
+    <input type="text" name="attr_pbcombatbasevalueNotes" value="">
   </div>
 
   <div class="pointbuytablerow">
@@ -1981,9 +3006,9 @@ name="roll_Ranged-Attack"></button>
   <span class="storyDescriptorHeader">Strange Encounters</span>
   <span class="storyDescriptorHeader">Treasured Possession</span>
   <textarea type="text" name="attr_Phobias" value=""></textarea>
-  <textarea type="text" name="attr_InjuriesandScars" value=""></textarea>
-  <textarea type="text" name="attr_StrangeEncounters" value=""></textarea>
-  <textarea type="text" name="attr_TreasuredPossession" value=""></textarea>
+  <textarea type="text" name="attr_injuriesandscars" value=""></textarea>
+  <textarea type="text" name="attr_strangeencounters" value=""></textarea>
+  <textarea type="text" name="attr_treasuredpossession" value=""></textarea>
   </div>
   </div>
 
@@ -2098,11 +3123,49 @@ name="roll_Ranged-Attack"></button>
 
 
 
-            <!-- sheet buttons other tabs -->
-
-
+<!-- sheetworkers -->
 
 <script type="text/worker">
+
+//GiG repeating sections thing
+  /* ===== PARAMETERS ==========
+  destinations = the name of the attribute that stores the total quantity
+          can be a single attribute, or an array: ['total_cost', 'total_weight']
+          If more than one, the matching fields must be in the same order. 
+      section = name of repeating fieldset, without the repeating_
+      fields = the name of the attribute field to be summed
+            destination and fields both can be a single attribute: 'weight'
+            or an array of attributes: ['weight','number','equipped']
+  */
+  const repeatingSum = (destinations, section, fields) => {
+      if (!Array.isArray(destinations)) destinations = [destinations.replace(/\s/g, '').split(',')];
+      if (!Array.isArray(fields)) fields = [fields.replace(/\s/g, '').split(',')];
+      getSectionIDs(`repeating_${section}`, idArray => {
+          const attrArray = idArray.reduce((m, id) => [...m, ...(fields.map(field => `repeating_${section}_${id}_${field}`))], []);
+          getAttrs([...attrArray], v => {
+              const getValue = (section, id, field) => v[`repeating_${section}_${id}_${field}`] === 'on' ? 1 : parseFloat(v[`repeating_${section}_${id}_${field}`]) || 0;
+              const commonMultipliers = (fields.length <= destinations.length) ? [] : fields.splice(destinations.length, fields.length - destinations.length);
+              const output = {};
+              destinations.forEach((destination, index) => {
+                  output[destination] = idArray.reduce((total, id) => total + getValue(section, id, fields[index]) * commonMultipliers.reduce((subtotal, mult) => subtotal * getValue(section, id, mult), 1), 0);
+              });
+              setAttrs(output);
+          }); 
+      }); 
+  };
+
+//TAB BUTTONS
+       const buttonlist = ["allsection","wepnstab","skillsandpoints","spells","story"];
+       buttonlist.forEach(button => {
+           on(`clicked:${button}`, function() {
+               setAttrs({
+                   sheetTab: button
+               });
+           });
+
+       });
+
+
     on("change:agility change:wit sheet:opened", function () {
         getAttrs([
             "agility", "wit"
@@ -2262,25 +3325,7 @@ name="roll_Ranged-Attack"></button>
           });
     });
 
-     // auto calculate skill table finished first draft. one variable at a time?
-    on("change:repeating_skills:tierseven change:repeating_skills:tierfour change:repeating_skills:tiertwo change:repeating_skills:tierone change:repeating_skills:tierstar change:repeating_skills:tierabovesub change:repeating_skills:synergybonus change:repeating_skills:synergyoffset change:repeating_skills:attributemodifier change:repeating_skills:attributemodifiertwo sheet:opened", function () {
-        getAttrs(["repeating_skills_tierseven", "repeating_skills_tierfour", "repeating_skills_tiertwo", "repeating_skills_tierone", "repeating_skills_tierstar", "repeating_skills_tierabovesub", "repeating_skills_synergybonus", "repeating_skills_synergyoffset","repeating_skills_attributemodifier", "repeating_skills_attributemodifiertwo",
-        ], function (values) {
-            // DR calculations
-            let columntierseven = +values.repeating_skills_tierseven || 0;
-            let columntierfour = +values.repeating_skills_tierfour || 0;
-            let columntiertwo = +values.repeating_skills_tiertwo || 0;
-            let columntierone = +values.repeating_skills_tierone || 0;
-            let columntierstar = +values.repeating_skills_tierstar || 0;
-            let columntierabovesub = +values.repeating_skills_tierabovesub || 0;
-            let columnsynergybonus = +values.repeating_skills_synergybonus || 0;
-            let columnsynergyoffset = +values.repeating_skills_synergyoffset || 0;
-            let columnattributemodifier = +values.repeating_skills_attributemodifier || 0;
-            let columnattributemodifiertwo = +values.repeating_skills_attributemodifiertwo || 0;
-            let total = columntierseven + columntierfour + columntiertwo + columntierone + columntierstar + columntierabovesub + columnsynergybonus + columnsynergyoffset + columnattributemodifier + columnattributemodifiertwo;
-            setAttrs({repeating_skills_skilltotal: total});
-        });
-  });
+
 
 
 
@@ -2295,17 +3340,6 @@ name="roll_Ranged-Attack"></button>
               setAttrs({repeating_armor_attE: total});
           });
     });
-
-    //TAB BUTTONS
-        const buttonlist = ["allsection","combat","skillsandpoints","spells","story"];
-        buttonlist.forEach(button => {
-            on(`clicked:${button}`, function() {
-                setAttrs({
-                    sheetTab: button
-                });
-            });
-
-        });
 
     //ARMOR TABLE stuff
      on("change:repeating_armor:armortablebody change:repeating_armor:atE sheet:opened", function () {
@@ -2476,10 +3510,8 @@ name="roll_Ranged-Attack"></button>
     });
 
 
-    //Auto calculate skill point totals, NOT WORKING
-             on('change:repeating_skills:cost remove:repeating_skills', function() {
-	repeatingSum("pbSkillTableNumber","skills","cost");
-});
+    //Auto calculate skill point totals, NOT WORKING, REMOVED
+
 
 //AUTO CALCULATE RANGED DEFENSE, need to figure out negatives
     //get SIZE for first row
@@ -2537,6 +3569,1106 @@ name="roll_Ranged-Attack"></button>
             setAttrs({rangeddefenseshieldtwelvenumber: total});
         });
     });
+
+
+    // auto calculate skill table finished first draft. one variable at a time?
+   on("change:repeating_skills:tierseven change:repeating_skills:tierfour change:repeating_skills:tiertwo change:repeating_skills:tierone change:repeating_skills:tierstar change:repeating_skills:tierabovesub change:repeating_skills:synergybonus change:repeating_skills:synergyoffset change:repeating_skills:attributemodifier change:repeating_skills:attributemodifiertwo sheet:opened", function () {
+       getAttrs(["repeating_skills_tierseven", "repeating_skills_tierfour", "repeating_skills_tiertwo", "repeating_skills_tierone", "repeating_skills_tierstar", "repeating_skills_tierabovesub", "repeating_skills_synergybonus", "repeating_skills_synergyoffset","repeating_skills_attributemodifier", "repeating_skills_attributemodifiertwo",
+       ], function (values) {
+           // DR calculations
+           let columntierseven = +values.repeating_skills_tierseven || 0;
+           let columntierfour = +values.repeating_skills_tierfour || 0;
+           let columntiertwo = +values.repeating_skills_tiertwo || 0;
+           let columntierone = +values.repeating_skills_tierone || 0;
+           let columntierstar = +values.repeating_skills_tierstar || 0;
+           let columntierabovesub = +values.repeating_skills_tierabovesub || 0;
+           let columnsynergybonus = +values.repeating_skills_synergybonus || 0;
+           let columnsynergyoffset = +values.repeating_skills_synergyoffset || 0;
+           let columnattributemodifier = +values.repeating_skills_attributemodifier || 0;
+           let columnattributemodifiertwo = +values.repeating_skills_attributemodifiertwo || 0;
+           let total = columntierseven + columntierfour + columntiertwo + columntierone + columntierstar + columntierabovesub + columnsynergybonus + columnsynergyoffset + columnattributemodifier + columnattributemodifiertwo;
+           setAttrs({repeating_skills_skilltotal: total});
+       });
+ });
+
+
+ //ALL Combat AP get
+   on("change:actionpoints sheet:opened", function () {
+        getAttrs([
+            "actionpoints"
+        ], function (values) {
+            let ap = +values.actionpoints || 0;
+            let total = ap;
+            setAttrs({allcombatattributemodifier: total});
+        });
+    });
+
+    //melee combat AP
+    on("change:actionpoints sheet:opened", function () {
+         getAttrs([
+             "actionpoints"
+         ], function (values) {
+             let ap = +values.actionpoints || 0;
+             let total = ap;
+             setAttrs({meleecombatattributemodifier: total});
+         });
+     });
+
+     //ranged combat AP
+     on("change:actionpoints sheet:opened", function () {
+          getAttrs([
+              "actionpoints"
+          ], function (values) {
+              let ap = +values.actionpoints || 0;
+              let total = ap;
+              setAttrs({rangedcombatattributemodifier: total});
+          });
+      });
+
+      //Adventuring skills attribute get
+
+    //knowledge
+  on("change:intelligence sheet:opened", function () {
+       getAttrs([
+           "intelligence"
+       ], function (values) {
+           let int = +values.intelligence || 0;
+           let total = int;
+           setAttrs({knowledgeattributemodifier: total});
+       });
+   });
+
+
+    //mobility
+   on("change:knockdown sheet:opened", function () {
+       getAttrs([
+           "knockdown"
+       ], function (values) {
+           let knd = +values.knockdown || 0;
+           let total = knd;
+           setAttrs({mobilityattributemodifier: total});
+       });
+   });
+
+   //Mechanical Devices
+   on("change:reflex sheet:opened", function () {
+      getAttrs([
+          "reflex"
+      ], function (values) {
+          let ref = +values.reflex || 0;
+          let total = ref;
+          setAttrs({mechanicaldevicesattributemodifier: total});
+      });
+   });
+
+    //removed mechanical devices int
+    on("change:intelligence sheet:opened", function () {
+         getAttrs([
+             "intelligence"
+         ], function (values) {
+             let int = +values.intelligence || 0;
+             let total = int;
+             setAttrs({mechanicaldevicesattributemodifiertwo: total});
+         });
+     });
+
+   //Medicine
+   on("change:reflex sheet:opened", function () {
+      getAttrs([
+          "reflex"
+      ], function (values) {
+          let ref = +values.reflex || 0;
+          let total = ref;
+          setAttrs({medicineattributemodifiertwo: total});
+      });
+   });
+        //medicine INT
+   on("change:intelligence sheet:opened", function () {
+        getAttrs([
+            "intelligence"
+        ], function (values) {
+            let int = +values.intelligence || 0;
+            let total = int;
+            setAttrs({medicineattributemodifier: total});
+        });
+    });
+
+    //Perception
+    on("change:wit sheet:opened", function () {
+       getAttrs([
+           "wit"
+       ], function (values) {
+           let wt = +values.wit || 0;
+           let total = wt;
+           setAttrs({perceptionattributemodifier: total});
+       });
+    });
+
+  //Social
+  on("change:wit sheet:opened", function () {
+     getAttrs([
+         "wit"
+     ], function (values) {
+         let wt = +values.wit || 0;
+         let total = wt;
+         setAttrs({socialattributemodifier: total});
+     });
+  });
+
+  on("change:willpower sheet:opened", function () {
+     getAttrs([
+         "willpower"
+     ], function (values) {
+         let wp = +values.willpower || 0;
+         let total = wp;
+         setAttrs({socialattributemodifiertwo: total});
+     });
+  });
+
+  on("change:wit sheet:opened", function () {
+     getAttrs([
+         "wit"
+     ], function (values) {
+         let wt = +values.wit || 0;
+         let total = wt;
+         setAttrs({socialwitattributemodifier: total});
+     });
+  });
+
+  on("change:willpower sheet:opened", function () {
+     getAttrs([
+         "willpower"
+     ], function (values) {
+         let wp = +values.willpower || 0;
+         let total = wp;
+         setAttrs({socialpersonalityattributemodifier: total});
+     });
+  });
+
+  //Strength skills
+  on("change:power sheet:opened", function () {
+     getAttrs([
+         "power"
+     ], function (values) {
+         let pw = +values.power || 0;
+         let total = pw;
+         setAttrs({strengthskillsattributemodifier: total});
+     });
+  });
+
+  //Survival
+  on("change:wit sheet:opened", function () {
+     getAttrs([
+         "wit"
+     ], function (values) {
+         let wt = +values.wit || 0;
+         let total = wt;
+         setAttrs({survivalattributemodifier: total});
+     });
+  });
+
+  on("change:intelligence sheet:opened", function () {
+     getAttrs([
+         "intelligence"
+     ], function (values) {
+         let int = +values.intelligence || 0;
+         let total = int;
+         setAttrs({survivalattributemodifiertwo: total});
+     });
+  });
+
+  on("change:wit sheet:opened", function () {
+     getAttrs([
+         "wit"
+     ], function (values) {
+         let wt = +values.wit || 0;
+         let total = wt;
+         setAttrs({survivaloutdoorsattributemodifier: total});
+     });
+  });
+
+  on("change:intelligence sheet:opened", function () {
+     getAttrs([
+         "intelligence"
+     ], function (values) {
+         let int = +values.intelligence || 0;
+         let total = int;
+         setAttrs({survivaloutdoorsattributemodifiertwo: total});
+     });
+  });
+
+  on("change:wit sheet:opened", function () {
+     getAttrs([
+         "wit"
+     ], function (values) {
+         let wt = +values.wit || 0;
+         let total = wt;
+         setAttrs({survivalurbanattributemodifier: total});
+     });
+  });
+
+  on("change:intelligence sheet:opened", function () {
+     getAttrs([
+         "intelligence"
+     ], function (values) {
+         let int = +values.intelligence || 0;
+         let total = int;
+         setAttrs({survivalurbanattributemodifiertwo: total});
+     });
+  });
+
+  //auto-calculate POINTS column x tiers by cost Number
+
+
+    //all combat skill total
+      on("change:allcombattierfive sheet:opened", function () {
+         getAttrs(["allcombattierfive",
+         ], function (values) {
+             let columntierfive = +values.allcombattierfive || 0;
+             let total = columntierfive * 5;
+             setAttrs({allcombatpoints: total});
+         });
+      });
+
+      //all combat specz tier 4
+    on("change:repeating_allcombatspec:tierfour sheet:opened", function (event) {
+      const [,section,rowID] = event.triggerName.match(/(repeating_.+?)_(.+?)_/);
+      const row = `${section}_${rowID}`;
+      getAttrs([`${row}_tierfour`], function (values) {
+        let columntierfour = +values[`${row}_tierfour`] || 0;
+        let total = columntierfour * 4;
+        setAttrs({ [`${row}_points`]: total});
+      });
+    });
+
+
+
+      //all combat specz tier 3
+        on("change:repeating_allcombatspec:tierthree sheet:opened", function () {
+           getAttrs(["repeating_allcombatspec_tierthree",
+           ], function (values) {
+               let columntierthree = +values.repeating_allcombatspec_tierthree || 0;
+               let total = columntierthree * 3;
+               setAttrs({repeating_allcombatspec_points: total});
+           });
+        });
+
+        ///all combat specz tier 2
+          on("change:repeating_allcombatspec:tiertwo sheet:opened", function () {
+             getAttrs(["repeating_allcombatspec_tiertwo",
+             ], function (values) {
+                 let columntiertwo = +values.repeating_allcombatspec_tiertwo || 0;
+                 let total = columntiertwo * 2;
+                 setAttrs({repeating_allcombatspec_points: total});
+             });
+          });
+
+          //all combat specz tier 1
+          on("change:repeating_allcombatspec:tierone sheet:opened", function () {
+             getAttrs(["repeating_allcombatspec_tierone",
+             ], function (values) {
+                 let columntierone = +values.repeating_allcombatspec_tierone || 0;
+                 let total = columntierone * 1;
+                 setAttrs({repeating_allcombatspec_points: total});
+             });
+          });
+
+  //melee combat skill total
+    on("change:meleecombattierfour sheet:opened", function () {
+       getAttrs(["meleecombattierfour",
+       ], function (values) {
+           let columntierfour = +values.meleecombattierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({meleecombatpoints: total});
+       });
+    });
+
+    //melee  combat specz tier 4
+      on("change:repeating_meleespec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_meleespec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_meleespec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_meleespec_points: total});
+         });
+      });
+
+    //melee  combat specz tier 3
+      on("change:repeating_meleespec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_meleespec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_meleespec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_meleespec_points: total});
+         });
+      });
+
+      ///melee  combat specz tier 2
+        on("change:repeating_meleespec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_meleespec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_meleespec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_meleespec_points: total});
+           });
+        });
+
+        //melee  combat specz tier 1
+        on("change:repeating_meleespec:tierone sheet:opened", function () {
+           getAttrs(["repeating_meleespec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_meleespec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_meleespec_points: total});
+           });
+        });
+
+      //ranged combat skill total
+        on("change:rangedcombattierfour sheet:opened", function () {
+           getAttrs(["rangedcombattierfour",
+           ], function (values) {
+               let columntierfour = +values.rangedcombattierfour || 0;
+               let total = columntierfour * 4;
+               setAttrs({rangedcombatpoints: total});
+           });
+        });
+
+        //ranged  combat specz tier 4
+          on("change:repeating_rangedspec:tierfour sheet:opened", function () {
+             getAttrs(["repeating_rangedspec_tierfour",
+             ], function (values) {
+                 let columntierfour = +values.repeating_rangedspec_tierfour || 0;
+                 let total = columntierfour * 4;
+                 setAttrs({repeating_rangedspec_points: total});
+             });
+          });
+
+        //ranged  combat specz tier 3
+          on("change:repeating_rangedspec:tierthree sheet:opened", function () {
+             getAttrs(["repeating_rangedspec_tierthree",
+             ], function (values) {
+                 let columntierthree = +values.repeating_rangedspec_tierthree || 0;
+                 let total = columntierthree * 3;
+                 setAttrs({repeating_rangedspec_points: total});
+             });
+          });
+
+          ///ranged  combat specz tier 2
+            on("change:repeating_rangedspec:tiertwo sheet:opened", function () {
+               getAttrs(["repeating_rangedspec_tiertwo",
+               ], function (values) {
+                   let columntiertwo = +values.repeating_rangedspec_tiertwo || 0;
+                   let total = columntiertwo * 2;
+                   setAttrs({repeating_rangedspec_points: total});
+               });
+            });
+
+            //ranged  combat specz tier 1
+            on("change:repeating_rangedspec:tierone sheet:opened", function () {
+               getAttrs(["repeating_rangedspec_tierone",
+               ], function (values) {
+                   let columntierone = +values.repeating_rangedspec_tierone || 0;
+                   let total = columntierone;
+                   setAttrs({repeating_rangedspec_points: total});
+               });
+            });
+
+//ADVENTURING SKILLS
+  //knowledge skill total
+    on("change:knowledgetierfour sheet:opened", function () {
+       getAttrs(["knowledgetierfour",
+       ], function (values) {
+           let columntierfour = +values.knowledgetierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({knowledgepoints: total});
+       });
+    });
+
+    //knowledge  specz tier 4
+      on("change:repeating_knowledgespec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_knowledgespec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_knowledgespec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_knowledgespec_points: total});
+         });
+      });
+
+    //knowledge specz tier 3
+      on("change:repeating_knowledgespec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_knowledgespec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_knowledgespec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_knowledgespec_points: total});
+         });
+      });
+
+      ///knowledge specz tier 2
+        on("change:repeating_knowledgespec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_knowledgespec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_knowledgespec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_knowledgespec_points: total});
+           });
+        });
+
+        //knowledge  specz tier 1
+        on("change:repeating_knowledgespec:tierone sheet:opened", function () {
+           getAttrs(["repeating_knowledgespec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_knowledgespec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_knowledgespec_points: total});
+           });
+        });
+
+  //mobility skill total
+  on("change:mobilitytierfour sheet:opened", function () {
+     getAttrs(["mobilitytierfour",
+     ], function (values) {
+         let columntierfour = +values.mobilitytierfour || 0;
+         let total = columntierfour * 4;
+         setAttrs({mobilitypoints: total});
+     });
+  });
+
+  //mobility specz tier 4
+    on("change:repeating_mobilityspec:tierfour sheet:opened", function () {
+       getAttrs(["repeating_mobilityspec_tierfour",
+       ], function (values) {
+           let columntierfour = +values.repeating_mobilityspec_tierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({repeating_mobilityspec_points: total});
+       });
+    });
+
+  //mobility  combat specz tier 3
+    on("change:repeating_mobilityspec:tierthree sheet:opened", function () {
+       getAttrs(["repeating_mobilityspec_tierthree",
+       ], function (values) {
+           let columntierthree = +values.repeating_mobilityspec_tierthree || 0;
+           let total = columntierthree * 3;
+           setAttrs({repeating_mobilityspec_points: total});
+       });
+    });
+
+    ///mobility  combat specz tier 2
+      on("change:repeating_mobilityspec:tiertwo sheet:opened", function () {
+         getAttrs(["repeating_mobilityspec_tiertwo",
+         ], function (values) {
+             let columntiertwo = +values.repeating_mobilityspec_tiertwo || 0;
+             let total = columntiertwo * 2;
+             setAttrs({repeating_mobilityspec_points: total});
+         });
+      });
+
+      //mobility  combat specz tier 1
+      on("change:repeating_mobilityspec:tierone sheet:opened", function () {
+         getAttrs(["repeating_mobilityspec_tierone",
+         ], function (values) {
+             let columntierone = +values.repeating_mobilityspec_tierone || 0;
+             let total = columntierone;
+             setAttrs({repeating_mobilityspec_points: total});
+         });
+      });
+
+  //mechanicaldevices skill total
+    on("change:mechanicaldevicestierfour sheet:opened", function () {
+       getAttrs(["mechanicaldevicestierfour",
+       ], function (values) {
+           let columntierfour = +values.mechanicaldevices_tierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({mechanicaldevicespoints: total});
+       });
+    });
+
+    //mechanicaldevices specz tier 4
+      on("change:repeating_mechanicaldevicesspec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_mechanicaldevicesspec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_mechanicaldevicesspec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_mechanicaldevicesspecpoints: total});
+         });
+      });
+
+    //mechanicaldevices specz tier 3
+      on("change:repeating_mechanicaldevicesspec:spectierthree sheet:opened", function () {
+         getAttrs(["repeating_mechanicaldevicesspec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_mechanicaldevicesspec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_mechanicaldevicesspecpoints: total});
+         });
+      });
+
+      ///mechanicaldevices specz tier 2
+        on("change:repeating_mechanicaldevicesspec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_mechanicaldevices_spectiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_mechanicaldevicesspec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_mechanicaldevicesspecpoints: total});
+           });
+        });
+
+        //mechanicaldevices specz tier 1
+        on("change:repeating_mechanicaldevicesspec:tierone sheet:opened", function () {
+           getAttrs(["repeating_mechanicaldevicesspec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_mechanicaldevicesspec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_mechanicaldevicesspecpoints: total});
+           });
+        });
+
+  //medicine skill total
+    on("change:medicinetierfour sheet:opened", function () {
+       getAttrs(["medicinetierfour",
+       ], function (values) {
+           let columntierfour = +values.medicinetierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({medicinepoints: total});
+       });
+    });
+
+    //medicine specz tier 4
+      on("change:repeating_medicinespec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_medicinespec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_medicinespec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_medicinespec_points: total});
+         });
+      });
+
+    //medicine specz tier 3
+      on("change:repeating_medicinespec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_medicinespec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_medicinespec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_medicinespec_points: total});
+         });
+      });
+
+      ///medicine specz tier 2
+        on("change:repeating_medicinespec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_medicinespec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_medicinespec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_medicinespec_points: total});
+           });
+        });
+
+        //medicine specz tier 1
+        on("change:repeating_medicinespec:tierone sheet:opened", function () {
+           getAttrs(["repeating_medicinespec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_medicinespec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_medicinespec_points: total});
+           });
+        });
+
+    //perception skill total
+      on("change:perceptiontierfour sheet:opened", function () {
+         getAttrs(["perceptiontierfour",
+         ], function (values) {
+             let columntierfour = +values.perceptiontierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({perceptionpoints: total});
+         });
+      });
+
+      //perception specz tier 4
+        on("change:repeating_perceptionspec:tierfour sheet:opened", function () {
+           getAttrs(["repeating_perceptionspec_tierfour",
+           ], function (values) {
+               let columntierfour = +values.repeating_perceptionspec_tierfour || 0;
+               let total = columntierfour * 4;
+               setAttrs({repeating_perceptionspec_points: total});
+           });
+        });
+
+      //perception specz tier 3
+        on("change:repeating_perceptionspec:tierthree sheet:opened", function () {
+           getAttrs(["repeating_perceptionspec_tierthree",
+           ], function (values) {
+               let columntierthree = +values.repeating_perceptionspec_tierthree || 0;
+               let total = columntierthree * 3;
+               setAttrs({repeating_perceptionspec_points: total});
+           });
+        });
+
+        ///perception specz tier 2
+          on("change:repeating_perceptionspec:tiertwo sheet:opened", function () {
+             getAttrs(["repeating_perceptionspec_tiertwo",
+             ], function (values) {
+                 let columntiertwo = +values.repeating_perceptionspec_tiertwo || 0;
+                 let total = columntiertwo * 2;
+                 setAttrs({repeating_perceptionspec_points: total});
+             });
+          });
+
+          //perception specz tier 1
+          on("change:repeating_perceptionspec:tierone sheet:opened", function () {
+             getAttrs(["repeating_perceptionspec_tierone",
+             ], function (values) {
+                 let columntierone = +values.repeating_perceptionspec_tierone || 0;
+                 let total = columntierone;
+                 setAttrs({repeating_perceptionspec_points: total});
+             });
+          });
+
+
+  //profession
+  //profession skill total
+    on("change:professiontierfour sheet:opened", function () {
+       getAttrs(["professiontierfour",
+       ], function (values) {
+           let columntierfour = +values.professiontierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({professionpoints: total});
+       });
+    });
+
+    on("change:professiontierthree sheet:opened", function () {
+       getAttrs(["professiontierthree",
+       ], function (values) {
+           let columntierthree = +values.professiontierthree || 0;
+           let total = columntierthree * 3;
+           setAttrs({professionpoints: total});
+       });
+    });
+
+    on("change:professiontiertwo sheet:opened", function () {
+       getAttrs(["professiontiertwo",
+       ], function (values) {
+           let columntiertwo = +values.professiontiertwo || 0;
+           let total = columntiertwo * 4;
+           setAttrs({professionpoints: total});
+       });
+    });
+
+    on("change:professiontierone sheet:opened", function () {
+       getAttrs(["professiontierone",
+       ], function (values) {
+           let columntierone = +values.professiontierone || 0;
+           let total = columntierone * 4;
+           setAttrs({professionpoints: total});
+       });
+    });
+
+    //profession specz tier 4
+      on("change:repeating_perceptionspec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_perceptionspec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_perceptionspec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_perceptionspec_points: total});
+         });
+      });
+
+    //profession specz tier 3
+      on("change:repeating_perceptionspec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_perceptionspec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_perceptionspec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_perceptionspec_points: total});
+         });
+      });
+
+      ///profession specz tier 2
+        on("change:repeating_perceptionspec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_perceptionspec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_perceptionspec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_perceptionspec_points: total});
+           });
+        });
+
+        //profession specz tier 1
+        on("change:repeating_perceptionspec:tierone sheet:opened", function () {
+           getAttrs(["repeating_perceptionspec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_perceptionspec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_perceptionspec_points: total});
+           });
+        });
+
+
+  //social skills
+  //social skill total
+  on("change:socialtierfive sheet:opened", function () {
+     getAttrs(["socialtierfive",
+     ], function (values) {
+         let columntierfive = +values.socialtierfive || 0;
+         let total = columntierfive * 5;
+         setAttrs({socialpoints: total});
+     });
+  });
+
+  //social wits
+  on("change:socialwittierfour sheet:opened", function () {
+   getAttrs(["socialwittierfour",
+   ], function (values) {
+       let columntierfour = +values.socialwittierfour || 0;
+       let total = columntierfour * 4;
+       setAttrs({socialwitpoints: total});
+   });
+  });
+
+  //socialwit specz tier 4
+    on("change:repeating_socialwitspec:tierfour sheet:opened", function () {
+       getAttrs(["repeating_socialwitspec_tierfour",
+       ], function (values) {
+           let columntierfour = +values.repeating_socialwitspec_tierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({repeating_socialwitspec_points: total});
+       });
+    });
+
+  //socialwit specz tier 3
+    on("change:repeating_socialwitspec:tierthree sheet:opened", function () {
+       getAttrs(["repeating_socialwitspec_tierthree",
+       ], function (values) {
+           let columntierthree = +values.repeating_socialwitspec_tierthree || 0;
+           let total = columntierthree * 3;
+           setAttrs({repeating_socialwitspec_points: total});
+       });
+    });
+
+    ///socialwit specz tier 2
+      on("change:repeating_socialwitspec:tiertwo sheet:opened", function () {
+         getAttrs(["repeating_socialwitspec_tiertwo",
+         ], function (values) {
+             let columntiertwo = +values.repeating_socialwitspec_tiertwo || 0;
+             let total = columntiertwo * 2;
+             setAttrs({repeating_socialwitspec_points: total});
+         });
+      });
+
+      //socialwit specz tier 1
+      on("change:repeating_socialwitspec:tierone sheet:opened", function () {
+         getAttrs(["repeating_socialwitspec_tierone",
+         ], function (values) {
+             let columntierone = +values.repeating_socialwitspec_tierone || 0;
+             let total = columntierone;
+             setAttrs({repeating_socialwitspec_points: total});
+         });
+      });
+
+
+
+  //social personality
+  on("change:socialpersonalitytierfour sheet:opened", function () {
+     getAttrs(["socialpersonalitytierfour",
+     ], function (values) {
+         let columntierfour = +values.socialpersonalitytierfour || 0;
+         let total = columntierfour * 4;
+         setAttrs({socialpersonalitypoints: total});
+     });
+  });
+
+    //socialpersonality specz tier 4
+      on("change:repeating_socialpersonalityspec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_socialpersonalityspec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_socialpersonalityspec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_socialpersonalityspec_points: total});
+         });
+      });
+
+    //socialpersonality specz tier 3
+      on("change:repeating_socialpersonalityspec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_socialpersonalityspec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_socialpersonalityspec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_socialpersonalityspec_points: total});
+         });
+      });
+
+      ///socialpersonality specz tier 2
+        on("change:repeating_socialpersonalityspec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_socialpersonalityspec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_socialpersonalityspec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_socialpersonalityspec_points: total});
+           });
+        });
+
+        //socialpersonality specz tier 1
+        on("change:repeating_socialpersonalityspec:tierone sheet:opened", function () {
+           getAttrs(["repeating_socialpersonalityspec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_socialpersonalityspec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_socialpersonalityspec_points: total});
+           });
+        });
+
+
+  //strengthskills skill total
+    on("change:strengthskillstierfour sheet:opened", function () {
+       getAttrs(["strengthskillstierfour",
+       ], function (values) {
+           let columntierfour = +values.strengthskillstierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({strengthskillspoints: total});
+       });
+    });
+
+    //strengthskills specz tier 4
+      on("change:repeating_strengthskillsspec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_strengthskillsspec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_strengthskillsspec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_strengthskillsspec_points: total});
+         });
+      });
+
+    //strengthskills specz tier 3
+      on("change:repeating_strengthskillsspec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_strengthskillsspec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_strengthskillsspec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_strengthskillsspec_points: total});
+         });
+      });
+
+      ///strengthskills specz tier 2
+        on("change:repeating_strengthskillsspec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_strengthskillsspec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_strengthskillsspec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_strengthskillsspec_points: total});
+           });
+        });
+
+        //strengthskills specz tier 1
+        on("change:repeating_strengthskillsspec:tierone sheet:opened", function () {
+           getAttrs(["repeating_strengthskillsspec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_strengthskillsspec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_strengthskillsspec_points: total});
+           });
+        });
+
+  //survival skills
+  //survival skill total
+    on("change:survivaltierfive sheet:opened", function () {
+       getAttrs(["survivaltierfive",
+       ], function (values) {
+           let columntierfive = +values.survivaltierfive || 0;
+           let total = columntierfive * 5;
+           setAttrs({survivalpoints: total});
+       });
+    });
+
+
+  //survival outdoors
+  on("change:survivaloutdoorstierfour sheet:opened", function () {
+     getAttrs(["survivaloutdoorstierfour",
+     ], function (values) {
+         let columntierfour = +values.survivaloutdoorstierfour || 0;
+         let total = columntierfour * 4;
+         setAttrs({survivaloutdoorspoints: total});
+     });
+  });
+
+    //survivaloutdoors specz tier 4
+      on("change:repeating_survivaloutdoorsspec:tierfour sheet:opened", function () {
+         getAttrs(["repeating_survivaloutdoorsspec_tierfour",
+         ], function (values) {
+             let columntierfour = +values.repeating_survivaloutdoorsspec_tierfour || 0;
+             let total = columntierfour * 4;
+             setAttrs({repeating_survivaloutdoorsspec_points: total});
+         });
+      });
+
+    //survivaloutdoors specz tier 3
+      on("change:repeating_survivaloutdoorsspec:tierthree sheet:opened", function () {
+         getAttrs(["repeating_survivaloutdoorsspec_tierthree",
+         ], function (values) {
+             let columntierthree = +values.repeating_survivaloutdoorsspec_tierthree || 0;
+             let total = columntierthree * 3;
+             setAttrs({repeating_survivaloutdoorsspec_points: total});
+         });
+      });
+
+      ///survivaloutdoors specz tier 2
+        on("change:repeating_survivaloutdoorsspec:tiertwo sheet:opened", function () {
+           getAttrs(["repeating_survivaloutdoorsspec_tiertwo",
+           ], function (values) {
+               let columntiertwo = +values.repeating_survivaloutdoorsspec_tiertwo || 0;
+               let total = columntiertwo * 2;
+               setAttrs({repeating_survivaloutdoorsspec_points: total});
+           });
+        });
+
+        //survivaloutdoors specz tier 1
+        on("change:repeating_survivaloutdoorsspec:tierone sheet:opened", function () {
+           getAttrs(["repeating_survivaloutdoorsspec_tierone",
+           ], function (values) {
+               let columntierone = +values.repeating_survivaloutdoorsspec_tierone || 0;
+               let total = columntierone;
+               setAttrs({repeating_survivaloutdoorsspec_points: total});
+           });
+        });
+
+  //survival urban
+  on("change:survivalurbantierfour sheet:opened", function () {
+   getAttrs(["survivalurbantierfour",
+   ], function (values) {
+       let columntierfour = +values.survivalurbantierfour || 0;
+       let total = columntierfour * 4;
+       setAttrs({survivalurbanpoints: total});
+   });
+  });
+
+  //survivalurban specz tier 4
+    on("change:repeating_survivalurbanspec:tierfour sheet:opened", function () {
+       getAttrs(["repeating_survivalurbanspec_tierfour",
+       ], function (values) {
+           let columntierfour = +values.repeating_survivalurbanspec_tierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({repeating_survivalurbanspec_points: total});
+       });
+    });
+
+  //survivalurban specz tier 3
+    on("change:repeating_survivalurbanspec:tierthree sheet:opened", function () {
+       getAttrs(["repeating_survivalurbanspec_tierthree",
+       ], function (values) {
+           let columntierthree = +values.repeating_survivalurbanspec_tierthree || 0;
+           let total = columntierthree * 3;
+           setAttrs({repeating_survivalurbanspec_points: total});
+       });
+    });
+
+    ///survivalurban specz tier 2
+      on("change:repeating_survivalurbanspec:tiertwo sheet:opened", function () {
+         getAttrs(["repeating_survivalurbanspec_tiertwo",
+         ], function (values) {
+             let columntiertwo = +values.repeating_survivalurbanspec_tiertwo || 0;
+             let total = columntiertwo * 2;
+             setAttrs({repeating_survivalurbanspec_points: total});
+         });
+      });
+
+      //survivalurban specz tier 1
+      on("change:repeating_survivalurbanspec:tierone sheet:opened", function () {
+         getAttrs(["repeating_survivalurbanspec_tierone",
+         ], function (values) {
+             let columntierone = +values.repeating_survivalurbanspec_tierone || 0;
+             let total = columntierone;
+             setAttrs({repeating_survivalurbanspec_points: total});
+         });
+      });
+
+  //custom LEGACY skills
+    on("change:repeating_skills:tierseven  sheet:opened", function () {
+       getAttrs(["repeating_skills_tierseven",
+       ], function (values) {
+           let columntierfive = +values.repeating_skills_tierseven || 0;
+           let total = columntierfive * 5;
+           setAttrs({repeating_skills_cost: total});
+       });
+    });
+
+    on("change:repeating_skills:tierfour  sheet:opened", function () {
+       getAttrs(["repeating_skills_tierfour",
+       ], function (values) {
+           let columntierfour = +values.repeating_skills_tierfour || 0;
+           let total = columntierfour * 4;
+           setAttrs({repeating_skills_cost: total});
+       });
+    });
+
+    on("change:repeating_skills:tiertwo  sheet:opened", function () {
+       getAttrs(["repeating_skills_tiertwo",
+       ], function (values) {
+           let columntierthree = +values.repeating_skills_tiertwo || 0;
+           let total = columntierthree * 3;
+           setAttrs({repeating_skills_cost: total});
+       });
+    });
+
+    on("change:repeating_skills:tierone  sheet:opened", function () {
+       getAttrs(["repeating_skills_tierone",
+       ], function (values) {
+           let columntiertwo = +values.repeating_skills_tierone || 0;
+           let total = columntiertwo * 2;
+           setAttrs({repeating_skills_cost: total});
+       });
+    });
+
+    on("change:repeating_skills:tierstar  sheet:opened", function () {
+       getAttrs(["repeating_skills_tierstar",
+       ], function (values) {
+           let columntierone = +values.repeating_skills_tierstar || 0;
+           let total = columntierone * 1;
+           setAttrs({repeating_skills_cost: total});
+       });
+    });
+
+  //POINT BUY TOTALS
+
+  //ATTRIBUTES total
+  on("change:strength change:agility change:toughness change:size change:wit change:willpower change:intelligence sheet:opened", function () {
+      getAttrs([
+          "strength", "agility", "toughness", "size", "wit", "willpower", "intelligence",
+      ], function (values) {
+          let st = +values.strength || 0;
+          let ag = +values.agility || 0;
+          let th = +values.toughness || 0;
+          let sz = +values.size || 0;
+          let wt = +values.wit || 0;
+          let wp = +values.willpower || 0;
+          let int = +values.intelligence || 0;
+          let total = (st * 6) + (ag * 6) + (th * 6) + (sz * 12) + (wt * 6) + (wp * 6) + (int * 6);
+          setAttrs({pbattributestotals: total});
+      });
+  });
+
+//GiG repeating methods stuff
+  const sections =  ['allcombatspec','meleespec', 'rangedspec']
+  sections.forEach(section => {
+     on(`change:repeating_${section}:points remove:repeating_${section}`, function() {
+  	repeatingSum(`${section}_total`,section,"points");
+     });
+  });
+
+  on("change:allcombatpoints change:meleecombatpoints change:rangedcombatpoints change:total_rangedspec change:total_meleespec change:total_allcombatspec sheet:opened", function () {
+      getAttrs([
+          "allcombatpoints", "meleecombatpoints",  "rangedcombatpoints", "total_rangedspec", "total_meleespec", "total_allcombatspec",
+      ], function (values) {
+          let cppt = +values.allcombatpoints || 0;
+          let cpszpt = +values.total_allcombatspec || 0;
+          let mlpt = +values.meleecombatpoints || 0;
+          let mtszpt = +values.total_meleespec || 0;
+          let rgpt = +values.rangedcombatpoints || 0;
+          let rgszpt = +values.total_rangedspec || 0;
+          let total = cppt + cpszpt + mlpt + mtszpt + rgpt + rgszpt;
+          setAttrs({pbcombatskillstotals: total});
+      });
+  });
+
+
 
 
 
